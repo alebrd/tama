@@ -47,7 +47,7 @@ export default function JobsPage() {
                 <p className={styles.roleDesc}>{role.description}</p>
               </div>
               <a
-                href="mailto:contact@tamaklub.com"
+                href="mailto:joanna@tamaklub.pl"
                 className={`${styles.applyBtn} btn btn-outline`}
               >
                 APPLY
@@ -58,8 +58,8 @@ export default function JobsPage() {
 
         <p className={styles.note}>
           Don&apos;t see a role that fits? Send us a general application at{" "}
-          <a href="mailto:contact@tamaklub.com" className={styles.email}>
-            contact@tamaklub.com
+          <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+            joanna@tamaklub.pl
           </a>
         </p>
       </div>

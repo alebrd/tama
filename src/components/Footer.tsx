@@ -15,12 +15,12 @@ export default function Footer() {
 
         <div className={styles.column}>
           <h4 className={styles.heading}>Navigate</h4>
-          <Link href="/tama" className={styles.text}>TAMA</Link>
-          <Link href="/program" className={styles.text}>Program</Link>
-          <Link href="/sets" className={styles.text}>Sets</Link>
-          <Link href="/awareness" className={styles.text}>Awareness</Link>
-          <Link href="/jobs" className={styles.text}>Jobs</Link>
-          <Link href="/contact" className={styles.text}>Contact</Link>
+          <Link href="/en/tama" className={styles.text}>TAMA</Link>
+          <Link href="/en/program" className={styles.text}>Program</Link>
+          <Link href="/en/shop" className={styles.text}>Shop</Link>
+          <Link href="/en/awareness" className={styles.text}>Awareness</Link>
+          <Link href="/en/jobs" className={styles.text}>Jobs</Link>
+          <Link href="/en/contact" className={styles.text}>Contact</Link>
         </div>
 
         <div className={styles.column}>
@@ -48,8 +48,8 @@ export default function Footer() {
           >
             Facebook
           </a>
-          <a href="mailto:contact@tamaklub.com" className={styles.text}>
-            contact@tamaklub.com
+          <a href="mailto:joanna@tamaklub.pl" className={styles.text}>
+            joanna@tamaklub.pl
           </a>
         </div>
       </div>

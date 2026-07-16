@@ -17,12 +17,20 @@ const products = [
     tag: "NEW DROP",
   },
   {
-    id: "socks-logo",
-    name: "TAMA Socks",
+    id: "socks-classic",
+    name: "TAMA Socks — Classic",
     description: "Premium ribbed cotton. TAMA embroidered in white. One size.",
     price: "PLN 40",
     image: "/shop-socks.jpg",
     tag: "BESTSELLER",
+  },
+  {
+    id: "socks-zigzag",
+    name: "TAMA Socks — Zigzag",
+    description: "Bold black & white chevron pattern with woven TAMA box logo. One size.",
+    price: "PLN 45",
+    image: "/shop-socks-zigzag.jpg",
+    tag: "LIMITED",
   },
 ];
 
@@ -53,7 +61,7 @@ export default function ShopPage() {
                 <p className={styles.description}>{product.description}</p>
                 <div className={styles.footer}>
                   <span className={styles.price}>{product.price}</span>
-                  <a href="mailto:contact@tamaklub.com" className="btn">
+                  <a href="mailto:joanna@tamaklub.pl" className="btn">
                     ENQUIRE
                   </a>
                 </div>

@@ -20,8 +20,8 @@ export default function ContactPage() {
             <p className={styles.cardText}>
               For any general questions, press enquiries, or feedback:
             </p>
-            <a href="mailto:contact@tamaklub.com" className={styles.email}>
-              contact@tamaklub.com
+            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+              joanna@tamaklub.pl
             </a>
           </div>
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
               61-894 Poznań, Poland
             </p>
             <a
-              href="https://maps.google.com/?q=ul.+Niezłomnych+2,+Poznań,+Poland"
+              href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapLink}

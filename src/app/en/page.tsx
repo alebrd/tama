@@ -70,7 +70,7 @@ export default function Home() {
               (MTP).
             </p>
             <a
-              href="https://maps.google.com/?q=ul.+Niezłomnych+2,+Poznań,+Poland"
+              href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapLink}

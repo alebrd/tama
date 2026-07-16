@@ -33,8 +33,8 @@ export default function AwarenessPage() {
           <p className={styles.policyText}>
             If you&apos;d like to share an experience or observation afterwards, you can contact us
             at{" "}
-            <a href="mailto:contact@tamaklub.com" className={styles.email}>
-              contact@tamaklub.com
+            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+              joanna@tamaklub.pl
             </a>
           </p>
         </div>
