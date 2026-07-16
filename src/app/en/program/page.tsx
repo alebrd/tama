@@ -18,10 +18,19 @@ export default function ProgramPage() {
           </p>
           <div className={styles.actions}>
             <a
-              href="https://www.facebook.com/tamaklub/events"
+              href="https://biletomat.pl/wydarzenia/w/poznan/w/klub-tama"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
+              id="program-tickets-btn"
+            >
+              TICKETS ↗
+            </a>
+            <a
+              href="https://www.facebook.com/tamaklub/events"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline glass"
               id="program-events-btn"
             >
               EVENTS ↗

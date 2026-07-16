@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Shop — TAMA",
+  title: "Merch — TAMA",
   description: "TAMA merchandise — limited drops from Poznań's Techno Palace.",
 };
 
@@ -34,12 +34,12 @@ const products = [
   },
 ];
 
-export default function ShopPage() {
+export default function MerchPage() {
   return (
     <div className={styles.page}>
       <div className="container">
         <div className={styles.header}>
-          <h1 className="text-gradient">SHOP</h1>
+          <h1 className="text-gradient">MERCH</h1>
           <p className={styles.subtitle}>Merchandise and more coming soon</p>
         </div>
 

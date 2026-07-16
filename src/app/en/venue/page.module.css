@@ -1,0 +1,135 @@
+.page {
+  padding: 5rem 0 8rem;
+  flex: 1;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 4rem;
+  max-width: 680px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  opacity: 0.45;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.sub {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Stats row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.stat {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.statValue {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  opacity: 0.45;
+  margin-bottom: 1.5rem;
+}
+
+/* Event type tags */
+.tagGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Description block */
+.descBlock {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.desc {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .descBlock {
+    padding: 2rem;
+  }
+}

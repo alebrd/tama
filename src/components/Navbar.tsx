@@ -5,10 +5,13 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 
+import Image from "next/image";
+
 const links = [
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/program", label: "Program" },
-  { href: "/en/shop", label: "Shop" },
+  { href: "/en/venue", label: "Venue" },
+  { href: "/en/merch", label: "Merch" },
   { href: "/en/awareness", label: "Awareness" },
   { href: "/en/contact", label: "Contact" },
 ];
@@ -21,14 +24,7 @@ export default function Navbar() {
     <header className={`${styles.header} glass`}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/en" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <div className={styles.logoBox}>
-            <div className={styles.logoRow}>
-              <span>T</span><span>A</span>
-            </div>
-            <div className={styles.logoRow}>
-              <span>M</span><span>A</span>
-            </div>
-          </div>
+          <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
         </Link>
 
         {/* Desktop Nav */}

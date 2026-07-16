@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -77,6 +78,22 @@ export default function Home() {
             >
               Open in Google Maps →
             </a>
+          </div>
+
+          <div className={`${styles.card} ${styles.cardWide} glass`}>
+            <div className={styles.cardWideInner}>
+              <div>
+                <h2 className={styles.cardTitle}>Host Your Event</h2>
+                <p className={styles.cardText}>
+                  TAMA is not only a club — it is a fully equipped industrial event space for
+                  up to 1,000 guests. Corporate parties, conferences, galas, concerts, and more,
+                  in the heart of Poznań.
+                </p>
+              </div>
+              <Link href="/en/venue" className={styles.venueLink}>
+                LEARN MORE →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

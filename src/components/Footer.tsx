@@ -1,15 +1,13 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.column}>
-          <div className={styles.logoBox}>
-            <div className={styles.logoRow}><span>T</span><span>A</span></div>
-            <div className={styles.logoRow}><span>M</span><span>A</span></div>
-          </div>
+          <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
           <p className={styles.tagline}>TECHNO PALACE · POZNAŃ</p>
         </div>
 
@@ -17,7 +15,8 @@ export default function Footer() {
           <h4 className={styles.heading}>Navigate</h4>
           <Link href="/en/tama" className={styles.text}>TAMA</Link>
           <Link href="/en/program" className={styles.text}>Program</Link>
-          <Link href="/en/shop" className={styles.text}>Shop</Link>
+          <Link href="/en/venue" className={styles.text}>Venue</Link>
+          <Link href="/en/merch" className={styles.text}>Merch</Link>
           <Link href="/en/awareness" className={styles.text}>Awareness</Link>
           <Link href="/en/jobs" className={styles.text}>Jobs</Link>
           <Link href="/en/contact" className={styles.text}>Contact</Link>
@@ -48,9 +47,7 @@ export default function Footer() {
           >
             Facebook
           </a>
-          <a href="mailto:joanna@tamaklub.pl" className={styles.text}>
-            joanna@tamaklub.pl
-          </a>
+
         </div>
       </div>
 
