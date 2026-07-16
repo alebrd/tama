@@ -1,0 +1,93 @@
+.page {
+  padding: 5rem 0 6rem;
+  flex: 1;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.roleList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.roleCard {
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.roleCard:hover {
+  transform: translateX(6px);
+}
+
+.roleInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.roleType {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.roleDesc {
+  color: var(--color-light-grey);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: 0.25rem;
+}
+
+.applyBtn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  padding: 0.6rem 1.5rem !important;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+.email {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .roleCard { flex-direction: column; align-items: flex-start; }
+}

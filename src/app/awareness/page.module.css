@@ -1,0 +1,52 @@
+.page {
+  padding: 5rem 0 8rem;
+  flex: 1;
+}
+
+.hero {
+  margin-bottom: 5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.policyBlock {
+  padding: 3.5rem;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.policyText {
+  color: var(--color-light-grey);
+  font-size: 1.0625rem;
+  line-height: 1.9;
+}
+
+.email {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.email:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .policyBlock { padding: 2rem; }
+}
