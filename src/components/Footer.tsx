@@ -1,32 +1,54 @@
+'use client';
+
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isEnglish = pathname.startsWith("/en");
+  const homeHref = isEnglish ? "/en" : "/";
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.column}>
-          <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+          <Link href={homeHref}>
+            <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+          </Link>
           <p className={styles.tagline}>TECHNO PALACE · POZNAŃ</p>
         </div>
 
-        <div className={styles.column}>
-          <h4 className={styles.heading}>Navigate</h4>
-          <Link href="/en/tama" className={styles.text}>TAMA</Link>
-          <Link href="/en/program" className={styles.text}>Program</Link>
-          <Link href="/en/venue" className={styles.text}>Venue</Link>
-          <Link href="/en/merch" className={styles.text}>Merch</Link>
-          <Link href="/en/awareness" className={styles.text}>Awareness</Link>
-          <Link href="/en/jobs" className={styles.text}>Jobs</Link>
-          <Link href="/en/contact" className={styles.text}>Contact</Link>
-        </div>
+        {isEnglish ? (
+          <div className={styles.column}>
+            <h4 className={styles.heading}>Navigate</h4>
+            <Link href="/en/tama" className={styles.text}>TAMA</Link>
+            <Link href="/en/program" className={styles.text}>Program</Link>
+            <Link href="/en/venue" className={styles.text}>Venue</Link>
+            <Link href="/en/merch" className={styles.text}>Merch</Link>
+            <Link href="/en/awareness" className={styles.text}>Awareness</Link>
+            <Link href="/en/jobs" className={styles.text}>Jobs</Link>
+            <Link href="/en/contact" className={styles.text}>Contact</Link>
+          </div>
+        ) : (
+          <div className={styles.column}>
+            <h4 className={styles.heading}>Nawigacja</h4>
+            <Link href="/tama" className={styles.text}>TAMA</Link>
+            <Link href="/program" className={styles.text}>Program</Link>
+            <Link href="/wynajem" className={styles.text}>Wynajem</Link>
+            <Link href="/merch" className={styles.text}>Merch</Link>
+            <Link href="/swiadomosc" className={styles.text}>Świadomość</Link>
+            <Link href="/praca" className={styles.text}>Praca</Link>
+            <Link href="/kontakt" className={styles.text}>Kontakt</Link>
+          </div>
+        )}
 
         <div className={styles.column}>
-          <h4 className={styles.heading}>Visit Us</h4>
+          <h4 className={styles.heading}>{isEnglish ? "Visit Us" : "Odwiedź nas"}</h4>
           <p className={styles.text}>Wielkopolska Izba Rzemieślnicza</p>
           <p className={styles.text}>ul. Niezłomnych 2</p>
-          <p className={styles.text}>61-894 Poznań, Poland</p>
+          <p className={styles.text}>61-894 Poznań, {isEnglish ? "Poland" : "Polska"}</p>
         </div>
 
         <div className={styles.column}>
@@ -47,12 +69,13 @@ export default function Footer() {
           >
             Facebook
           </a>
-
         </div>
       </div>
 
       <div className={styles.bottom}>
-        <p className={styles.text}>© {new Date().getFullYear()} TAMA. All rights reserved.</p>
+        <p className={styles.text}>
+          © {new Date().getFullYear()} TAMA. {isEnglish ? "All rights reserved." : "Wszelkie prawa zastrzeżone."}
+        </p>
       </div>
     </footer>
   );

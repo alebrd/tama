@@ -7,8 +7,9 @@
 
 .navContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 2.5rem;
   height: 80px;
 }
 
@@ -32,6 +33,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-left: auto;
 }
 
 .link {
@@ -63,6 +65,45 @@
 .link:hover::after,
 .link.active::after {
   width: 100%;
+}
+
+/* Right side wrapper */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Language Switcher */
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.langBtn {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.langBtn:hover {
+  opacity: 0.7;
+}
+
+.langActive {
+  opacity: 1;
+}
+
+.langDivider {
+  opacity: 0.25;
+  font-size: 0.7rem;
+  pointer-events: none;
 }
 
 /* Hamburger Button */
@@ -143,9 +184,22 @@
   opacity: 1;
 }
 
+.mobileLang {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.mobileLang .langBtn {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .navLinks { display: none; }
+  .langSwitcher { display: none; }
   .hamburger { display: flex; }
   .mobileOverlay { display: flex; }
 }

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import styles from "./en/page.module.css";
+import styles from "../en/tama/page.module.css";
 
 export const metadata: Metadata = {
   title: "TAMA — Klub",
   description: "Historia i tożsamość TAMY, wiodącego klubu techno w Poznaniu.",
 };
 
-export default function Home() {
+export default function TamaPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
@@ -77,22 +76,6 @@ export default function Home() {
             >
               Otwórz w Google Maps →
             </a>
-          </div>
-
-          <div className={`${styles.card} ${styles.cardWide} glass`}>
-            <div className={styles.cardWideInner}>
-              <div>
-                <h2 className={styles.cardTitle}>Zorganizuj Wydarzenie</h2>
-                <p className={styles.cardText}>
-                  TAMA to nie tylko klub — to w pełni wyposażona industrialna przestrzeń eventowa
-                  dla do 1 000 gości. Imprezy firmowe, konferencje, gale, koncerty i nie tylko,
-                  w sercu Poznania.
-                </p>
-              </div>
-              <Link href="/wynajem" className={styles.venueLink}>
-                DOWIEDZ SIĘ WIĘCEJ →
-              </Link>
-            </div>
           </div>
         </div>
       </div>
