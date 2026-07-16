@@ -6,12 +6,12 @@ import { useState } from "react";
 import styles from "./Navbar.module.css";
 
 const links = [
-  { href: "/tama", label: "TAMA" },
-  { href: "/program", label: "Program" },
-  { href: "/sets", label: "Sets" },
-  { href: "/awareness", label: "Awareness" },
-  { href: "/jobs", label: "Jobs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/en/tama", label: "TAMA" },
+  { href: "/en/program", label: "Program" },
+  { href: "/en/sets", label: "Sets" },
+  { href: "/en/awareness", label: "Awareness" },
+  { href: "/en/jobs", label: "Jobs" },
+  { href: "/en/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className={`${styles.header} glass`}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
+        <Link href="/en" className={styles.logo} onClick={() => setMenuOpen(false)}>
           <div className={styles.logoBox}>
             <div className={styles.logoRow}>
               <span>T</span><span>A</span>
