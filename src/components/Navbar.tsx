@@ -56,50 +56,52 @@ export default function Navbar() {
   const enHref = isEnglish ? pathname : alternatePath;
 
   return (
-    <header className={`${styles.header} glass`}>
-      <div className={`container ${styles.navContainer}`}>
-        <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
-        </Link>
+    <>
+      <header className={`${styles.header} glass`}>
+        <div className={`container ${styles.navContainer}`}>
+          <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
+            <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className={styles.navLinks}>
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`${styles.link} ${pathname === href ? styles.active : ""}`}
+          {/* Desktop Nav */}
+          <nav className={styles.navLinks}>
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${styles.link} ${pathname === href ? styles.active : ""}`}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Right side: Lang switcher + Hamburger */}
+          <div className={styles.navRight}>
+            <div className={styles.langSwitcher}>
+              <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`}>
+                PL
+              </Link>
+              <span className={styles.langDivider}>·</span>
+              <Link href={enHref} className={`${styles.langBtn} ${isEnglish ? styles.langActive : ""}`}>
+                EN
+              </Link>
+            </div>
+
+            <button
+              id="hamburger-btn"
+              className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
             >
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right side: Lang switcher + Hamburger */}
-        <div className={styles.navRight}>
-          <div className={styles.langSwitcher}>
-            <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`}>
-              PL
-            </Link>
-            <span className={styles.langDivider}>·</span>
-            <Link href={enHref} className={`${styles.langBtn} ${isEnglish ? styles.langActive : ""}`}>
-              EN
-            </Link>
+              <span /><span /><span />
+            </button>
           </div>
-
-          <button
-            id="hamburger-btn"
-            className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-          >
-            <span /><span /><span />
-          </button>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Overlay */}
+      {/* Mobile Overlay — outside header to avoid iOS backdrop-filter containment */}
       <div
         className={`${styles.mobileOverlay} ${menuOpen ? styles.mobileOverlayOpen : ""}`}
         aria-hidden={!menuOpen}
@@ -126,6 +128,6 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
