@@ -8,9 +8,8 @@ import styles from "./Navbar.module.css";
 const links = [
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/program", label: "Program" },
-  { href: "/en/sets", label: "Sets" },
+  { href: "/en/shop", label: "Shop" },
   { href: "/en/awareness", label: "Awareness" },
-  { href: "/en/jobs", label: "Jobs" },
   { href: "/en/contact", label: "Contact" },
 ];
 

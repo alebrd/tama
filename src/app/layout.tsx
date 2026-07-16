@@ -12,6 +12,10 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "TAMA",
   description: "Premier techno and electronic music club in Poznań",
+  icons: {
+    icon: "/favicon-32.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
