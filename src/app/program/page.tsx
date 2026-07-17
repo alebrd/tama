@@ -36,7 +36,7 @@ export default function ProgramPage() {
               WYDARZENIA ↗
             </a>
             <a
-              href="https://ra.co/clubs/tama"
+              href="https://de.ra.co/clubs/106231"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline glass"
