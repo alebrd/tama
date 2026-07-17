@@ -82,7 +82,7 @@ export default function WynajemPage() {
             </p>
             <div className={styles.cta}>
               <a
-                href="mailto:arek@tamaklub.pl"
+                href="mailto:katya@tamaklub.pl"
                 className="btn"
                 id="wynajem-enquire-btn"
               >
