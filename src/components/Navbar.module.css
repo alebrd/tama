@@ -14,7 +14,10 @@
 }
 
 /* Logo */
-.logo { display: block; }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
 .logoImg {
   width: 50px;
@@ -201,6 +204,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
   .navContainer {
     justify-content: space-between;
     height: 64px;
@@ -208,5 +214,8 @@
   .navLinks { display: none; }
   .langSwitcher { display: none; }
   .hamburger { display: flex; }
-  .mobileOverlay { display: flex; }
+  .mobileOverlay {
+    display: flex;
+    top: calc(64px + env(safe-area-inset-top, 0px));
+  }
 }
