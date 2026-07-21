@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "../en/venue/page.module.css";
+import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
   title: "Wynajem — TAMA",
@@ -97,6 +98,12 @@ export default function WynajemPage() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Gallery */}
+        <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Galeria</h2>
+          <VenueGallery isEnglish={false} />
         </div>
 
       </div>

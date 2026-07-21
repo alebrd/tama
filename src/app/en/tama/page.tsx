@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
+import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "TAMA — The Club",
@@ -69,14 +70,17 @@ export default function TamaPage() {
               Approximately 1 km from Poznań Główny railway station and Poznań International Fair
               (MTP).
             </p>
-            <a
-              href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mapLink}
-            >
-              Open in Google Maps →
-            </a>
+            <div className={styles.mapLinksWrapper}>
+              <MapTrigger isEnglish={true} className={styles.mapLink} />
+              <a
+                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapLink}
+              >
+                Open in Google Maps →
+              </a>
+            </div>
           </div>
         </div>
       </div>

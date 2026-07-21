@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./en/page.module.css";
+import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "TAMA — Klub",
@@ -69,14 +70,17 @@ export default function Home() {
             <p className={styles.cardText}>
               Około 1 km od dworca Poznań Główny i Międzynarodowych Targów Poznańskich (MTP).
             </p>
-            <a
-              href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mapLink}
-            >
-              Otwórz w Google Maps →
-            </a>
+            <div className={styles.mapLinksWrapper}>
+              <MapTrigger isEnglish={false} className={styles.mapLink} />
+              <a
+                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapLink}
+              >
+                Otwórz w Google Maps →
+              </a>
+            </div>
           </div>
 
           <div className={`${styles.card} ${styles.cardWide} glass`}>

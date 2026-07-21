@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
+import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
   title: "Venue — TAMA",
@@ -97,6 +98,12 @@ export default function VenuePage() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Gallery */}
+        <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Gallery</h2>
+          <VenueGallery isEnglish={true} />
         </div>
 
       </div>

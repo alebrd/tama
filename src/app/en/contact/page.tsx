@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
+import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "Contact — TAMA",
@@ -42,14 +43,17 @@ export default function ContactPage() {
               ul. Niezłomnych 2<br />
               61-894 Poznań, Poland
             </p>
-            <a
-              href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mapLink}
-            >
-              Open in Google Maps →
-            </a>
+            <div className={styles.mapLinksWrapper}>
+              <MapTrigger isEnglish={true} className={styles.mapLink} />
+              <a
+                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapLink}
+              >
+                Open in Google Maps →
+              </a>
+            </div>
           </div>
 
           <div className={`${styles.card} glass`}>

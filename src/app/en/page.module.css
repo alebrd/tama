@@ -68,6 +68,13 @@
   font-size: 0.9375rem;
 }
 
+.mapLinksWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .mapLink {
   font-size: 0.875rem;
   font-weight: 600;

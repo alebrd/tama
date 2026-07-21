@@ -1,14 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import MapModal from "./MapModal";
 
 export default function Footer() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
   const homeHref = isEnglish ? "/en" : "/";
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   return (
     <footer className={styles.footer}>
@@ -49,6 +52,9 @@ export default function Footer() {
           <p className={styles.text}>Wielkopolska Izba Rzemieślnicza</p>
           <p className={styles.text}>ul. Niezłomnych 2</p>
           <p className={styles.text}>61-894 Poznań, {isEnglish ? "Poland" : "Polska"}</p>
+          <button onClick={() => setIsMapOpen(true)} className={styles.mapTrigger}>
+            {isEnglish ? "View location" : "Zobacz lokalizację"} ↗
+          </button>
         </div>
 
         <div className={styles.column}>
@@ -77,6 +83,8 @@ export default function Footer() {
           © {new Date().getFullYear()} TAMA. {isEnglish ? "All rights reserved." : "Wszelkie prawa zastrzeżone."}
         </p>
       </div>
+
+      <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} isEnglish={isEnglish} />
     </footer>
   );
 }
