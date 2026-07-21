@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -44,6 +45,16 @@ export default function ProgramPage() {
             >
               RESIDENT ADVISOR ↗
             </a>
+          </div>
+          <div className={styles.flyerWrapper}>
+            <Image
+              src="/program-flyer.jpg"
+              alt="Latest Program Flyer"
+              fill
+              className={styles.flyerImage}
+              sizes="(max-width: 900px) 100vw, 900px"
+              priority
+            />
           </div>
         </div>
       </div>
