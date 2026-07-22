@@ -1,0 +1,83 @@
+.footer {
+  background: var(--color-slow-dark);
+  border-top: 1px solid rgba(255, 26, 26, 0.1);
+  padding-top: 4rem;
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.logoImg {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(255, 26, 26, 0.3));
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  color: var(--color-light-grey);
+  font-size: 0.9rem;
+}
+
+.linksCol, .contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linksCol h4, .contactCol h4 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-slow-red);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.linksCol a, .contactCol p, .contactCol a {
+  color: var(--color-light-grey);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.linksCol a:hover, .contactCol a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.tamaLink {
+  color: var(--color-slow-red) !important;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.tamaLink:hover {
+  text-shadow: 0 0 12px var(--color-slow-red) !important;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.bottomBar p {
+  color: var(--color-light-grey);
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 0.5;
+}

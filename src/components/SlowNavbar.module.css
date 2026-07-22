@@ -1,16 +1,21 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
   z-index: 100;
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 26, 26, 0.2);
+  background: rgba(7, 7, 7, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navContainer {
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 2.5rem;
-  height: 64px;
+  justify-content: space-between;
 }
 
 /* Logo */
@@ -20,38 +25,57 @@
 }
 
 .logoImg {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(255, 26, 26, 0.5));
+  transition: filter 0.3s ease;
 }
 
 .logo:hover .logoImg {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  filter: drop-shadow(0 0 20px rgba(255, 26, 26, 0.8));
 }
 
 /* Desktop Nav */
 .navLinks {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 }
 
 .link {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  color: var(--color-light-grey);
+  text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
   position: relative;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
 }
 
-.link:hover,
-.link.active {
-  opacity: 1;
+.link:hover, .active {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.tamaLink {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-slow-red);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.tamaLink:hover {
+  color: #fff;
+  text-shadow: 0 0 15px var(--color-slow-red);
 }
 
 .link::after {
@@ -93,21 +117,6 @@
   cursor: pointer;
   text-decoration: none;
   color: var(--foreground);
-}
-
-.slowLink {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--color-light-grey);
-  text-decoration: none;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.slowLink:hover {
-  color: #ff1a1a;
-  text-shadow: 0 0 15px rgba(255, 26, 26, 0.5);
 }
 
 .langBtn:hover {

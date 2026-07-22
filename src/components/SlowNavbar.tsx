@@ -4,53 +4,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./SlowNavbar.module.css";
 
 const plLinks = [
-  { href: "/tama", label: "TAMA" },
-  { href: "/program", label: "Program" },
-  { href: "/wynajem", label: "Wynajem" },
-  { href: "/merch", label: "Merch" },
-  { href: "/swiadomosc", label: "Świadomość" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/slowclub", label: "Start" },
+  { href: "/slowclub/program", label: "Program" },
+  { href: "/slowclub/kontakt", label: "Kontakt" },
 ];
 
 const enLinks = [
-  { href: "/en/tama", label: "TAMA" },
-  { href: "/en/program", label: "Program" },
-  { href: "/en/venue", label: "Venue" },
-  { href: "/en/merch", label: "Merch" },
-  { href: "/en/awareness", label: "Awareness" },
-  { href: "/en/contact", label: "Contact" },
+  { href: "/en/slowclub", label: "Start" },
+  { href: "/en/slowclub/program", label: "Program" },
+  { href: "/en/slowclub/contact", label: "Contact" },
 ];
 
 const pathMap: Record<string, string> = {
-  "/": "/en",
-  "/tama": "/en/tama",
-  "/program": "/en/program",
-  "/wynajem": "/en/venue",
-  "/merch": "/en/merch",
-  "/swiadomosc": "/en/awareness",
-  "/praca": "/en/jobs",
-  "/kontakt": "/en/contact",
-  "/en": "/",
-  "/en/tama": "/tama",
-  "/en/program": "/program",
-  "/en/venue": "/wynajem",
-  "/en/merch": "/merch",
-  "/en/awareness": "/swiadomosc",
-  "/en/jobs": "/praca",
-  "/en/contact": "/kontakt",
+  "/slowclub": "/en/slowclub",
+  "/slowclub/program": "/en/slowclub/program",
+  "/slowclub/kontakt": "/en/slowclub/contact",
+  "/en/slowclub": "/slowclub",
+  "/en/slowclub/program": "/slowclub/program",
+  "/en/slowclub/contact": "/slowclub/kontakt",
 };
 
-export default function Navbar() {
+export default function SlowNavbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isEnglish = pathname.startsWith("/en");
   const links = isEnglish ? enLinks : plLinks;
-  const homeHref = isEnglish ? "/en" : "/";
-  const alternatePath = pathMap[pathname] ?? (isEnglish ? "/" : "/en");
+  const homeHref = isEnglish ? "/en/slowclub" : "/slowclub";
+  const alternatePath = pathMap[pathname] ?? (isEnglish ? "/slowclub" : "/en/slowclub");
 
   const plHref = isEnglish ? alternatePath : pathname;
   const enHref = isEnglish ? pathname : alternatePath;
@@ -60,7 +44,7 @@ export default function Navbar() {
       <header className={`${styles.header} glass`}>
         <div className={`container ${styles.navContainer}`}>
           <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-            <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+            <Image src="/slow/logo.png" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
           </Link>
 
           {/* Desktop Nav */}
@@ -74,8 +58,8 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.slowLink}>
-              SLOW ↗
+            <Link href={isEnglish ? "/en" : "/"} className={styles.tamaLink}>
+              TAMA ↗
             </Link>
           </nav>
 
@@ -120,8 +104,8 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.mobileSlowLink} onClick={() => setMenuOpen(false)}>
-            SLOW ↗
+          <Link href={isEnglish ? "/en" : "/"} className={styles.mobileTamaLink} onClick={() => setMenuOpen(false)}>
+            TAMA ↗
           </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>

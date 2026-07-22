@@ -1,0 +1,43 @@
+.page {
+  padding: 5rem 0 6rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--color-slow-red);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.sub {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
