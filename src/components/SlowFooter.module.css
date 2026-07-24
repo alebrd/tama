@@ -62,7 +62,7 @@ a.text:hover {
 }
 
 .tamaLink {
-  color: var(--color-slow-red);
+  color: var(--color-light-grey);
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 700;
@@ -71,7 +71,7 @@ a.text:hover {
 }
 
 .tamaLink:hover {
-  text-shadow: 0 0 12px var(--color-slow-red);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 
