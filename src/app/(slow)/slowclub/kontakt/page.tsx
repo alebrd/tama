@@ -12,7 +12,7 @@ export default function SlowKontaktPage() {
     <div className={styles.page}>
       <div className="container">
         <div className={styles.header}>
-          <h1 className="text-gradient-slow">KONTAKT</h1>
+          <h1 className={`text-gradient-slow ${styles.title}`}>KONTAKT</h1>
         </div>
 
         <div className={styles.grid}>
