@@ -6,9 +6,10 @@ import MapModal from './MapModal';
 interface MapTriggerProps {
   isEnglish: boolean;
   className?: string;
+  variant?: 'tama' | 'slow';
 }
 
-export default function MapTrigger({ isEnglish, className }: MapTriggerProps) {
+export default function MapTrigger({ isEnglish, className, variant = 'tama' }: MapTriggerProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,7 +29,7 @@ export default function MapTrigger({ isEnglish, className }: MapTriggerProps) {
       >
         {isEnglish ? 'VIEW LOCATION' : 'ZOBACZ LOKALIZACJĘ'}
       </button>
-      <MapModal isOpen={isOpen} onClose={() => setIsOpen(false)} isEnglish={isEnglish} />
+      <MapModal isOpen={isOpen} onClose={() => setIsOpen(false)} isEnglish={isEnglish} variant={variant} />
     </>
   );
 }

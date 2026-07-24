@@ -31,8 +31,8 @@ export default function SlowContactPageEn() {
             <p className={styles.cardText}>
               Artist bookings and event proposals:
             </p>
-            <a href="mailto:arek@tamaklub.pl" className={styles.email}>
-              arek@tamaklub.pl
+            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+              joanna@tamaklub.pl
             </a>
           </div>
 
@@ -44,9 +44,9 @@ export default function SlowContactPageEn() {
               61-894 Poznań, Poland
             </p>
             <div className={styles.mapLinksWrapper}>
-              <MapTrigger isEnglish={true} className={styles.mapLink} />
+              <MapTrigger isEnglish={true} className={styles.mapLink} variant="slow" />
               <a
-                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+                href="https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.mapLink}

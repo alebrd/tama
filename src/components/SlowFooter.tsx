@@ -78,7 +78,7 @@ export default function SlowFooter() {
         </p>
       </div>
 
-      <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} isEnglish={isEnglish} />
+      <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} isEnglish={isEnglish} variant="slow" />
     </footer>
   );
 }

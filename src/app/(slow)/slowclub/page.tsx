@@ -35,7 +35,10 @@ export default function SlowHomePage() {
             />
           </div>
           <h1 className={`text-gradient-slow ${styles.title}`}>THE OTHER SIDE OF TAMA</h1>
-          <p className={styles.subtitle}>Najbardziej kameralne miejsce w Poznaniu. Robimy sobie przerwę na lato, ale wracamy we wrześniu.</p>
+          <p className={styles.subtitle}>
+            Tu tempo równa się rytmowi serca, a klimat przenosi Was poza codzienność.<br />
+            <strong>ONLY HOUSE MUSIC</strong>
+          </p>
           <div className={styles.actions}>
             <Link href="/slowclub/program" className="btn-slow">Program</Link>
           </div>

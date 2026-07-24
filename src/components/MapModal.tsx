@@ -8,9 +8,10 @@ interface MapModalProps {
   isOpen: boolean;
   onClose: () => void;
   isEnglish: boolean;
+  variant?: 'tama' | 'slow';
 }
 
-export default function MapModal({ isOpen, onClose, isEnglish }: MapModalProps) {
+export default function MapModal({ isOpen, onClose, isEnglish, variant = 'tama' }: MapModalProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -42,14 +43,17 @@ export default function MapModal({ isOpen, onClose, isEnglish }: MapModalProps) 
         </div>
         <div className={styles.mapContainer}>
           <iframe
-            src="https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src={variant === 'slow' 
+              ? "https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              : "https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            }
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="TAMA Poznań Map"
+            title={variant === 'slow' ? "SLOW Poznań Map" : "TAMA Poznań Map"}
           />
         </div>
         <div className={styles.footer}>
@@ -59,7 +63,10 @@ export default function MapModal({ isOpen, onClose, isEnglish }: MapModalProps) 
             61-894 Poznań, {isEnglish ? 'Poland' : 'Polska'}
           </p>
           <a
-            href="https://www.google.com/maps/search/Tama+Klub+Poznan"
+            href={variant === 'slow'
+              ? "https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
+              : "https://www.google.com/maps/search/Tama+Klub+Poznan"
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
