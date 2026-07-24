@@ -64,7 +64,7 @@ export default function SlowKontaktPage() {
               rel="noopener noreferrer"
               className={styles.socialLink}
             >
-              Instagram ↗
+              Instagram
             </a>
             <a
               href="https://www.facebook.com/slowclubpoznan"
@@ -72,7 +72,7 @@ export default function SlowKontaktPage() {
               rel="noopener noreferrer"
               className={styles.socialLink}
             >
-              Facebook ↗
+              Facebook
             </a>
           </div>
         </div>

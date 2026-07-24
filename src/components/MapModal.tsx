@@ -65,7 +65,7 @@ export default function MapModal({ isOpen, onClose, isEnglish }: MapModalProps) 
             className="btn"
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.75rem' }}
           >
-            {isEnglish ? 'OPEN IN MAPS ↗' : 'OTWÓRZ W MAPACH ↗'}
+            {isEnglish ? 'OPEN IN MAPS' : 'OTWÓRZ W MAPACH'}
           </a>
         </div>
       </div>

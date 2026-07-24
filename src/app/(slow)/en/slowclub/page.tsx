@@ -26,11 +26,11 @@ export default function SlowHomePageEn() {
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.logoWrapper}>
             <Image
-              src="/slow/logo.png"
-              alt="SLOW Logo"
-              width={200}
+              src="/slow/neon-logo.png"
+              alt="SLOW Neon Sign"
+              width={600}
               height={200}
-              className={styles.heroLogo}
+              className={styles.heroNeonLogo}
               priority
             />
           </div>
@@ -39,18 +39,6 @@ export default function SlowHomePageEn() {
           <div className={styles.actions}>
             <Link href="/en/slowclub/program" className="btn-slow">Program</Link>
           </div>
-        </div>
-      </section>
-
-      <section className={`container ${styles.bannerSection}`}>
-        <div className={styles.bannerWrapper}>
-          <Image
-            src="/slow/summer-break-banner.jpg"
-            alt="Slow Summer Break"
-            fill
-            className={styles.bannerImage}
-            sizes="100vw"
-          />
         </div>
       </section>
     </div>

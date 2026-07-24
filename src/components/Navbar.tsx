@@ -75,7 +75,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.slowLink}>
-              SLOW ↗
+              SLOW
             </Link>
           </nav>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.mobileSlowLink} onClick={() => setMenuOpen(false)}>
-            SLOW ↗
+            SLOW
           </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>

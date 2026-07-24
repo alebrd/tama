@@ -24,7 +24,7 @@ export default function SlowProgramPage() {
               className="btn-slow"
               id="slow-program-tickets-btn-pl"
             >
-              BILETY ↗
+              BILETY
             </a>
             <a
               href="https://www.facebook.com/slowclubpoznan/events"
@@ -33,7 +33,7 @@ export default function SlowProgramPage() {
               className="btn-slow"
               id="slow-program-events-btn-pl"
             >
-              WYDARZENIA na FB ↗
+              WYDARZENIA na FB
             </a>
             <a
               href="https://de.ra.co/clubs/294815"
@@ -42,7 +42,7 @@ export default function SlowProgramPage() {
               className="btn-slow"
               id="slow-program-ra-btn-pl"
             >
-              RESIDENT ADVISOR ↗
+              RESIDENT ADVISOR
             </a>
           </div>
         </div>

@@ -25,13 +25,15 @@
   flex-direction: column;
   gap: 1rem;
   border: 1px solid rgba(255, 26, 26, 0.1) !important;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   background: rgba(7, 7, 7, 0.6) !important;
 }
 
 .card:hover {
   border-color: rgba(255, 26, 26, 0.4) !important;
   box-shadow: 0 10px 30px rgba(255, 26, 26, 0.1);
+  transform: translateY(-3px);
 }
 
 .cardTitle {

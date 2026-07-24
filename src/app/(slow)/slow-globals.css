@@ -1,8 +1,8 @@
 :root {
-  --color-slow-red: #ff1a1a;
-  --color-slow-red-glow: rgba(255, 26, 26, 0.4);
+  --color-slow-red: #e01212;
+  --color-slow-red-glow: rgba(224, 18, 18, 0.4);
   --color-slow-dark: #070707;
-  --color-slow-gradient: linear-gradient(135deg, #ff1a1a, #ff7b00);
+  --color-slow-gradient: linear-gradient(135deg, #e01212, #d45000);
   --background: var(--color-slow-dark);
 }
 
@@ -23,27 +23,31 @@ body {
   background: rgba(7, 7, 7, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(224, 18, 18, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .btn-slow {
-  background: var(--color-slow-red);
-  color: #fff;
+  display: inline-block;
+  background: transparent;
+  color: var(--color-slow-red);
   border: 1px solid var(--color-slow-red);
+  border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 1rem 2rem;
+  padding: 0.85rem 2rem;
   font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 0 15px var(--color-slow-red-glow);
+  box-shadow: 0 0 6px rgba(224, 18, 18, 0.15);
 }
 
 .btn-slow:hover {
-  background: transparent;
-  color: var(--color-slow-red);
-  box-shadow: 0 0 25px var(--color-slow-red-glow);
+  background: var(--color-slow-red);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(224, 18, 18, 0.3);
+  transform: translateY(-2px);
+  opacity: 1;
 }

@@ -53,7 +53,7 @@ export default function Footer() {
           <p className={styles.text}>ul. Niezłomnych 2</p>
           <p className={styles.text}>61-894 Poznań, {isEnglish ? "Poland" : "Polska"}</p>
           <button onClick={() => setIsMapOpen(true)} className={styles.mapTrigger}>
-            {isEnglish ? "View location" : "Zobacz lokalizację"} ↗
+            {isEnglish ? "View location" : "Zobacz lokalizację"}
           </button>
         </div>
 

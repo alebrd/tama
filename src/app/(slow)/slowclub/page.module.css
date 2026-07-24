@@ -48,19 +48,27 @@
 }
 
 .logoWrapper {
-  margin-bottom: 2rem;
-  animation: pulseGlow 4s infinite alternate ease-in-out;
+  margin-bottom: 1.5rem;
+  animation: pulseGlow 3s infinite alternate ease-in-out;
 }
 
 @keyframes pulseGlow {
-  0% { filter: drop-shadow(0 0 10px rgba(255, 26, 26, 0.4)); }
-  100% { filter: drop-shadow(0 0 30px rgba(255, 26, 26, 1)); }
+  0% { filter: drop-shadow(0 0 8px rgba(255, 26, 26, 0.6)); }
+  100% { filter: drop-shadow(0 0 24px rgba(255, 26, 26, 1)) drop-shadow(0 0 50px rgba(255, 26, 26, 0.4)); }
 }
 
 .heroLogo {
   mix-blend-mode: screen;
   width: clamp(150px, 20vw, 250px);
   height: auto;
+  border-radius: 8px;
+}
+
+.heroNeonLogo {
+  width: clamp(280px, 55vw, 600px);
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .title {
@@ -70,14 +78,16 @@
   letter-spacing: 4px;
   margin-bottom: 1rem;
   line-height: 1.1;
+  filter: drop-shadow(0 0 20px rgba(255, 26, 26, 0.4));
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
   color: var(--color-light-grey);
-  margin-bottom: 3rem;
-  line-height: 1.6;
-  max-width: 600px;
+  opacity: 0.65;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  max-width: 500px;
 }
 
 .actions {
@@ -86,7 +96,7 @@
 }
 
 .bannerSection {
-  padding: 4rem 0 6rem;
+  padding: 5rem 0 7rem;
 }
 
 .bannerWrapper {

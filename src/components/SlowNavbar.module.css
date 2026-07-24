@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 26, 26, 0.2);
   background: rgba(7, 7, 7, 0.7);
@@ -12,7 +11,7 @@
 }
 
 .navContainer {
-  height: 100%;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,9 +24,13 @@
 }
 
 .logoImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 10px rgba(255, 26, 26, 0.5));
+  filter: drop-shadow(0 0 10px rgba(255, 26, 26, 0.5)) brightness(0.75);
   transition: filter 0.3s ease;
+  border-radius: 4px;
 }
 
 .logo:hover .logoImg {
@@ -60,7 +63,6 @@
 
 .link:hover, .active {
   color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .tamaLink {
@@ -85,8 +87,9 @@
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: var(--foreground);
+  background-color: var(--color-slow-red);
   transition: width 0.3s ease;
+  box-shadow: 0 0 6px var(--color-slow-red);
 }
 
 .link:hover::after,
@@ -152,7 +155,7 @@
   display: block;
   width: 24px;
   height: 1.5px;
-  background: var(--foreground);
+  background: var(--color-slow-red);
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
@@ -175,7 +178,7 @@
   position: fixed;
   inset: 0;
   top: 64px;
-  background: var(--background);
+  background: radial-gradient(ellipse at 50% 40%, rgba(224, 18, 18, 0.07) 0%, #070707 70%);
   z-index: 99;
   flex-direction: column;
   justify-content: center;
@@ -205,13 +208,16 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
+  color: var(--color-slow-red);
+  opacity: 0.55;
+  transition: opacity 0.2s ease, text-shadow 0.2s ease;
+  text-decoration: none;
 }
 
 .mobileLink:hover,
 .mobileLink.active {
   opacity: 1;
+  text-shadow: 0 0 20px rgba(224, 18, 18, 0.7);
 }
 
 .mobileLang {
@@ -233,7 +239,8 @@
   }
   .navContainer {
     justify-content: space-between;
-    height: 64px;
+  }
+  .logo {
   }
   .navLinks { display: none; }
   .langSwitcher { display: none; }

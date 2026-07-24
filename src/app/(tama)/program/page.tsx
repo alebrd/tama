@@ -25,7 +25,7 @@ export default function ProgramPage() {
               className="btn"
               id="program-tickets-btn-pl"
             >
-              BILETY ↗
+              BILETY
             </a>
             <a
               href="https://www.facebook.com/tamaklub/events"
@@ -34,7 +34,7 @@ export default function ProgramPage() {
               className="btn btn-outline glass"
               id="program-events-btn-pl"
             >
-              WYDARZENIA ↗
+              WYDARZENIA
             </a>
             <a
               href="https://de.ra.co/clubs/106231"
@@ -43,7 +43,7 @@ export default function ProgramPage() {
               className="btn btn-outline glass"
               id="program-ra-btn-pl"
             >
-              RESIDENT ADVISOR ↗
+              RESIDENT ADVISOR
             </a>
           </div>
           <div className={styles.flyerWrapper}>

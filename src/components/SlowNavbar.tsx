@@ -7,13 +7,13 @@ import { useState } from "react";
 import styles from "./SlowNavbar.module.css";
 
 const plLinks = [
-  { href: "/slowclub", label: "Start" },
+  { href: "/slowclub", label: "SLOW" },
   { href: "/slowclub/program", label: "Program" },
   { href: "/slowclub/kontakt", label: "Kontakt" },
 ];
 
 const enLinks = [
-  { href: "/en/slowclub", label: "Start" },
+  { href: "/en/slowclub", label: "SLOW" },
   { href: "/en/slowclub/program", label: "Program" },
   { href: "/en/slowclub/contact", label: "Contact" },
 ];
@@ -59,7 +59,7 @@ export default function SlowNavbar() {
               </Link>
             ))}
             <Link href={isEnglish ? "/en" : "/"} className={styles.tamaLink}>
-              TAMA ↗
+              TAMA
             </Link>
           </nav>
 
@@ -105,7 +105,7 @@ export default function SlowNavbar() {
             </Link>
           ))}
           <Link href={isEnglish ? "/en" : "/"} className={styles.mobileTamaLink} onClick={() => setMenuOpen(false)}>
-            TAMA ↗
+            TAMA
           </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>

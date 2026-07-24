@@ -26,7 +26,7 @@ export default function MapTrigger({ isEnglish, className }: MapTriggerProps) {
           textAlign: 'left'
         }}
       >
-        {isEnglish ? 'VIEW LOCATION ↗' : 'ZOBACZ LOKALIZACJĘ ↗'}
+        {isEnglish ? 'VIEW LOCATION' : 'ZOBACZ LOKALIZACJĘ'}
       </button>
       <MapModal isOpen={isOpen} onClose={() => setIsOpen(false)} isEnglish={isEnglish} />
     </>

@@ -19,6 +19,10 @@ const virtuose = localFont({
 export const metadata: Metadata = {
   title: "SLOW — The other side of TAMA",
   description: "Slow Club Poznań",
+  icons: {
+    icon: "/slow/logo.png",
+    apple: "/slow/logo.png",
+  },
 };
 
 export default function SlowLayout({
