@@ -122,6 +122,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page { padding-top: 2rem; }
   .statsRow {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;

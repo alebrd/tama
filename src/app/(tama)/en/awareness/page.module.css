@@ -50,3 +50,7 @@
 @media (max-width: 600px) {
   .policyBlock { padding: 2rem; }
 }
+
+@media (max-width: 768px) {
+  .page { padding-top: 2rem; }
+}
