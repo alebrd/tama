@@ -81,6 +81,7 @@
 @media (max-width: 768px) {
   .page {
     align-items: flex-start;
+    padding-top: 2rem;
   }
   .title {
     font-size: clamp(3rem, 12vw, 5rem);
