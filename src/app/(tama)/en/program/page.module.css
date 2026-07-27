@@ -79,6 +79,12 @@
 }
 
 @media (max-width: 768px) {
+  .page {
+    align-items: flex-start;
+  }
+  .title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
   .flyerWrapper {
     margin-top: 3rem;
   }

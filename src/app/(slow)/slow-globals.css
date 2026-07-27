@@ -13,6 +13,7 @@ body {
 .text-gradient-slow {
   font-family: var(--font-virtuose), sans-serif;
   letter-spacing: 4px;
+  font-weight: 900;
   color: var(--color-slow-red);
 }
 
