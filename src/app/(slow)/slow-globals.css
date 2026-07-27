@@ -1,6 +1,6 @@
 :root {
-  --color-slow-red: #e01212;
-  --color-slow-red-glow: rgba(224, 18, 18, 0.4);
+  --color-slow-red: #c41010;
+  --color-slow-red-glow: rgba(196, 16, 16, 0.4);
   --color-slow-dark: #070707;
   --color-slow-gradient: linear-gradient(135deg, #e01212, #d45000);
   --background: var(--color-slow-dark);
@@ -13,10 +13,7 @@ body {
 .text-gradient-slow {
   font-family: var(--font-virtuose), sans-serif;
   letter-spacing: 4px;
-  background: var(--color-slow-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-slow-red);
 }
 
 .glass-slow {

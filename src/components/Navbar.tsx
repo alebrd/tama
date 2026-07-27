@@ -55,6 +55,14 @@ export default function Navbar() {
   const plHref = isEnglish ? alternatePath : pathname;
   const enHref = isEnglish ? pathname : alternatePath;
 
+  const isActive = (href: string) => {
+    if (pathname === href) return true;
+    // Treat root paths as equivalent to /tama and /en/tama
+    if (href === "/tama" && pathname === "/") return true;
+    if (href === "/en/tama" && pathname === "/en") return true;
+    return false;
+  };
+
   return (
     <>
       <header className={`${styles.header} glass`}>
@@ -69,7 +77,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`${styles.link} ${pathname === href ? styles.active : ""}`}
+                className={`${styles.link} ${isActive(href) ? styles.active : ""}`}
               >
                 {label}
               </Link>
@@ -114,7 +122,7 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`${styles.mobileLink} ${pathname === href ? styles.active : ""}`}
+              className={`${styles.mobileLink} ${isActive(href) ? styles.active : ""}`}
               onClick={() => setMenuOpen(false)}
             >
               {label}
