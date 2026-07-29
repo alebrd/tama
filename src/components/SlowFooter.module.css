@@ -106,9 +106,32 @@ a.text:hover {
 }
 
 @media (max-width: 560px) {
+  .footer {
+    padding-top: 1.5rem;
+  }
   .footerContainer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
     text-align: center;
   }
-  .column { align-items: center; }
+  /* Brand column spans full width */
+  .footerContainer .column:first-child {
+    grid-column: 1 / -1;
+    align-items: center;
+    border-bottom: 1px solid rgba(196, 16, 16, 0.2);
+    padding-bottom: 1.5rem;
+  }
+  .column {
+    align-items: center;
+  }
+  .text,
+  .mapTrigger,
+  .tamaLink {
+    font-size: 0.75rem;
+  }
+  .heading {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
 }
+
