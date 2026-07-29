@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 const plLinks = [
@@ -46,6 +46,13 @@ const pathMap: Record<string, string> = {
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const isEnglish = pathname.startsWith("/en");
   const links = isEnglish ? enLinks : plLinks;
@@ -65,7 +72,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`${styles.header} glass`}>
+      <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
             <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />

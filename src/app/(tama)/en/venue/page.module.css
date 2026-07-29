@@ -1,5 +1,5 @@
 .page {
-  padding: 3rem 0 8rem;
+  padding: calc(3rem + 64px) 0 8rem;
   flex: 1;
 }
 
@@ -122,7 +122,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .page { padding-top: 2rem; }
+  .page { padding-top: calc(2rem + 64px); }
   .statsRow {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;

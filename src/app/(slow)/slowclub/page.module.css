@@ -96,7 +96,7 @@
 }
 
 .bannerSection {
-  padding: 5rem 0 7rem;
+  padding: calc(3rem + 64px) 0 7rem;
 }
 
 .bannerWrapper {

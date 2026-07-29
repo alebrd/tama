@@ -1,6 +1,6 @@
 /* Shared page shell */
 .page {
-  padding: 3rem 0 6rem;
+  padding: calc(3rem + 64px) 0 6rem;
   flex: 1;
 }
 
@@ -90,6 +90,6 @@
 }
 
 @media (max-width: 768px) {
-  .page { padding-top: 2rem; }
+  .page { padding-top: calc(2rem + 64px); }
   .grid { grid-template-columns: 1fr; }
 }
