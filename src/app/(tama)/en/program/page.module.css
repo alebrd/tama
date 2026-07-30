@@ -55,6 +55,7 @@
   aspect-ratio: 16 / 9;
   margin-top: 4rem;
   border: 1px solid var(--glass-border);
+  border-radius: 8px;
   background: #000;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);

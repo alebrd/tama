@@ -31,7 +31,7 @@ export default function SlowLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${virtuose.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${virtuose.variable}`} suppressHydrationWarning>
       <body>
         <div className="noise-overlay" />
         <SlowNavbar />
