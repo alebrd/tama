@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import styles from "./page.module.css";
-import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "TAMA — The Club",
@@ -22,7 +22,7 @@ export default function TamaPage() {
       {/* Body */}
       <div className="container">
         <div className={styles.grid}>
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Venue</h2>
             <p className={styles.cardText}>
               Located inside a revitalized 90-year-old building — the former representative hall of
@@ -37,7 +37,7 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Music</h2>
             <p className={styles.cardText}>
               TAMA is best known in the nightlife scene for its commitment to underground electronic
@@ -51,7 +51,7 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Community</h2>
             <p className={styles.cardText}>
               TAMA was built by and for Poznań&apos;s creative community. We believe in fostering a space
@@ -60,27 +60,16 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Find Us</h2>
+          <div className={styles.card}>
+            <h2 className={styles.cardTitle}>Host Your Event</h2>
             <p className={styles.cardText}>
-              ul. Niezłomnych 2<br />
-              61-894 Poznań, Poland
+              TAMA is more than a club — it is a fully equipped industrial event space for up
+              to 1,000 guests. Corporate events, conferences, galas, concerts and more,
+              in the heart of Poznań.
             </p>
-            <p className={styles.cardText}>
-              Approximately 1 km from Poznań Główny railway station and Poznań International Fair
-              (MTP).
-            </p>
-            <div className={styles.mapLinksWrapper}>
-              <MapTrigger isEnglish={true} className={styles.mapLink} />
-              <a
-                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mapLink}
-              >
-                Open in Google Maps →
-              </a>
-            </div>
+            <Link href="/en/venue" className={styles.venueLink}>
+              LEARN MORE →
+            </Link>
           </div>
         </div>
       </div>

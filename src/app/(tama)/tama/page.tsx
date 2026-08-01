@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import styles from "../en/tama/page.module.css";
-import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "TAMA — Klub",
@@ -22,7 +22,7 @@ export default function TamaPage() {
       {/* Body */}
       <div className="container">
         <div className={styles.grid}>
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>Miejsce</h2>
             <p className={styles.cardText}>
               Zlokalizowana w zrewitalizowanym, 90-letnim budynku — dawnej sali reprezentacyjnej{" "}
@@ -37,7 +37,7 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>Muzyka</h2>
             <p className={styles.cardText}>
               TAMA jest znana w środowisku nocnego życia z niezachwianego zaangażowania w muzykę
@@ -51,7 +51,7 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
+          <div className={styles.card}>
             <h2 className={styles.cardTitle}>Społeczność</h2>
             <p className={styles.cardText}>
               TAMA powstała przez i dla poznańskiej społeczności twórczej. Wierzymy w budowanie
@@ -60,26 +60,16 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Znajdź nas</h2>
+          <div className={styles.card}>
+            <h2 className={styles.cardTitle}>Zorganizuj Wydarzenie</h2>
             <p className={styles.cardText}>
-              ul. Niezłomnych 2<br />
-              61-894 Poznań, Polska
+              TAMA to nie tylko klub — to w pełni wyposażona industrialna przestrzeń eventowa
+              dla do 1 000 gości. Imprezy firmowe, konferencje, gale, koncerty i nie tylko,
+              w sercu Poznania.
             </p>
-            <p className={styles.cardText}>
-              Około 1 km od dworca Poznań Główny i Międzynarodowych Targów Poznańskich (MTP).
-            </p>
-            <div className={styles.mapLinksWrapper}>
-              <MapTrigger isEnglish={false} className={styles.mapLink} />
-              <a
-                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mapLink}
-              >
-                Otwórz w Google Maps →
-              </a>
-            </div>
+            <Link href="/wynajem" className={styles.venueLink}>
+              DOWIEDZ SIĘ WIĘCEJ →
+            </Link>
           </div>
         </div>
       </div>
