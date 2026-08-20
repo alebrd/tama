@@ -40,7 +40,7 @@ export default function JobsPage() {
 
         <div className={styles.roleList}>
           {roles.map((role, i) => (
-            <div key={i} className={`${styles.roleCard} glass`}>
+            <div key={i} className={styles.roleCard}>
               <div className={styles.roleInfo}>
                 <h2 className={styles.roleTitle}>{role.title}</h2>
                 <span className={styles.roleType}>{role.type}</span>

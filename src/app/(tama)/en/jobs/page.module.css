@@ -32,11 +32,15 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  transition: transform 0.2s ease;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .roleCard:hover {
   transform: translateX(6px);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .roleInfo {
