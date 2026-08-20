@@ -48,7 +48,7 @@ export default function SlowProgramPageEn() {
           </div>
           <div className={styles.flyerWrapper}>
             <Image
-              src="/slow/program-flyer.jpg"
+              src="/slow/robert-owens.jpg"
               alt="SLOW Summer Break Flyer"
               fill
               className={styles.flyerImage}
