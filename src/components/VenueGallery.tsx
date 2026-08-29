@@ -10,6 +10,12 @@ interface VenueGalleryProps {
 }
 
 const images = [
+  "/venue-stage.jpg",
+  "/arturAENnowicki-2942.jpg",
+  "/arturAENnowicki-2992.jpg",
+  "/artur_aen_nowicki-09366.jpg",
+  "/artur_aen_nowicki-09368.jpg",
+  "/venue-entrance.jpg",
   "/screenshot-1.jpg",
   "/screenshot-2.jpg",
   "/screenshot-3.jpg",
@@ -22,13 +28,7 @@ const images = [
   "/screenshot-10.jpg",
   "/screenshot-11.jpg",
   "/screenshot-12.jpg",
-  "/screenshot-13.jpg",
-  "/arturAENnowicki-2942.jpg",
-  "/arturAENnowicki-2992.jpg",
-  "/artur_aen_nowicki-09366.jpg",
-  "/artur_aen_nowicki-09368.jpg",
-  "/venue-stage.jpg",
-  "/venue-entrance.jpg"
+  "/screenshot-13.jpg"
 ];
 
 export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
@@ -73,7 +73,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
   return (
     <>
       <div className={styles.previewGrid}>
-        {images.map((src, index) => (
+        {images.slice(0, 4).map((src, index) => (
           <div 
             key={src}
             className={styles.previewCard} 
