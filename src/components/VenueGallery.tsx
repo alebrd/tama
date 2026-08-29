@@ -73,7 +73,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
   return (
     <>
       <div className={styles.previewGrid}>
-        {images.slice(0, 4).map((src, index) => (
+        {images.map((src, index) => (
           <div 
             key={src}
             className={styles.previewCard} 
