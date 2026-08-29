@@ -14,7 +14,7 @@ export default function TamaPage() {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
-          <p className={styles.sub}>Techno Palace · Poznań, Polska</p>
+          <p className={styles.sub}>Muzyka. Kultura. Doświadczenie.</p>
         </div>
         <div className={styles.glow} />
       </section>

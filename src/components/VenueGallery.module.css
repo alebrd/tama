@@ -19,10 +19,9 @@
 
 .previewGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   width: 100%;
-  max-width: 450px;
   margin-top: 1rem;
 }
 
@@ -43,7 +42,7 @@
 
 .previewImage {
   object-fit: cover;
-  filter: grayscale(100%) brightness(0.4);
+  filter: grayscale(30%) brightness(0.7);
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
@@ -66,7 +65,9 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: scale(0.9);
 }
 
 .previewCard:hover .previewImage {
@@ -78,6 +79,8 @@
   color: #fff;
   border-color: rgba(255, 255, 255, 0.4);
   background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  transform: scale(1);
 }
 
 .modal {
@@ -134,18 +137,23 @@
 
 .galleryContent {
   padding: 1.5rem;
-  overflow-y: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  flex-direction: row;
   gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .imageWrapper {
   position: relative;
-  width: 100%;
+  flex: 0 0 85%;
   min-height: 400px;
   background: #000;
   border: 1px solid var(--glass-border);
+  scroll-snap-align: center;
 }
 
 .image {
@@ -162,11 +170,63 @@
   .galleryContent {
     padding: 1rem;
     gap: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
   }
   .imageWrapper {
     min-height: 250px;
+    flex: 0 0 auto;
+    width: 100%;
   }
   .previewGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+.galleryWrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.scrollBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.scrollBtn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scrollPrev {
+  left: 1rem;
+}
+
+.scrollNext {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .scrollBtn {
+    display: none;
   }
 }

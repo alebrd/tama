@@ -8,26 +8,22 @@ import styles from "./Navbar.module.css";
 
 const plLinks = [
   { href: "/tama", label: "TAMA" },
-  { href: "/program", label: "Program" },
+  { href: "/przestrzenie", label: "Przestrzenie" },
   { href: "/wynajem", label: "Wynajem" },
-  { href: "/merch", label: "Merch" },
-  { href: "/swiadomosc", label: "Świadomość" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 const enLinks = [
   { href: "/en/tama", label: "TAMA" },
-  { href: "/en/program", label: "Program" },
+  { href: "/en/spaces", label: "Spaces" },
   { href: "/en/venue", label: "Venue" },
-  { href: "/en/merch", label: "Merch" },
-  { href: "/en/awareness", label: "Awareness" },
   { href: "/en/contact", label: "Contact" },
 ];
 
 const pathMap: Record<string, string> = {
   "/": "/en",
   "/tama": "/en/tama",
-  "/program": "/en/program",
+  "/przestrzenie": "/en/spaces",
   "/wynajem": "/en/venue",
   "/merch": "/en/merch",
   "/swiadomosc": "/en/awareness",
@@ -35,7 +31,7 @@ const pathMap: Record<string, string> = {
   "/kontakt": "/en/contact",
   "/en": "/",
   "/en/tama": "/tama",
-  "/en/program": "/program",
+  "/en/spaces": "/przestrzenie",
   "/en/venue": "/wynajem",
   "/en/merch": "/merch",
   "/en/awareness": "/swiadomosc",

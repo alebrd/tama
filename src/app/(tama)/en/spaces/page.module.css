@@ -1,0 +1,145 @@
+.page {
+  padding: calc(3rem + 64px) 0 6rem;
+  flex: 1;
+}
+
+.hero {
+  margin-bottom: 4rem;
+  
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.sub {
+  font-size: 1.125rem;
+  color: var(--color-light-grey);
+  max-width: 600px;
+  
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 6rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 3rem;
+  
+}
+
+.spacesList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.spaceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.spaceImage {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.spaceImage img {
+  object-fit: cover;
+}
+
+.spaceContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spaceTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.spaceDesc {
+  color: var(--color-light-grey);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.spaceDesc ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+.spaceDesc li {
+  margin-bottom: 0.5rem;
+}
+
+.setupsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.setupCard {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 2rem;
+  
+}
+
+.setupTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.setupValue {
+  font-size: 1.1rem;
+  color: var(--color-light-grey);
+  line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+  .spaceRow {
+    flex-direction: row;
+    height: 400px;
+  }
+  
+  .spaceRow:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .spaceImage {
+    flex: 1;
+    height: 100%;
+  }
+  
+  .spaceContent {
+    flex: 1;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page { padding-top: calc(2rem + 64px); }
+}

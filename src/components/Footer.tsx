@@ -20,14 +20,16 @@ export default function Footer() {
           <Link href={homeHref}>
             <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
           </Link>
-          <p className={styles.tagline}>TECHNO PALACE · POZNAŃ</p>
+          <p className={styles.tagline}>
+            {isEnglish ? "Music. Culture. Experience." : "Muzyka. Kultura. Doświadczenie."}
+          </p>
         </div>
 
         {isEnglish ? (
           <div className={styles.column}>
             <h4 className={styles.heading}>Navigate</h4>
             <Link href="/en/tama" className={styles.text}>TAMA</Link>
-            <Link href="/en/program" className={styles.text}>Program</Link>
+            <Link href="/en/spaces" className={styles.text}>Spaces</Link>
             <Link href="/en/venue" className={styles.text}>Venue</Link>
             <Link href="/en/merch" className={styles.text}>Merch</Link>
             <Link href="/en/awareness" className={styles.text}>Awareness</Link>
@@ -38,7 +40,7 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/tama" className={styles.text}>TAMA</Link>
-            <Link href="/program" className={styles.text}>Program</Link>
+            <Link href="/przestrzenie" className={styles.text}>Przestrzenie</Link>
             <Link href="/wynajem" className={styles.text}>Wynajem</Link>
             <Link href="/merch" className={styles.text}>Merch</Link>
             <Link href="/swiadomosc" className={styles.text}>Świadomość</Link>

@@ -1,0 +1,46 @@
+--- src/components/VenueGallery.module.css
++++ src/components/VenueGallery.module.css
+@@ -67,13 +67,17 @@
+   background: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(2px);
+-  transition: all 0.3s ease;
++  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
++  opacity: 0;
++  transform: scale(0.9);
+ }
+ 
+ .previewCard:hover .previewImage {
+   filter: grayscale(0%) brightness(0.8);
+   transform: scale(1.05);
+ }
+ 
+ .previewCard:hover .previewOverlay span {
+   color: #fff;
+   border-color: rgba(255, 255, 255, 0.4);
+   background: rgba(0, 0, 0, 0.7);
++  opacity: 1;
++  transform: scale(1);
+ }
+@@ -134,22 +138,24 @@
+ 
+ .galleryContent {
+   padding: 1.5rem;
+-  overflow-y: auto;
++  overflow-x: auto;
++  overflow-y: hidden;
+   display: flex;
+-  flex-direction: column;
++  flex-direction: row;
+   gap: 1.5rem;
++  scroll-snap-type: x mandatory;
+ }
+ 
+ .imageWrapper {
+   position: relative;
+-  width: 100%;
++  flex: 0 0 100%;
+   min-height: 400px;
+   background: #000;
+   border: 1px solid var(--glass-border);
++  scroll-snap-align: center;
+ }
