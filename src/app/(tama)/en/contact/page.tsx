@@ -27,9 +27,9 @@ export default function ContactPage() {
           </div>
 
           <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Bookings</h2>
+            <h2 className={styles.cardTitle}>Artist Bookings</h2>
             <p className={styles.cardText}>
-              Artist bookings and event proposals:
+              Artist bookings:
             </p>
             <a href="mailto:arek@tamaklub.pl" className={styles.email}>
               arek@tamaklub.pl
@@ -57,22 +57,12 @@ export default function ContactPage() {
           </div>
 
           <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Social</h2>
-            <a
-              href="https://www.instagram.com/tamaklub/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.facebook.com/tamaklub"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              Facebook
+            <h2 className={styles.cardTitle}>Venue Rents & Bookings</h2>
+            <p className={styles.cardText}>
+              Enquiries about venue hire, event organisation and B2B offers:
+            </p>
+            <a href="mailto:katya@tamaklub.pl" className={styles.email}>
+              katya@tamaklub.pl
             </a>
           </div>
         </div>

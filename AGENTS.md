@@ -17,3 +17,24 @@ This includes but is not limited to:
 
 When performing technical tasks (e.g. adding i18n, refactoring routing, fixing bugs), you must preserve all existing content and formatting exactly as-is. Only translate, rewrite, or restructure content when the user explicitly asks for it.
 <!-- END:content-rules -->
+
+<!-- BEGIN:design-standards-rules -->
+# Design Standards Rules
+
+**ALWAYS read the relevant design standards document before making ANY visual or CSS change.**
+
+- For changes to TAMA pages, components, or styles → read `TAMA_DESIGN_STANDARDS.md` first.
+- For changes to SLOW pages, components, or styles → read `SLOW_DESIGN_STANDARDS.md` first.
+- For changes that affect both (e.g. shared components like `Navbar`, `Footer`, `VenueGallery`) → read both documents.
+
+These documents define the canonical values for:
+- Colors and CSS variables
+- Border radius (standard: `4px` everywhere, no exceptions)
+- Typography scale and font usage
+- Spacing, padding, and layout grid
+- Component styles (buttons, cards, glass utilities)
+- Transition timings
+- Responsive breakpoints
+
+**NEVER introduce a color, border-radius, font, spacing value, or animation that is not already defined in these documents** unless the user explicitly asks to extend the design system — in which case you must also update the relevant standards document.
+<!-- END:design-standards-rules -->
