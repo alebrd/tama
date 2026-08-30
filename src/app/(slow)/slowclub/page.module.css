@@ -61,13 +61,13 @@
   mix-blend-mode: screen;
   width: clamp(150px, 20vw, 250px);
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .heroNeonLogo {
   width: clamp(280px, 55vw, 600px);
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
   object-fit: contain;
 }
 
@@ -103,7 +103,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 21 / 9;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 26, 26, 0.2);
