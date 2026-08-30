@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "Contact — TAMA",
@@ -16,37 +15,50 @@ export default function ContactPage() {
         </div>
 
         <div className={styles.grid}>
-          <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>General Enquiries</h2>
-            <p className={styles.cardText}>
-              For any general questions, press enquiries, or feedback:
-            </p>
-            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-              joanna@tamaklub.pl
-            </a>
+
+          <div className={`${styles.card} ${styles.cardFull} glass`}>
+            <h2 className={styles.cardTitle}>Get in Touch</h2>
+            <div className={styles.contactsList}>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>General Enquiries</span>
+                <p className={styles.cardText}>For any general questions, press enquiries, or feedback:</p>
+                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+                  joanna@tamaklub.pl
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Artist Bookings</span>
+                <p className={styles.cardText}>Artist bookings:</p>
+                <a href="mailto:arek@tamaklub.pl" className={styles.email}>
+                  arek@tamaklub.pl
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Venue Rents & Bookings</span>
+                <p className={styles.cardText}>Enquiries about venue hire, event organisation and B2B offers:</p>
+                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
+                  katya@tamaklub.pl
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Artist Bookings</h2>
-            <p className={styles.cardText}>
-              Artist bookings:
-            </p>
-            <a href="mailto:arek@tamaklub.pl" className={styles.email}>
-              arek@tamaklub.pl
-            </a>
-          </div>
-
-          <div className={`${styles.card} glass`}>
+          <div className={`${styles.card} ${styles.cardFull} glass`}>
             <h2 className={styles.cardTitle}>Visit Us</h2>
             <p className={styles.cardText}>
-              Wielkopolska Izba Rzemieślnicza<br />
-              ul. Niezłomnych 2<br />
-              61-894 Poznań, Poland
+              Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Poland
             </p>
+            <iframe
+              src="https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className={styles.mapEmbed}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TAMA Poznań Map"
+            />
             <div className={styles.mapLinksWrapper}>
-              <MapTrigger isEnglish={true} className={styles.mapLink} />
               <a
-                href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+                href="https://www.google.com/maps/search/Tama+Klub+Poznan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.mapLink}
@@ -56,15 +68,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className={`${styles.card} glass`}>
-            <h2 className={styles.cardTitle}>Venue Rents & Bookings</h2>
-            <p className={styles.cardText}>
-              Enquiries about venue hire, event organisation and B2B offers:
-            </p>
-            <a href="mailto:katya@tamaklub.pl" className={styles.email}>
-              katya@tamaklub.pl
-            </a>
-          </div>
         </div>
       </div>
     </div>

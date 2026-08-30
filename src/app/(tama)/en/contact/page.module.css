@@ -33,6 +33,10 @@
   transform: translateY(-4px);
 }
 
+.cardFull {
+  grid-column: 1 / -1;
+}
+
 .cardTitle {
   font-size: 1rem;
   letter-spacing: 2px;
@@ -43,6 +47,35 @@
   color: var(--color-light-grey);
   font-size: 0.875rem;
   line-height: 1.7;
+}
+
+.contactsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactItem:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.contactRole {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.5;
 }
 
 .email {
@@ -65,6 +98,7 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .mapLink {
@@ -81,22 +115,31 @@
   border-color: var(--foreground);
 }
 
-.socialLink {
+.mapEmbed {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 4px;
   display: block;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  align-self: flex-start;
-}
-
-.socialLink:hover {
-  border-color: var(--foreground);
+  margin-top: 0.5rem;
+  filter: grayscale(20%) brightness(0.85);
 }
 
 @media (max-width: 768px) {
   .page { padding-top: calc(2rem + 64px); }
   .grid { grid-template-columns: 1fr; }
   .header h1 { font-size: clamp(3rem, 12vw, 5rem); }
+  .mapEmbed { height: 280px; }
+  .cardFull { grid-column: 1; }
+  .contactsList { grid-template-columns: 1fr; }
+  .contactItem {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .contactItem:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
 }
