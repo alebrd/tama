@@ -9,14 +9,14 @@ import styles from "./Navbar.module.css";
 const plLinks = [
   { href: "/tama", label: "TAMA" },
   { href: "/przestrzen", label: "Przestrzeń" },
-  { href: "/wynajem", label: "Wynajem" },
+  { href: "/wynajem", label: "Oferta" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 const enLinks = [
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/spaces", label: "Spaces" },
-  { href: "/en/venue", label: "Venue" },
+  { href: "/en/venue", label: "Offer" },
   { href: "/en/contact", label: "Contact" },
 ];
 
@@ -70,9 +70,16 @@ export default function Navbar() {
     <>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.navContainer}`}>
-          <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-            <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
-          </Link>
+          <div className={styles.logoGroup}>
+            <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
+              <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+            </Link>
+            <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo} onClick={() => setMenuOpen(false)}>
+              <div className={styles.slowLogoWrapper}>
+                <Image src="/slow-logo.jpg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+              </div>
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
           <nav className={styles.navLinks}>

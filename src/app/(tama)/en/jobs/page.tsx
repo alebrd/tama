@@ -3,65 +3,32 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Jobs — TAMA",
-  description: "Open positions at TAMA club in Poznań.",
+  description: "Join the TAMA team.",
 };
-
-const roles = [
-  {
-    title: "Bar Staff",
-    type: "Part-time / Weekends",
-    description:
-      "Join our bar team and be part of the energy. We're looking for passionate people with a positive attitude and experience in a fast-paced bar environment.",
-  },
-  {
-    title: "Door Staff",
-    type: "Part-time / Weekends",
-    description:
-      "Represent TAMA at the door. We need calm, respectful, and professional individuals committed to keeping our venue a safe space for everyone.",
-  },
-  {
-    title: "Booking Assistant",
-    type: "Part-time",
-    description:
-      "Support our booking and artist relations team. Ideal for someone passionate about electronic music and the underground scene with strong organizational skills.",
-  },
-];
 
 export default function JobsPage() {
   return (
     <div className={styles.page}>
       <div className="container">
         <div className={styles.header}>
-          <h1 className="text-gradient">JOBS</h1>
-          <p className={styles.subtitle}>
-            Want to be part of TAMA? We&apos;re always looking for passionate people.
+          <h1 className="text-gradient">JOIN THE TAMA TEAM</h1>
+        </div>
+
+        <div style={{ maxWidth: "700px", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          <p className={styles.roleDesc} style={{ fontSize: "1rem", color: "var(--foreground)" }}>
+            Do you want to join the TAMA team and grow in a dynamic environment? We are looking for dedicated, communicative people open to new challenges.
+          </p>
+          <p className={styles.roleDesc} style={{ fontSize: "1rem" }}>
+            If you are interested in working with us, send your CV along with a short note about the kind of work or position you are looking for to:
+            <br />
+            <a href="mailto:patryk@tamaklub.pl" className={styles.email} style={{ marginTop: "0.5rem", display: "inline-block" }}>
+              patryk@tamaklub.pl
+            </a>
+          </p>
+          <p className={styles.roleDesc} style={{ fontSize: "1rem" }}>
+            Even if we are not currently recruiting for a specific position, we would love to learn about your experience and skills. If an opportunity arises that matches your interests, we will contact you.
           </p>
         </div>
-
-        <div className={styles.roleList}>
-          {roles.map((role, i) => (
-            <div key={i} className={styles.roleCard}>
-              <div className={styles.roleInfo}>
-                <h2 className={styles.roleTitle}>{role.title}</h2>
-                <span className={styles.roleType}>{role.type}</span>
-                <p className={styles.roleDesc}>{role.description}</p>
-              </div>
-              <a
-                href="mailto:joanna@tamaklub.pl"
-                className={`${styles.applyBtn} btn btn-outline`}
-              >
-                APPLY
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <p className={styles.note}>
-          Don&apos;t see a role that fits? Send us a general application at{" "}
-          <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-            joanna@tamaklub.pl
-          </a>
-        </p>
       </div>
     </div>
   );

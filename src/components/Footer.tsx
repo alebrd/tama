@@ -17,9 +17,16 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.column}>
-          <Link href={homeHref}>
-            <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
-          </Link>
+          <div className={styles.logoGroup}>
+            <Link href={homeHref} className={styles.logo}>
+              <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+            </Link>
+            <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo}>
+              <div className={styles.slowLogoWrapper}>
+                <Image src="/slow-logo.jpg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+              </div>
+            </Link>
+          </div>
           <p className={styles.tagline}>
             {isEnglish ? "Music. Culture. Experience." : "Muzyka. Kultura. Doświadczenie."}
           </p>
@@ -27,10 +34,10 @@ export default function Footer() {
 
         {isEnglish ? (
           <div className={styles.column}>
-            <h4 className={styles.heading}>Navigate</h4>
+            <h4 className={styles.heading}>Navigation</h4>
             <Link href="/en/tama" className={styles.text}>TAMA</Link>
             <Link href="/en/spaces" className={styles.text}>Spaces</Link>
-            <Link href="/en/venue" className={styles.text}>Venue</Link>
+            <Link href="/en/venue" className={styles.text}>Offer</Link>
             <Link href="/en/merch" className={styles.text}>Merch</Link>
             <Link href="/en/jobs" className={styles.text}>Jobs</Link>
             <Link href="/en/contact" className={styles.text}>Contact</Link>
@@ -40,7 +47,7 @@ export default function Footer() {
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/tama" className={styles.text}>TAMA</Link>
             <Link href="/przestrzen" className={styles.text}>Przestrzeń</Link>
-            <Link href="/wynajem" className={styles.text}>Wynajem</Link>
+            <Link href="/wynajem" className={styles.text}>Oferta</Link>
             <Link href="/merch" className={styles.text}>Merch</Link>
             <Link href="/praca" className={styles.text}>Praca</Link>
             <Link href="/kontakt" className={styles.text}>Kontakt</Link>
