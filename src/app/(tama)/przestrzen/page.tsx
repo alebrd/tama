@@ -57,8 +57,8 @@ export default function PrzestrzeniePage() {
           <p className={styles.eyebrow}>POZNAJ NASZĄ OFERTĘ WYNAJMU</p>
           <h1 className={`${styles.title} text-gradient`}>Nasze Przestrzenie</h1>
           <p className={styles.sub}>
-            Ponad 1 000 m² zrewitalizowanej przestrzeni industrialnej, 
-            umożliwiającej organizację spotkań dla grup do 900 osób.
+            Ponad 1 300 m² zrewitalizowanej przestrzeni industrialnej, 
+            umożliwiającej organizację spotkań dla grup do 1 300 osób.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function PrzestrzeniePage() {
             <div className={styles.setupCard}>
               <h3 className={styles.setupTitle}>Koncertowo-Eventowe</h3>
               <p className={styles.setupValue}>
-                900 miejsc stojących<br/>
+                1 300 miejsc stojących<br/>
                 lub 20 stolików + 800 stojących
               </p>
             </div>

@@ -42,7 +42,7 @@ font-weight: 700
 ### Type Scale
 | Role | Size | Notes |
 |---|---|---|
-| Hero title | `clamp(2.5rem, 8vw, 5rem)` | line-height `0.9` |
+| Hero title | `clamp(2.5rem, 6vw, 4rem)` | line-height `0.9` or `1.1` |
 | Section title | `clamp(2rem, 5vw, 3rem)` | |
 | Page subtitle (eyebrow) | `0.75rem` | uppercase, letter-spacing `2px`, opacity `0.6` |
 | Page sub-description | `0.9rem` | uppercase, letter-spacing `3px`, opacity `0.7` |
@@ -93,6 +93,7 @@ padding:    0 2rem
 | Scrolled background | `rgba(0, 0, 0, 0.85)` |
 | Border bottom | `1px solid var(--glass-border)` |
 | Nav link gap | `2rem` |
+| Layout | SLOW logo sits directly next to TAMA logo (1.5x zoom, `gap: 1rem`) |
 
 ### Footer
 | Property | Value |
@@ -103,6 +104,7 @@ padding:    0 2rem
 | Tablet (≤ 900px) | `1fr 1fr` |
 | Mobile (≤ 560px) | full-width brand + `1fr 1fr 1fr` |
 | Padding top | `4rem` desktop / `1.5rem` mobile |
+| Links / Actions | Address acts as a direct link to Google Maps (underline + hover glow) |
 
 ### Card Grid
 | Breakpoint | Columns | Gap |
@@ -184,11 +186,11 @@ A global SVG noise texture is rendered via `.noise-overlay` at `opacity: 0.03` (
 
 ## 8. Navigation Structure
 
-**Header (PL):** TAMA · Przestrzenie · Wynajem · Kontakt
+**Header (PL):** TAMA · Przestrzeń · Oferta · Kontakt
 
-**Header (EN):** TAMA · Spaces · Venue · Contact
+**Header (EN):** TAMA · Spaces · Offer · Contact
 
-**Footer only (both langs):** Merch · Świadomość / Awareness · Praca / Jobs
+**Footer only (both langs):** Merch · Praca / Jobs
 
 **Routes hidden but alive:** /program · /en/program
 

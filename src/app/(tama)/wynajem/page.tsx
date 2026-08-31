@@ -5,13 +5,13 @@ import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
   title: "Wynajem — TAMA",
-  description: "Zorganizuj swoje wydarzenie w TAMIE — industrialna przestrzeń eventowa w sercu Poznania dla do 1 000 gości.",
+  description: "Zorganizuj swoje wydarzenie w TAMIE — industrialna przestrzeń eventowa w sercu Poznania dla do 1 300 gości.",
 };
 
 const stats = [
   { value: "5", label: "Sale konferencyjne" },
-  { value: "1 000", label: "Maks. gości" },
-  { value: "1 000 m²", label: "Łączna powierzchnia" },
+  { value: "1 300", label: "Maks. gości" },
+  { value: "1 300 m²", label: "Łączna powierzchnia" },
   { value: "Centrum", label: "Lokalizacja w Poznaniu" },
 ];
 
@@ -72,7 +72,7 @@ export default function WynajemPage() {
               szeroki zakres wydarzeń — od kameralnych warsztatów po wielkie gale.
             </p>
             <p className={styles.desc}>
-              Obiekt dysponuje 5 salami o różnych rozmiarach, mieszczącymi od 20 do 1 000
+              Obiekt dysponuje 5 salami o różnych rozmiarach, mieszczącymi od 20 do 1 300
               uczestników. Każda przestrzeń wyposażona jest w profesjonalne nagłośnienie i oświetlenie
               sceniczne oraz może być zaaranżowana według indywidualnych potrzeb organizatora —
               w układzie teatralnym, bankietowym lub open floor.

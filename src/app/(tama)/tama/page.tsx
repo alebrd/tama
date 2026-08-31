@@ -30,7 +30,7 @@ export default function TamaPage() {
               TAMA to wyjątkowa przestrzeń eventowa w sercu Poznania, mieszcząca się w zrewitalizowanym, 90-letnim budynku dawnej Wielkopolskiej Izby Rzemieślniczej. Historyczna architektura i industrialny charakter tworzą niepowtarzalne tło dla wydarzeń biznesowych i kulturalnych.
             </p>
             <p className={styles.cardText}>
-              Ponad 1 000 m² elastycznej przestrzeni, profesjonalne zaplecze techniczne, nagłośnienie i oświetlenie pozwalają na organizację zarówno kameralnych spotkań, jak i dużych wydarzeń dla kilkuset osób.
+              Ponad 1 300 m² elastycznej przestrzeni, profesjonalne zaplecze techniczne, nagłośnienie i oświetlenie pozwalają na organizację zarówno kameralnych spotkań, jak i dużych wydarzeń dla kilkuset osób.
             </p>
             <p className={styles.cardText}>
               Konferencje, bankiety, gale, premiery, wydarzenia firmowe czy niestandardowe realizacje — TAMA daje przestrzeń i możliwości dopasowane do potrzeb każdego wydarzenia.
@@ -63,7 +63,7 @@ export default function TamaPage() {
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Zorganizuj Wydarzenie</h2>
             <p className={styles.cardText}>
-              Ponad 1 000 m² industrialnej przestrzeni, profesjonalne zaplecze techniczne i doświadczenie w realizacji wydarzeń dla nawet 1 200 gości.
+              Ponad 1 300 m² industrialnej przestrzeni, profesjonalne zaplecze techniczne i doświadczenie w realizacji wydarzeń dla nawet 1 300 gości.
             </p>
             <p className={styles.cardText}>
               Konferencje, gale, bankiety, koncerty, premiery produktów i niestandardowe projekty — TAMA daje przestrzeń i możliwości, by stworzyć wydarzenie dopasowane do Twoich potrzeb.

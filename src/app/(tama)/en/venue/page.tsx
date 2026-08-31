@@ -5,13 +5,13 @@ import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
   title: "Venue — TAMA",
-  description: "Host your corporate event, conference, gala, or private party at TAMA — an industrial event space in the heart of Poznań for up to 1,000 guests.",
+  description: "Host your corporate event, conference, gala, or private party at TAMA — an industrial event space in the heart of Poznań for up to 1,300 guests.",
 };
 
 const stats = [
   { value: "5", label: "Conference Halls" },
-  { value: "1,000", label: "Max Guests" },
-  { value: "1,000 m²", label: "Total Space" },
+  { value: "1,300", label: "Max Guests" },
+  { value: "1,300 m²", label: "Total Space" },
   { value: "Central", label: "Poznań Location" },
 ];
 
@@ -72,7 +72,7 @@ export default function VenuePage() {
               from intimate workshops to large-scale galas.
             </p>
             <p className={styles.desc}>
-              The venue offers 5 rooms of various sizes, accommodating between 20 and 1,000
+              The venue offers 5 rooms of various sizes, accommodating between 20 and 1,300
               participants. Every space is equipped with professional sound systems, stage lighting,
               and can be configured to the organiser&apos;s specific needs — theatre, banquet, or
               open-floor layouts.

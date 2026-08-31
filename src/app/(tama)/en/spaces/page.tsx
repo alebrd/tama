@@ -57,8 +57,8 @@ export default function SpacesPage() {
           <p className={styles.eyebrow}>DISCOVER OUR RENTAL OFFER</p>
           <h1 className={`${styles.title} text-gradient`}>Our Spaces</h1>
           <p className={styles.sub}>
-            Over 1,000 m² of revitalized industrial space, 
-            enabling the organization of meetings for groups up to 900 people.
+            Over 1,300 m² of revitalized industrial space, 
+            enabling the organization of meetings for groups up to 1,300 people.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function SpacesPage() {
             <div className={styles.setupCard}>
               <h3 className={styles.setupTitle}>Concert / Event</h3>
               <p className={styles.setupValue}>
-                900 standing places<br/>
+                1,300 standing places<br/>
                 or 20 tables + 800 standing
               </p>
             </div>
