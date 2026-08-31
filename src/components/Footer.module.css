@@ -27,16 +27,19 @@
   font-family: inherit;
   line-height: 1.6;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
   margin-top: 0.5rem;
   text-align: left;
+  text-decoration: none;
 }
 
 .mapTrigger:hover {
   color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .heading {
@@ -46,17 +49,21 @@
   margin-bottom: 0.5rem;
   color: var(--foreground);
   opacity: 0.5;
+  text-transform: uppercase;
 }
 
 .text {
   color: var(--color-light-grey);
   font-size: 0.875rem;
   line-height: 1.5;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 a.text:hover {
   color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .bottom {

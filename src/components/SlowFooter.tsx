@@ -43,9 +43,16 @@ export default function SlowFooter() {
 
         <div className={styles.column}>
           <h4 className={styles.heading}>{isEnglish ? "Visit Us" : "Odwiedź nas"}</h4>
-          <p className={styles.text}>Wielkopolska Izba Rzemieślnicza</p>
-          <p className={styles.text}>ul. Niezłomnych 2</p>
-          <p className={styles.text}>61-894 Poznań, {isEnglish ? "Poland" : "Polska"}</p>
+          <a
+            href="https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.text}
+            style={{ display: "block" }}
+          >
+            ul. Niezłomnych 2<br />
+            61-894 Poznań, {isEnglish ? "Poland" : "Polska"}
+          </a>
           <button onClick={() => setIsMapOpen(true)} className={styles.mapTrigger}>
             {isEnglish ? "View location" : "Zobacz lokalizację"}
           </button>

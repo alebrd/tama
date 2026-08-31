@@ -13,7 +13,9 @@ export default function TamaPage() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
+          <h1 className={`${styles.title} text-gradient`}>
+            TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
+          </h1>
           <p className={styles.sub}>Muzyka. Kultura. Doświadczenie.</p>
         </div>
         <div className={styles.glow} />
@@ -25,50 +27,49 @@ export default function TamaPage() {
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Miejsce</h2>
             <p className={styles.cardText}>
-              Zlokalizowana w zrewitalizowanym, 90-letnim budynku — dawnej sali reprezentacyjnej{" "}
-              <em>Wielkopolskiej Izby Rzemieślniczej</em> — TAMA to coś więcej niż klub. To żywy
-              pomnik industrialnej przeszłości Poznania, przekształcony w przestrzeń dla dźwięku,
-              ruchu i społeczności.
+              TAMA to wyjątkowa przestrzeń eventowa w sercu Poznania, mieszcząca się w zrewitalizowanym, 90-letnim budynku dawnej Wielkopolskiej Izby Rzemieślniczej. Historyczna architektura i industrialny charakter tworzą niepowtarzalne tło dla wydarzeń biznesowych i kulturalnych.
             </p>
             <p className={styles.cardText}>
-              Zajmując ponad 1 000 m² surowej industrialnej przestrzeni, klub wyposażony jest
-              w profesjonalne systemy nagłośnienia i nowoczesne oświetlenie sceniczne, stworzone
-              z myślą o immersyjnych wieczorach klubowych i koncertach.
+              Ponad 1 000 m² elastycznej przestrzeni, profesjonalne zaplecze techniczne, nagłośnienie i oświetlenie pozwalają na organizację zarówno kameralnych spotkań, jak i dużych wydarzeń dla kilkuset osób.
+            </p>
+            <p className={styles.cardText}>
+              Konferencje, bankiety, gale, premiery, wydarzenia firmowe czy niestandardowe realizacje — TAMA daje przestrzeń i możliwości dopasowane do potrzeb każdego wydarzenia.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Muzyka</h2>
             <p className={styles.cardText}>
-              TAMA jest znana w środowisku nocnego życia z niezachwianego zaangażowania w muzykę
-              elektroniczną — techno, house i wszystko pomiędzy. Regularnie plasując się w czołówce
-              najlepszych klubów w Polsce, gostimy zarówno artystów o międzynarodowej renomie,
-              jak i najlepszych lokalnych twórców.
+              TAMA to przestrzeń z wieloletnim doświadczeniem w realizacji koncertów i wydarzeń muzycznych o różnej skali.
             </p>
             <p className={styles.cardText}>
-              Od serii <em>OBSESSION</em> po letnie edycje open-air — każde wydarzenie jest
-              tworzone z myślą o przekraczaniu granic tego, czym może być noc w klubie.
+              Profesjonalne nagłośnienie, scena, oświetlenie i kompleksowe zaplecze techniczne pozwalają nam dopasować rozwiązania do charakteru i potrzeb każdego wydarzenia.
+            </p>
+            <p className={styles.cardText}>
+              Od kameralnych występów po duże produkcje — TAMA łączy przestrzeń, technologię i doświadczenie.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Społeczność</h2>
             <p className={styles.cardText}>
-              TAMA powstała przez i dla poznańskiej społeczności twórczej. Wierzymy w budowanie
-              przestrzeni, gdzie artyści, tancerze i miłośnicy muzyki mogą gromadzić się bez
-              osądzania — miejsca, które należy do wszystkich w równym stopniu.
+              TAMA od początku jest miejscem tworzonym wokół ludzi, muzyki i wspólnych doświadczeń. Przez lata stała się ważnym punktem na kulturalnej i muzycznej mapie Poznania, współpracując z artystami, organizatorami, markami i lokalnymi twórcami.
+            </p>
+            <p className={styles.cardText}>
+              TAMA to nie tylko przestrzeń — to doświadczenie, ludzie i społeczność, która ją tworzy.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Zorganizuj Wydarzenie</h2>
             <p className={styles.cardText}>
-              TAMA to nie tylko klub — to w pełni wyposażona industrialna przestrzeń eventowa
-              dla do 1 000 gości. Imprezy firmowe, konferencje, gale, koncerty i nie tylko,
-              w sercu Poznania.
+              Ponad 1 000 m² industrialnej przestrzeni, profesjonalne zaplecze techniczne i doświadczenie w realizacji wydarzeń dla nawet 1 200 gości.
+            </p>
+            <p className={styles.cardText}>
+              Konferencje, gale, bankiety, koncerty, premiery produktów i niestandardowe projekty — TAMA daje przestrzeń i możliwości, by stworzyć wydarzenie dopasowane do Twoich potrzeb.
             </p>
             <Link href="/wynajem" className={styles.venueLink}>
-              DOWIEDZ SIĘ WIĘCEJ →
+              POZNAJ MOŻLIWOŚCI →
             </Link>
           </div>
         </div>

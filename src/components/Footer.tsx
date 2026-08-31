@@ -32,7 +32,6 @@ export default function Footer() {
             <Link href="/en/spaces" className={styles.text}>Spaces</Link>
             <Link href="/en/venue" className={styles.text}>Venue</Link>
             <Link href="/en/merch" className={styles.text}>Merch</Link>
-            <Link href="/en/awareness" className={styles.text}>Awareness</Link>
             <Link href="/en/jobs" className={styles.text}>Jobs</Link>
             <Link href="/en/contact" className={styles.text}>Contact</Link>
           </div>
@@ -40,10 +39,9 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/tama" className={styles.text}>TAMA</Link>
-            <Link href="/przestrzenie" className={styles.text}>Przestrzenie</Link>
+            <Link href="/przestrzen" className={styles.text}>Przestrzeń</Link>
             <Link href="/wynajem" className={styles.text}>Wynajem</Link>
             <Link href="/merch" className={styles.text}>Merch</Link>
-            <Link href="/swiadomosc" className={styles.text}>Świadomość</Link>
             <Link href="/praca" className={styles.text}>Praca</Link>
             <Link href="/kontakt" className={styles.text}>Kontakt</Link>
           </div>
@@ -51,9 +49,16 @@ export default function Footer() {
 
         <div className={styles.column}>
           <h4 className={styles.heading}>{isEnglish ? "Visit Us" : "Odwiedź nas"}</h4>
-          <p className={styles.text}>Wielkopolska Izba Rzemieślnicza</p>
-          <p className={styles.text}>ul. Niezłomnych 2</p>
-          <p className={styles.text}>61-894 Poznań, {isEnglish ? "Poland" : "Polska"}</p>
+          <a
+            href="https://maps.app.goo.gl/J83HT3NkUMGAEGSR9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.text}
+            style={{ display: "block" }}
+          >
+            ul. Niezłomnych 2<br />
+            61-894 Poznań, {isEnglish ? "Poland" : "Polska"}
+          </a>
           <button onClick={() => setIsMapOpen(true)} className={styles.mapTrigger}>
             {isEnglish ? "View location" : "Zobacz lokalizację"}
           </button>

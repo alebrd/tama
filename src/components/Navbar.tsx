@@ -8,7 +8,7 @@ import styles from "./Navbar.module.css";
 
 const plLinks = [
   { href: "/tama", label: "TAMA" },
-  { href: "/przestrzenie", label: "Przestrzenie" },
+  { href: "/przestrzen", label: "Przestrzeń" },
   { href: "/wynajem", label: "Wynajem" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -23,20 +23,20 @@ const enLinks = [
 const pathMap: Record<string, string> = {
   "/": "/en",
   "/tama": "/en/tama",
-  "/przestrzenie": "/en/spaces",
+  "/przestrzen": "/en/spaces",
   "/wynajem": "/en/venue",
   "/merch": "/en/merch",
-  "/swiadomosc": "/en/awareness",
   "/praca": "/en/jobs",
   "/kontakt": "/en/contact",
+  "/program": "/en/program",
   "/en": "/",
   "/en/tama": "/tama",
-  "/en/spaces": "/przestrzenie",
+  "/en/spaces": "/przestrzen",
   "/en/venue": "/wynajem",
   "/en/merch": "/merch",
-  "/en/awareness": "/swiadomosc",
   "/en/jobs": "/praca",
   "/en/contact": "/kontakt",
+  "/en/program": "/program",
 };
 
 export default function Navbar() {
@@ -76,7 +76,16 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className={styles.navLinks}>
-            {links.map(({ href, label }) => (
+            <Link
+              href={links[0].href}
+              className={`${styles.link} ${isActive(links[0].href) ? styles.active : ""}`}
+            >
+              {links[0].label}
+            </Link>
+            <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.slowLink}>
+              SLOW
+            </Link>
+            {links.slice(1).map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -85,9 +94,6 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.slowLink}>
-              SLOW
-            </Link>
           </nav>
 
           {/* Right side: Lang switcher + Hamburger */}
@@ -121,7 +127,17 @@ export default function Navbar() {
         aria-hidden={!menuOpen}
       >
         <nav className={styles.mobileNav}>
-          {links.map(({ href, label }) => (
+          <Link
+            href={links[0].href}
+            className={`${styles.mobileLink} ${isActive(links[0].href) ? styles.active : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            {links[0].label}
+          </Link>
+          <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.mobileSlowLink} onClick={() => setMenuOpen(false)}>
+            SLOW
+          </Link>
+          {links.slice(1).map(({ href, label }) => (
             <Link
               key={href}
               href={href}
@@ -131,9 +147,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.mobileSlowLink} onClick={() => setMenuOpen(false)}>
-            SLOW
-          </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>
               PL

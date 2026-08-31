@@ -5,7 +5,7 @@ import styles from "../en/spaces/page.module.css";
 
 export const metadata: Metadata = {
   title: "Nasze Przestrzenie — TAMA",
-  description: "Odkryj unikalne wnętrza klubu TAMA. Przestrzeń eventowa w zrewitalizowanym budynku Wielkopolskiej Izby Rzemieślniczej w Poznaniu.",
+  description: "Zbadaj unikalne przestrzenie w TAMIE. Przestrzeń eventowa w zrewitalizowanym budynku Wielkopolskiej Izby Rzemieślniczej w Poznaniu.",
 };
 
 const spaces = [

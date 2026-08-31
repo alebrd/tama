@@ -13,7 +13,9 @@ export default function TamaPage() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
+          <h1 className={`${styles.title} text-gradient`}>
+            TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
+          </h1>
           <p className={styles.sub}>Music. Culture. Experience.</p>
         </div>
         <div className={styles.glow} />
@@ -25,50 +27,49 @@ export default function TamaPage() {
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Venue</h2>
             <p className={styles.cardText}>
-              Located inside a revitalized 90-year-old building — the former representative hall of
-              the <em>Wielkopolska Chamber of Crafts</em> — TAMA is more than a club. It is a living
-              monument to Poznań&apos;s industrial past, reimagined as a space for sound, movement, and
-              community.
+              TAMA is a unique event space in the heart of Poznań, located in a revitalized, 90-year-old building of the former Wielkopolska Chamber of Crafts. Historical architecture and an industrial character create an unmistakable backdrop for business and cultural events.
             </p>
             <p className={styles.cardText}>
-              Spanning over 1,000 m² of raw industrial space, the venue is equipped with
-              professional sound systems and state-of-the-art lighting rigs, purpose-built for
-              immersive club nights and live concerts alike.
+              Over 1,000 m² of flexible space, professional technical facilities, sound, and lighting allow for organizing both intimate gatherings and large events for hundreds of people.
+            </p>
+            <p className={styles.cardText}>
+              Conferences, banquets, galas, premieres, corporate events, or custom productions — TAMA provides the space and possibilities tailored to the needs of every event.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Music</h2>
             <p className={styles.cardText}>
-              TAMA is best known in the nightlife scene for its commitment to underground electronic
-              music — techno, house, and everything in between. Consistently ranked among the top
-              clubs in Poland, we host both internationally acclaimed artists and the best emerging
-              local talent.
+              TAMA is a space with years of experience in producing concerts and music events of various scales.
             </p>
             <p className={styles.cardText}>
-              From the <em>OBSESSION</em> series to open-air summer editions, each event is crafted
-              to push the boundaries of what a club night can feel like.
+              Professional sound systems, stage, lighting, and comprehensive technical facilities allow us to tailor solutions to the character and needs of each event.
+            </p>
+            <p className={styles.cardText}>
+              From intimate performances to large-scale productions — TAMA combines space, technology, and experience.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>The Community</h2>
             <p className={styles.cardText}>
-              TAMA was built by and for Poznań&apos;s creative community. We believe in fostering a space
-              where artists, dancers, and music lovers can gather without judgment — a place that
-              belongs to everyone equally.
+              From the very beginning, TAMA has been a place built around people, music, and shared experiences. Over the years, it has become an important point on the cultural and musical map of Poznań, collaborating with artists, organizers, brands, and local creators.
+            </p>
+            <p className={styles.cardText}>
+              TAMA is not just a space — it is the experience, the people, and the community that creates it.
             </p>
           </div>
 
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Host Your Event</h2>
             <p className={styles.cardText}>
-              TAMA is more than a club — it is a fully equipped industrial event space for up
-              to 1,000 guests. Corporate events, conferences, galas, concerts and more,
-              in the heart of Poznań.
+              Over 1,000 m² of industrial space, professional technical facilities, and experience in producing events for up to 1,200 guests.
+            </p>
+            <p className={styles.cardText}>
+              Conferences, galas, banquets, concerts, product premieres, and custom projects — TAMA provides the space and possibilities to create an event tailored to your needs.
             </p>
             <Link href="/en/venue" className={styles.venueLink}>
-              LEARN MORE →
+              EXPLORE POSSIBILITIES →
             </Link>
           </div>
         </div>
