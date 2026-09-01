@@ -73,8 +73,10 @@
 }
 
 .logo:hover .slowLogoImg {
-  transform: scale(1.554); /* 1.48 * 1.05 */
+  transform: scale(1.554);
 }
+
+
 
 /* Desktop Nav */
 .navLinks {

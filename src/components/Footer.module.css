@@ -89,6 +89,7 @@ a.text:hover {
   object-fit: cover;
   border-radius: var(--radius-sm, 4px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
 .logo:hover .logoImg {
@@ -105,6 +106,7 @@ a.text:hover {
   justify-content: center;
   align-items: center;
   transition: box-shadow 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
 .slowLogoImg {

@@ -13,9 +13,7 @@ export default function TamaPage() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={`${styles.title} text-gradient`}>
-            TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
-          </h1>
+          <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
           <p className={styles.sub}>Music. Culture. Experience.</p>
         </div>
         <div className={styles.glow} />
