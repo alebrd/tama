@@ -66,20 +66,16 @@ export default function VenuePage() {
           <div className={`${styles.descBlock} glass`}>
             <h2 className={styles.sectionTitle}>The Space</h2>
             <p className={styles.desc}>
-              TAMA is housed inside a revitalized 90-year-old building — the former representative
-              hall of the <em>Wielkopolska Chamber of Crafts</em>. The industrial interior, flexible
-              layout, and professional technical facilities make it ideal for a wide range of events,
-              from intimate workshops to large-scale galas.
+              Create an event tailored to your vision.
             </p>
             <p className={styles.desc}>
-              The venue offers 5 rooms of various sizes, accommodating between 20 and 1,000
-              participants. Every space is equipped with professional sound systems, stage lighting,
-              and can be configured to the organiser&apos;s specific needs — theatre, banquet, or
-              open-floor layouts.
+              TAMA Club is a modern and atmospheric venue in the very heart of Poznań, ideal for organizing a variety of events — from corporate events, conferences, training sessions, trade fairs, banquets, and galas, to concerts, fashion shows, and industry meetings.
             </p>
             <p className={styles.desc}>
-              Located at ul. Niezłomnych 2 — just 1 km from Poznań Główny station and the
-              International Fair (MTP), with hotels and parking in the immediate vicinity.
+              Our team will help you plan every stage of execution, matching the space, room layout, technical facilities, and catering offer to the character of your event.
+            </p>
+            <p className={styles.desc}>
+              Tell us about your idea, and we will prepare an offer tailored to your needs.
             </p>
             <div className={styles.cta}>
               <a

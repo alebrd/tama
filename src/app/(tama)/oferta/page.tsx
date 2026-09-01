@@ -66,20 +66,16 @@ export default function WynajemPage() {
           <div className={`${styles.descBlock} glass`}>
             <h2 className={styles.sectionTitle}>Przestrzeń</h2>
             <p className={styles.desc}>
-              TAMA mieści się w zrewitalizowanym, 90-letnim budynku — dawnej sali reprezentacyjnej{" "}
-              <em>Wielkopolskiej Izby Rzemieślniczej</em>. Industrialne wnętrze, elastyczny układ
-              i profesjonalna infrastruktura techniczna sprawiają, że jest to idealne miejsce na
-              szeroki zakres wydarzeń — od kameralnych warsztatów po wielkie gale.
+              Stwórz wydarzenie dopasowane do swojej wizji.
             </p>
             <p className={styles.desc}>
-              Obiekt dysponuje 5 salami o różnych rozmiarach, mieszczącymi od 20 do 1 000
-              uczestników. Każda przestrzeń wyposażona jest w profesjonalne nagłośnienie i oświetlenie
-              sceniczne oraz może być zaaranżowana według indywidualnych potrzeb organizatora —
-              w układzie teatralnym, bankietowym lub open floor.
+              Klub TAMA to nowoczesne i klimatyczne miejsce w samym sercu Poznania, idealne do organizacji różnorodnych wydarzeń – od imprez firmowych, konferencji, szkoleń, targów, bankietów i gal po koncerty, pokazy mody czy spotkania branżowe.
             </p>
             <p className={styles.desc}>
-              Zlokalizowana przy ul. Niezłomnych 2 — zaledwie 1 km od dworca Poznań Główny
-              i Międzynarodowych Targów Poznańskich (MTP), w sąsiedztwie hoteli i parkingów.
+              Nasz zespół pomoże Ci zaplanować każdy etap realizacji, dobierając przestrzeń, układ sali, zaplecze techniczne oraz ofertę gastronomiczną do charakteru wydarzenia.
+            </p>
+            <p className={styles.desc}>
+              Opowiedz nam o swoim pomyśle, a przygotujemy ofertę dopasowaną do Twoich potrzeb.
             </p>
             <div className={styles.cta}>
               <a
