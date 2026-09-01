@@ -87,20 +87,29 @@ export default function PrzestrzeniePage() {
           <h2 className={styles.sectionTitle}>Możliwe Ustawienia</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Bankietowe</h3>
+              <h3 className={styles.setupTitle}>
+                Bankietowe
+                <Image src="/icons/Artboard3.svg" alt="Bankietowe" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 25 stołów (10-osobowych)<br/>
                 Łącznie 250 miejsc siedzących
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Teatralne / Konferencyjne</h3>
+              <h3 className={styles.setupTitle}>
+                Teatralne / Konferencyjne
+                <Image src="/icons/Artboard2.svg" alt="Teatralne" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 400 miejsc siedzących
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Koncertowo-Eventowe</h3>
+              <h3 className={styles.setupTitle}>
+                Koncertowo-Eventowe
+                <Image src="/icons/Artboard1.svg" alt="Koncertowo" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 1 000 miejsc stojących<br/>
                 lub 20 stolików + 800 stojących

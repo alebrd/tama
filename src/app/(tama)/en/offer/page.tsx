@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 import VenueGallery from "@/components/VenueGallery";
 
@@ -61,6 +62,52 @@ export default function VenuePage() {
           </div>
         </div>
 
+        {/* Location */}
+        <div className={styles.section}>
+          <div className={`${styles.descBlock} glass`}>
+            <h2 className={styles.sectionTitle}>Location</h2>
+            <p className={styles.desc}>
+              TAMA is located in the very heart of Poznań, just a few minutes from the Main Railway Station (PKP) and the Poznań International Fair (MTP). The convenient location ensures easy access for both event participants and organizers. In the immediate vicinity, there are numerous hotels of various standards and parking lots, making TAMA an ideal venue for local and national events.
+            </p>
+
+            <div className={styles.locationBox}>
+              <div className={styles.locationAddress}>ul. Niezłomnych 2, 61-894 Poznań</div>
+              <div className={styles.transitGrid}>
+                <div className={styles.transitItem}>
+                  <Image src="/icons/Artboard4.svg" alt="Train" width={56} height={56} className={styles.transitIcon} />
+                  <div>
+                    <div className={styles.transitLabel}>Main Railway Station</div>
+                    <div className={styles.transitValue}>0.8 km</div>
+                  </div>
+                </div>
+                <div className={styles.transitItem}>
+                  <Image src="/icons/Artboard5.svg" alt="Airport" width={56} height={56} className={styles.transitIcon} />
+                  <div>
+                    <div className={styles.transitLabel}>Poznań-Ławica Airport</div>
+                    <div className={styles.transitValue}>6.4 km</div>
+                  </div>
+                </div>
+                <div className={styles.transitItem}>
+                  <Image src="/icons/Artboard6.svg" alt="Public Transport" width={56} height={56} className={styles.transitIcon} />
+                  <div>
+                    <div className={styles.transitLabel}>Public Transport Access</div>
+                    <div className={styles.transitValue}>Bus, Tram</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <iframe
+              src="https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className={styles.mapEmbed}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TAMA Poznań Map"
+            />
+          </div>
+        </div>
+
         {/* Description */}
         <div className={styles.section}>
           <div className={`${styles.descBlock} glass`}>
@@ -96,25 +143,34 @@ export default function VenuePage() {
           </div>
         </div>
 
-        {/* Setups */}
+                {/* Setups */}
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>Possible Setups</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Banquet</h3>
+              <h3 className={styles.setupTitle}>
+                Banquet
+                <Image src="/icons/Artboard3.svg" alt="Banquet" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 25 tables (10-person)<br/>
                 250 seated places total
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Theatrical / Conference</h3>
+              <h3 className={styles.setupTitle}>
+                Theatrical / Conference
+                <Image src="/icons/Artboard2.svg" alt="Theatrical" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 400 seated places
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Concert & Event</h3>
+              <h3 className={styles.setupTitle}>
+                Concert & Event
+                <Image src="/icons/Artboard1.svg" alt="Concert" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 1,000 standing places<br/>
                 or 20 tables + 800 standing

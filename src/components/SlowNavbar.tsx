@@ -7,23 +7,23 @@ import { useState, useEffect } from "react";
 import styles from "./SlowNavbar.module.css";
 
 const plLinks = [
-  { href: "/slowclub", label: "SLOW" },
-  { href: "/slowclub/program", label: "Program" },
-  { href: "/slowclub/kontakt", label: "Kontakt" },
+  { href: "/", label: "Home", special: true },
+  { href: "/slowclub", label: "SLOW", special: false },
+  { href: "/tama", label: "TAMA", special: true },
+  { href: "/slowclub/kontakt", label: "Kontakt", special: false },
 ];
 
 const enLinks = [
-  { href: "/en/slowclub", label: "SLOW" },
-  { href: "/en/slowclub/program", label: "Program" },
-  { href: "/en/slowclub/contact", label: "Contact" },
+  { href: "/en", label: "Home", special: true },
+  { href: "/en/slowclub", label: "SLOW", special: false },
+  { href: "/en/tama", label: "TAMA", special: true },
+  { href: "/en/slowclub/contact", label: "Contact", special: false },
 ];
 
 const pathMap: Record<string, string> = {
   "/slowclub": "/en/slowclub",
-  "/slowclub/program": "/en/slowclub/program",
   "/slowclub/kontakt": "/en/slowclub/contact",
   "/en/slowclub": "/slowclub",
-  "/en/slowclub/program": "/slowclub/program",
   "/en/slowclub/contact": "/slowclub/kontakt",
 };
 
@@ -51,23 +51,20 @@ export default function SlowNavbar() {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-            <Image src="/slow/logo.png" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
+            <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
           </Link>
 
           {/* Desktop Nav */}
           <nav className={styles.navLinks}>
-            {links.map(({ href, label }) => (
+            {links.map(({ href, label, special }) => (
               <Link
                 key={href}
                 href={href}
-                className={`${styles.link} ${pathname === href ? styles.active : ""}`}
+                className={`${special ? styles.tamaLink : styles.link} ${pathname === href ? styles.active : ""}`}
               >
                 {label}
               </Link>
             ))}
-            <Link href={isEnglish ? "/en" : "/"} className={styles.tamaLink}>
-              Home
-            </Link>
           </nav>
 
           {/* Right side: Lang switcher + Hamburger */}
@@ -101,19 +98,16 @@ export default function SlowNavbar() {
         aria-hidden={!menuOpen}
       >
         <nav className={styles.mobileNav}>
-          {links.map(({ href, label }) => (
+          {links.map(({ href, label, special }) => (
             <Link
               key={href}
               href={href}
-              className={`${styles.mobileLink} ${pathname === href ? styles.active : ""}`}
+              className={`${special ? styles.mobileTamaLink : styles.mobileLink} ${pathname === href ? styles.active : ""}`}
               onClick={() => setMenuOpen(false)}
             >
               {label}
             </Link>
           ))}
-          <Link href={isEnglish ? "/en" : "/"} className={styles.mobileTamaLink} onClick={() => setMenuOpen(false)}>
-            Home
-          </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>
               PL

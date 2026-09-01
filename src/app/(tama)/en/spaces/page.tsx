@@ -87,20 +87,29 @@ export default function SpacesPage() {
           <h2 className={styles.sectionTitle}>Possible Setups</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Banquet</h3>
+              <h3 className={styles.setupTitle}>
+                Banquet
+                <Image src="/icons/Artboard3.svg" alt="Banquet" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 25 tables (10-person)<br/>
                 Total of 250 seated places
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Theater / Conference</h3>
+              <h3 className={styles.setupTitle}>
+                Theater / Conference
+                <Image src="/icons/Artboard2.svg" alt="Theater" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 400 seated places
               </p>
             </div>
             <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>Concert / Event</h3>
+              <h3 className={styles.setupTitle}>
+                Concert / Event
+                <Image src="/icons/Artboard1.svg" alt="Concert" width={32} height={32} className={styles.setupIcon} />
+              </h3>
               <p className={styles.setupValue}>
                 1,000 standing places<br/>
                 or 20 tables + 800 standing

@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 800px;
+  width: 100%;
 }
 
 .desc {
@@ -159,10 +159,110 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .setupValue {
   font-size: 1.1rem;
   color: var(--color-light-grey);
   line-height: 1.6;
+}
+
+.setupIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.locationBox {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.locationAddress {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.transitGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.transitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transitIcon {
+  width: 56px;
+  height: 56px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.transitLabel {
+  font-size: 0.75rem;
+  color: var(--color-light-grey);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.transitValue {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.mapEmbed {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  filter: grayscale(20%) brightness(0.85);
+}
+
+
+
+@media (max-width: 768px) {
+  .descBlock {
+    padding: 1.5rem;
+  }
+  .locationBox { 
+    padding: 1.5rem; 
+    margin-top: 2rem;
+  }
+  .transitGrid {
+    gap: 1.5rem;
+  }
+  .mapEmbed { 
+    height: 280px; 
+  }
+  .setupCard {
+    padding: 1.5rem;
+  }
+  .setupTitle {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+  .setupIcon {
+    width: 28px;
+    height: 28px;
+  }
+  .setupsGrid {
+    gap: 1rem;
+  }
 }

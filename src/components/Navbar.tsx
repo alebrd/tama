@@ -73,17 +73,17 @@ export default function Navbar() {
           {isRootPage ? (
             <div className={styles.logoGroup}>
               <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-                <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+                <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
               </Link>
               <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo} onClick={() => setMenuOpen(false)}>
                 <div className={styles.slowLogoWrapper}>
-                  <Image src="/slow-logo.jpg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+                  <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
                 </div>
               </Link>
             </div>
           ) : (
             <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-              <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
             </Link>
           )}
 

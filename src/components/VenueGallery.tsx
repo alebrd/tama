@@ -108,7 +108,9 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
               unoptimized={true}
             />
             <div className={styles.previewOverlay}>
-              <span>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
+              <span className={styles.overlayTextNormal}>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
+              <span className={styles.overlayTextMoreDesktop}>+{images.length - 10}</span>
+              <span className={styles.overlayTextMoreMobile}>+{images.length - 4}</span>
             </div>
           </div>
         ))}

@@ -110,6 +110,9 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .setupValue {
@@ -141,4 +144,29 @@
 
 @media (max-width: 768px) {
   .page { padding-top: calc(2rem + 64px); }
+}
+
+
+.setupIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .setupCard {
+    padding: 1.5rem;
+  }
+  .setupTitle {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+  .setupIcon {
+    width: 28px;
+    height: 28px;
+  }
+  .setupsGrid {
+    gap: 1rem;
+  }
 }

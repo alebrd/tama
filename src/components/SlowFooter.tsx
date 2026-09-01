@@ -18,7 +18,7 @@ export default function SlowFooter() {
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.column}>
           <Link href={homeHref}>
-            <Image src="/slow/logo.png" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
+            <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
           </Link>
           <p className={styles.tagline}>THE OTHER SIDE OF TAMA.</p>
         </div>
@@ -27,7 +27,6 @@ export default function SlowFooter() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Navigate</h4>
             <Link href="/en/slowclub" className={styles.text}>SLOW</Link>
-            <Link href="/en/slowclub/program" className={styles.text}>Program</Link>
             <Link href="/en/slowclub/contact" className={styles.text}>Contact</Link>
             <Link href="/en/tama" className={styles.tamaLink}>TAMA</Link>
           </div>
@@ -35,7 +34,6 @@ export default function SlowFooter() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/slowclub" className={styles.text}>SLOW</Link>
-            <Link href="/slowclub/program" className={styles.text}>Program</Link>
             <Link href="/slowclub/kontakt" className={styles.text}>Kontakt</Link>
             <Link href="/tama" className={styles.tamaLink}>TAMA</Link>
           </div>
@@ -59,23 +57,29 @@ export default function SlowFooter() {
         </div>
 
         <div className={styles.column}>
-          <h4 className={styles.heading}>Social</h4>
-          <a
-            href="https://www.instagram.com/slowclubpoznan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.text}
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.facebook.com/slowclubpoznan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.text}
-          >
-            Facebook
-          </a>
+          <div className={styles.socialWrapper}>
+            <h4 className={styles.heading} style={{ marginBottom: '0.75rem' }}>Social</h4>
+            <div className={styles.socialRow}>
+            <a
+              href="https://www.instagram.com/slowclubpoznan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Instagram"
+            >
+              <Image src="/icons/Artboard10.svg" alt="Instagram" width={40} height={40} className={styles.socialIcon} />
+            </a>
+            <a
+              href="https://www.facebook.com/slowclubpoznan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Facebook"
+            >
+              <Image src="/icons/Artboard9.svg" alt="Facebook" width={40} height={40} className={styles.socialIcon} />
+            </a>
+          </div>
+          </div>
         </div>
       </div>
 

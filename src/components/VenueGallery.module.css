@@ -247,3 +247,38 @@
     display: none;
   }
 }
+
+/* Overlay Badges Logic */
+.overlayTextMoreDesktop, .overlayTextMoreMobile {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .previewCard:nth-child(10) .overlayTextNormal { 
+    display: none !important; 
+  }
+  .previewCard:nth-child(10) .overlayTextMoreDesktop { 
+    display: block !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    font-size: 1.2rem !important;
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .previewCard:nth-child(4) .overlayTextNormal { 
+    display: none !important; 
+  }
+  .previewCard:nth-child(4) .overlayTextMoreMobile { 
+    display: block !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    font-size: 1.2rem !important;
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+}

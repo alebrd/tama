@@ -22,17 +22,17 @@ export default function Footer() {
           {isRootPage ? (
             <div className={styles.logoGroup}>
               <Link href={homeHref} className={styles.logo}>
-                <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+                <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
               </Link>
               <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo}>
                 <div className={styles.slowLogoWrapper}>
-                  <Image src="/slow-logo.jpg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+                  <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
                 </div>
               </Link>
             </div>
           ) : (
             <Link href={homeHref}>
-              <Image src="/logo.png" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
             </Link>
           )}
           <p className={styles.tagline}>
@@ -80,23 +80,29 @@ export default function Footer() {
         </div>
 
         <div className={styles.column}>
-          <h4 className={styles.heading}>Social</h4>
-          <a
-            href="https://www.instagram.com/tamaklub/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.text}
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.facebook.com/tamaklub"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.text}
-          >
-            Facebook
-          </a>
+          <div className={styles.socialWrapper}>
+            <h4 className={styles.heading} style={{ marginBottom: '0.75rem' }}>Social</h4>
+            <div className={styles.socialRow}>
+            <a
+              href="https://www.instagram.com/tamaklub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Instagram"
+            >
+              <Image src="/icons/Artboard10.svg" alt="Instagram" width={40} height={40} className={styles.socialIcon} />
+            </a>
+            <a
+              href="https://www.facebook.com/tamaklub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Facebook"
+            >
+              <Image src="/icons/Artboard9.svg" alt="Facebook" width={40} height={40} className={styles.socialIcon} />
+            </a>
+          </div>
+          </div>
         </div>
       </div>
 
