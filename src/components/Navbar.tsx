@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 const plLinks = [
+  { href: "/", label: "Home" },
   { href: "/tama", label: "TAMA" },
   { href: "/przestrzen", label: "Przestrzeń" },
   { href: "/wynajem", label: "Oferta" },
@@ -14,6 +15,7 @@ const plLinks = [
 ];
 
 const enLinks = [
+  { href: "/en", label: "Home" },
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/spaces", label: "Spaces" },
   { href: "/en/venue", label: "Offer" },
@@ -52,18 +54,14 @@ export default function Navbar() {
 
   const isEnglish = pathname.startsWith("/en");
   const links = isEnglish ? enLinks : plLinks;
-  const homeHref = isEnglish ? "/en" : "/";
+  const homeHref = isEnglish ? "/en/tama" : "/tama";
   const alternatePath = pathMap[pathname] ?? (isEnglish ? "/" : "/en");
 
   const plHref = isEnglish ? alternatePath : pathname;
   const enHref = isEnglish ? pathname : alternatePath;
 
   const isActive = (href: string) => {
-    if (pathname === href) return true;
-    // Treat root paths as equivalent to /tama and /en/tama
-    if (href === "/tama" && pathname === "/") return true;
-    if (href === "/en/tama" && pathname === "/en") return true;
-    return false;
+    return pathname === href;
   };
 
   const isRootPage = pathname === "/" || pathname === "/en";
@@ -97,10 +95,16 @@ export default function Navbar() {
             >
               {links[0].label}
             </Link>
+            <Link
+              href={links[1].href}
+              className={`${styles.link} ${isActive(links[1].href) ? styles.active : ""}`}
+            >
+              {links[1].label}
+            </Link>
             <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.slowLink}>
               SLOW
             </Link>
-            {links.slice(1).map(({ href, label }) => (
+            {links.slice(2).map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -149,10 +153,17 @@ export default function Navbar() {
           >
             {links[0].label}
           </Link>
+          <Link
+            href={links[1].href}
+            className={`${styles.mobileLink} ${isActive(links[1].href) ? styles.active : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            {links[1].label}
+          </Link>
           <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.mobileSlowLink} onClick={() => setMenuOpen(false)}>
             SLOW
           </Link>
-          {links.slice(1).map(({ href, label }) => (
+          {links.slice(2).map(({ href, label }) => (
             <Link
               key={href}
               href={href}

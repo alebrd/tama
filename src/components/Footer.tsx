@@ -10,7 +10,7 @@ import MapModal from "./MapModal";
 export default function Footer() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
-  const homeHref = isEnglish ? "/en" : "/";
+  const homeHref = isEnglish ? "/en/tama" : "/tama";
   const [isMapOpen, setIsMapOpen] = useState(false);
 
   const isRootPage = pathname === "/" || pathname === "/en";

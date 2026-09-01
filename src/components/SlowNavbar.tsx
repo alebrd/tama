@@ -66,7 +66,7 @@ export default function SlowNavbar() {
               </Link>
             ))}
             <Link href={isEnglish ? "/en" : "/"} className={styles.tamaLink}>
-              TAMA
+              Home
             </Link>
           </nav>
 
@@ -112,7 +112,7 @@ export default function SlowNavbar() {
             </Link>
           ))}
           <Link href={isEnglish ? "/en" : "/"} className={styles.mobileTamaLink} onClick={() => setMenuOpen(false)}>
-            TAMA
+            Home
           </Link>
           <div className={styles.mobileLang}>
             <Link href={plHref} className={`${styles.langBtn} ${!isEnglish ? styles.langActive : ""}`} onClick={() => setMenuOpen(false)}>
