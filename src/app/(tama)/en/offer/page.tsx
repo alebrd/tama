@@ -4,14 +4,14 @@ import styles from "./page.module.css";
 import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
-  title: "Venue — TAMA",
-  description: "Host your corporate event, conference, gala, or private party at TAMA — an industrial event space in the heart of Poznań for up to 1,300 guests.",
+  title: "Offer — TAMA",
+  description: "Host your corporate event, conference, gala, or private party at TAMA — an industrial event space in the heart of Poznań for up to 1,000 guests.",
 };
 
 const stats = [
   { value: "5", label: "Conference Halls" },
-  { value: "1,300", label: "Max Guests" },
-  { value: "1,300 m²", label: "Total Space" },
+  { value: "1,000", label: "Max Guests" },
+  { value: "1,100 m²", label: "Total Space" },
   { value: "Central", label: "Poznań Location" },
 ];
 
@@ -72,7 +72,7 @@ export default function VenuePage() {
               from intimate workshops to large-scale galas.
             </p>
             <p className={styles.desc}>
-              The venue offers 5 rooms of various sizes, accommodating between 20 and 1,300
+              The venue offers 5 rooms of various sizes, accommodating between 20 and 1,000
               participants. Every space is equipped with professional sound systems, stage lighting,
               and can be configured to the organiser&apos;s specific needs — theatre, banquet, or
               open-floor layouts.
@@ -100,8 +100,35 @@ export default function VenuePage() {
           </div>
         </div>
 
-        {/* Gallery */}
+        {/* Setups */}
         <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Possible Setups</h2>
+          <div className={styles.setupsGrid}>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Banquet</h3>
+              <p className={styles.setupValue}>
+                25 tables (10-person)<br/>
+                250 seated places total
+              </p>
+            </div>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Theatrical / Conference</h3>
+              <p className={styles.setupValue}>
+                400 seated places
+              </p>
+            </div>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Concert & Event</h3>
+              <p className={styles.setupValue}>
+                1,000 standing places<br/>
+                or 20 tables + 800 standing
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery */}
+        <div className={styles.section} style={{ marginTop: "6rem" }}>
           <h2 className={styles.sectionTitle}>Gallery</h2>
           <VenueGallery isEnglish={true} />
         </div>

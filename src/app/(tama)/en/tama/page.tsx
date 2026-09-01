@@ -28,7 +28,7 @@ export default function TamaPage() {
               TAMA is a unique event space in the heart of Poznań, located in a revitalized, 90-year-old building of the former Wielkopolska Chamber of Crafts. Historical architecture and an industrial character create an unmistakable backdrop for business and cultural events.
             </p>
             <p className={styles.cardText}>
-              Over 1,300 m² of flexible space, professional technical facilities, sound, and lighting allow for organizing both intimate gatherings and large events for hundreds of people.
+              Over 1,100 m² of flexible space, professional technical facilities, sound, and lighting allow for organizing both intimate gatherings and large events for hundreds of people.
             </p>
             <p className={styles.cardText}>
               Conferences, banquets, galas, premieres, corporate events, or custom productions — TAMA provides the space and possibilities tailored to the needs of every event.
@@ -61,12 +61,12 @@ export default function TamaPage() {
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Host Your Event</h2>
             <p className={styles.cardText}>
-              Over 1,300 m² of industrial space, professional technical facilities, and experience in producing events for up to 1,300 guests.
+              Over 1,100 m² of industrial space, professional technical facilities, and experience in producing events for up to 1,000 guests.
             </p>
             <p className={styles.cardText}>
               Conferences, galas, banquets, concerts, product premieres, and custom projects — TAMA provides the space and possibilities to create an event tailored to your needs.
             </p>
-            <Link href="/en/venue" className={styles.venueLink}>
+            <Link href="/en/offer" className={styles.venueLink}>
               EXPLORE POSSIBILITIES →
             </Link>
           </div>

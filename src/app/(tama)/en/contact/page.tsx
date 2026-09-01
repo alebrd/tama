@@ -20,24 +20,24 @@ export default function ContactPage() {
             <h2 className={styles.cardTitle}>Get in Touch</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>General Enquiries</span>
-                <p className={styles.cardText}>For any general questions, press enquiries, or feedback:</p>
-                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-                  joanna@tamaklub.pl
+                <span className={styles.contactRole}>Venue Rental & B2B Events</span>
+                <p className={styles.contactDesc}>Enquiries regarding venue hire, corporate events, and B2B collaborations:</p>
+                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
+                  katya@tamaklub.pl
                 </a>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Artist Bookings</span>
-                <p className={styles.cardText}>Artist bookings:</p>
+                <span className={styles.contactRole}>Artist Booking & Concerts</span>
+                <p className={styles.contactDesc}>Artist booking and enquiries regarding concert organization:</p>
                 <a href="mailto:arek@tamaklub.pl" className={styles.email}>
                   arek@tamaklub.pl
                 </a>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Venue Rents & Bookings</span>
-                <p className={styles.cardText}>Enquiries about venue hire, event organisation and B2B offers:</p>
-                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
-                  katya@tamaklub.pl
+                <span className={styles.contactRole}>Press Contact</span>
+                <p className={styles.contactDesc}>Media, publications, interviews, and press collaborations:</p>
+                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+                  joanna@tamaklub.pl
                 </a>
               </div>
             </div>

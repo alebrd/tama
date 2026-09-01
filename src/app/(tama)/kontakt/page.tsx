@@ -20,24 +20,24 @@ export default function KontaktPage() {
             <h2 className={styles.cardTitle}>Napisz do nas</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Zapytania ogólne</span>
-                <p className={styles.cardText}>Wszelkie pytania ogólne, kontakt prasowy lub opinie:</p>
-                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-                  joanna@tamaklub.pl
+                <span className={styles.contactRole}>Wynajem Przestrzeni i Eventy B2B</span>
+                <p className={styles.contactDesc}>Zapytania dotyczące wynajmu przestrzeni, organizacji wydarzeń firmowych i współpracy B2B:</p>
+                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
+                  katya@tamaklub.pl
                 </a>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Bookings artystów</span>
-                <p className={styles.cardText}>Bookings artystów:</p>
+                <span className={styles.contactRole}>Booking Artystów i Koncerty</span>
+                <p className={styles.contactDesc}>Booking artystów oraz zapytania dotyczące organizacji koncertów:</p>
                 <a href="mailto:arek@tamaklub.pl" className={styles.email}>
                   arek@tamaklub.pl
                 </a>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Wynajem przestrzeni</span>
-                <p className={styles.cardText}>Zapytania o wynajem sali, organizację eventów i ofertę B2B:</p>
-                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
-                  katya@tamaklub.pl
+                <span className={styles.contactRole}>Kontakt Prasowy</span>
+                <p className={styles.contactDesc}>Media, publikacje, wywiady i współpraca prasowa:</p>
+                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+                  joanna@tamaklub.pl
                 </a>
               </div>
             </div>

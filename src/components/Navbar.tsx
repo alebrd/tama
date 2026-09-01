@@ -10,7 +10,7 @@ const plLinks = [
   { href: "/", label: "Home" },
   { href: "/tama", label: "TAMA" },
   { href: "/przestrzen", label: "Przestrzeń" },
-  { href: "/wynajem", label: "Oferta" },
+  { href: "/oferta", label: "Oferta" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -18,7 +18,7 @@ const enLinks = [
   { href: "/en", label: "Home" },
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/spaces", label: "Spaces" },
-  { href: "/en/venue", label: "Offer" },
+  { href: "/en/offer", label: "Offer" },
   { href: "/en/contact", label: "Contact" },
 ];
 
@@ -26,7 +26,7 @@ const pathMap: Record<string, string> = {
   "/": "/en",
   "/tama": "/en/tama",
   "/przestrzen": "/en/spaces",
-  "/wynajem": "/en/venue",
+  "/oferta": "/en/offer",
   "/merch": "/en/merch",
   "/praca": "/en/jobs",
   "/kontakt": "/en/contact",
@@ -34,7 +34,7 @@ const pathMap: Record<string, string> = {
   "/en": "/",
   "/en/tama": "/tama",
   "/en/spaces": "/przestrzen",
-  "/en/venue": "/wynajem",
+  "/en/offer": "/oferta",
   "/en/merch": "/merch",
   "/en/jobs": "/praca",
   "/en/contact": "/kontakt",

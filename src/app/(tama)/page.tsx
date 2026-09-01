@@ -31,7 +31,7 @@ export default function UniversalLandingPage() {
               <Image src="/logo.png" alt="TAMA Logo" width={80} height={80} className={styles.cardLogo} />
               <h2 className={styles.cardTitle}>TAMA</h2>
               <p className={styles.cardText}>
-                Główna scena. Surowa, potężna przestrzeń industrialna zaprojektowana dla największych wydarzeń muzycznych i kulturalnych. Z pojemnością do 1 300 gości, spektakularnym nagłośnieniem i bezkompromisowym charakterem.
+                Główna scena. Surowa, potężna przestrzeń industrialna zaprojektowana dla największych wydarzeń muzycznych i kulturalnych. Z pojemnością do 1 000 gości, spektakularnym nagłośnieniem i bezkompromisowym charakterem.
               </p>
               <div className={styles.actionRow}>
                 <Link href="/tama" className="btn btn-outline">

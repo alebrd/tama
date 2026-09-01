@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import styles from "../en/venue/page.module.css";
+import styles from "../en/offer/page.module.css";
 import VenueGallery from "@/components/VenueGallery";
 
 export const metadata: Metadata = {
-  title: "Wynajem — TAMA",
-  description: "Zorganizuj swoje wydarzenie w TAMIE — industrialna przestrzeń eventowa w sercu Poznania dla do 1 300 gości.",
+  title: "Oferta — TAMA",
+  description: "Zorganizuj swoje wydarzenie w TAMIE — industrialna przestrzeń eventowa w sercu Poznania dla do 1 000 gości.",
 };
 
 const stats = [
   { value: "5", label: "Sale konferencyjne" },
-  { value: "1 300", label: "Maks. gości" },
-  { value: "1 300 m²", label: "Łączna powierzchnia" },
+  { value: "1 000", label: "Maks. gości" },
+  { value: "1 100 m²", label: "Łączna powierzchnia" },
   { value: "Centrum", label: "Lokalizacja w Poznaniu" },
 ];
 
@@ -72,7 +72,7 @@ export default function WynajemPage() {
               szeroki zakres wydarzeń — od kameralnych warsztatów po wielkie gale.
             </p>
             <p className={styles.desc}>
-              Obiekt dysponuje 5 salami o różnych rozmiarach, mieszczącymi od 20 do 1 300
+              Obiekt dysponuje 5 salami o różnych rozmiarach, mieszczącymi od 20 do 1 000
               uczestników. Każda przestrzeń wyposażona jest w profesjonalne nagłośnienie i oświetlenie
               sceniczne oraz może być zaaranżowana według indywidualnych potrzeb organizatora —
               w układzie teatralnym, bankietowym lub open floor.
@@ -100,8 +100,35 @@ export default function WynajemPage() {
           </div>
         </div>
 
-        {/* Gallery */}
+        {/* Setups */}
         <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Możliwe Ustawienia</h2>
+          <div className={styles.setupsGrid}>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Bankietowe</h3>
+              <p className={styles.setupValue}>
+                25 stołów (10-osobowych)<br/>
+                Łącznie 250 miejsc siedzących
+              </p>
+            </div>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Teatralne / Konferencyjne</h3>
+              <p className={styles.setupValue}>
+                400 miejsc siedzących
+              </p>
+            </div>
+            <div className={styles.setupCard}>
+              <h3 className={styles.setupTitle}>Koncertowo-Eventowe</h3>
+              <p className={styles.setupValue}>
+                1 000 miejsc stojących<br/>
+                lub 20 stolików + 800 stojących
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery */}
+        <div className={styles.section} style={{ marginTop: "6rem" }}>
           <h2 className={styles.sectionTitle}>Galeria</h2>
           <VenueGallery isEnglish={false} />
         </div>

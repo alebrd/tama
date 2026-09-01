@@ -141,3 +141,28 @@
     padding: 2rem;
   }
 }
+
+.setupsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.setupCard {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.setupTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.setupValue {
+  font-size: 1.1rem;
+  color: var(--color-light-grey);
+  line-height: 1.6;
+}

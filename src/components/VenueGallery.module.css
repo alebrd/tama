@@ -238,3 +238,12 @@
     display: none;
   }
 }
+
+@media (min-width: 769px) {
+  .previewGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .previewCard:nth-child(n+11) {
+    display: none;
+  }
+}

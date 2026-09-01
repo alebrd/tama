@@ -45,7 +45,7 @@ export default function Footer() {
             <h4 className={styles.heading}>Navigation</h4>
             <Link href="/en/tama" className={styles.text}>TAMA</Link>
             <Link href="/en/spaces" className={styles.text}>Spaces</Link>
-            <Link href="/en/venue" className={styles.text}>Offer</Link>
+            <Link href="/en/offer" className={styles.text}>Offer</Link>
             <Link href="/en/merch" className={styles.text}>Merch</Link>
             <Link href="/en/jobs" className={styles.text}>Jobs</Link>
             <Link href="/en/contact" className={styles.text}>Contact</Link>
@@ -55,7 +55,7 @@ export default function Footer() {
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/tama" className={styles.text}>TAMA</Link>
             <Link href="/przestrzen" className={styles.text}>Przestrzeń</Link>
-            <Link href="/wynajem" className={styles.text}>Oferta</Link>
+            <Link href="/oferta" className={styles.text}>Oferta</Link>
             <Link href="/merch" className={styles.text}>Merch</Link>
             <Link href="/praca" className={styles.text}>Praca</Link>
             <Link href="/kontakt" className={styles.text}>Kontakt</Link>

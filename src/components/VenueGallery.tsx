@@ -10,25 +10,42 @@ interface VenueGalleryProps {
 }
 
 const images = [
-  "/venue-stage.jpg",
-  "/arturAENnowicki-2942.jpg",
-  "/arturAENnowicki-2992.jpg",
-  "/artur_aen_nowicki-09366.jpg",
-  "/artur_aen_nowicki-09368.jpg",
-  "/venue-entrance.jpg",
-  "/screenshot-1.jpg",
-  "/screenshot-2.jpg",
-  "/screenshot-3.jpg",
-  "/screenshot-4.jpg",
-  "/screenshot-5.jpg",
-  "/screenshot-6.jpg",
-  "/screenshot-7.jpg",
-  "/screenshot-8.jpg",
-  "/screenshot-9.jpg",
-  "/screenshot-10.jpg",
-  "/screenshot-11.jpg",
-  "/screenshot-12.jpg",
-  "/screenshot-13.jpg"
+  // 10 Best Professional Photos for the Desktop Preview
+  "/offer/AEN03361.jpg",
+  "/offer/AEN03586.jpg",
+  "/offer/AEN04257.jpg",
+  "/offer/ARTUR_AEN_NOWICKI-5262.jpg",
+  "/offer/arturAENnowicki-2942.jpg",
+  "/offer/arturAENnowicki-2949.jpg",
+  "/offer/arturAENnowicki-2953.jpg",
+  "/offer/arturAENnowicki-2970.jpg",
+  "/offer/arturAENnowicki-2992.jpg",
+  "/offer/artur_aen_nowicki-09430.jpg",
+  // The rest of the photos
+  "/offer/AEN03279.jpg",
+  "/offer/AEN03353.jpg",
+  "/offer/AEN04241.jpg",
+  "/offer/IMG_2806.JPG",
+  "/offer/IMG_2807.JPG",
+  "/offer/IMG_6607.jpg",
+  "/offer/IMG_6611_3.jpg",
+  "/offer/IMG_6617.jpg",
+  "/offer/IMG_6628.jpg",
+  "/offer/IMG_6632.jpg",
+  "/offer/IMG_7576.jpg",
+  "/offer/IMG_7587.jpg",
+  "/offer/IMG_7590.jpg",
+  "/offer/IMG_7595.jpg",
+  "/offer/IMG_7616.jpg",
+  "/offer/IMG_7708.jpg",
+  "/offer/IMG_7710.jpg",
+  "/offer/IMG_7715.jpg",
+  "/offer/arturAENnowicki-2950.jpg",
+  "/offer/arturAENnowicki-2982.jpg",
+  "/offer/arturAENnowicki-2987.jpg",
+  "/offer/arturAENnowicki-3202.jpg",
+  "/offer/artur_aen_nowicki-0045.jpg",
+  "/offer/artur_aen_nowicki-0049.jpg"
 ];
 
 export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
@@ -88,6 +105,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
               fill
               className={styles.previewImage}
               sizes="(max-width: 768px) 100vw, 300px"
+              unoptimized={true}
             />
             <div className={styles.previewOverlay}>
               <span>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
@@ -117,6 +135,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
                       fill
                       className={styles.image}
                       sizes="(max-width: 900px) 100vw, 800px"
+                      unoptimized={true}
                     />
                   </div>
                 ))}

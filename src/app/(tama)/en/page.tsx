@@ -31,7 +31,7 @@ export default function UniversalLandingEnPage() {
               <Image src="/logo.png" alt="TAMA Logo" width={80} height={80} className={styles.cardLogo} />
               <h2 className={styles.cardTitle}>TAMA</h2>
               <p className={styles.cardText}>
-                The main stage. A raw, powerful industrial space designed for the biggest musical and cultural events. With a capacity of up to 1,300 guests, spectacular sound, and an uncompromising character.
+                The main stage. A raw, powerful industrial space designed for the biggest musical and cultural events. With a capacity of up to 1,000 guests, spectacular sound, and an uncompromising character.
               </p>
               <div className={styles.actionRow}>
                 <Link href="/en/tama" className="btn btn-outline">
