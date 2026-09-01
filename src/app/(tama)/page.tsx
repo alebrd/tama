@@ -28,7 +28,6 @@ export default function UniversalLandingPage() {
           <div className={styles.grid}>
             {/* TAMA */}
             <div className={`${styles.card} ${styles.cardTama}`}>
-              <Image src="/logo.png" alt="TAMA Logo" width={80} height={80} className={styles.cardLogo} />
               <h2 className={styles.cardTitle}>TAMA</h2>
               <p className={styles.cardText}>
                 Główna scena. Surowa, potężna przestrzeń industrialna zaprojektowana dla największych wydarzeń muzycznych i kulturalnych. Z pojemnością do 1 000 gości, spektakularnym nagłośnieniem i bezkompromisowym charakterem.
@@ -42,7 +41,6 @@ export default function UniversalLandingPage() {
 
             {/* SLOW */}
             <div className={`${styles.card} ${styles.cardSlow}`}>
-              <Image src="/slow-logo.jpg" alt="SLOW Logo" width={80} height={80} className={styles.cardLogo} />
               <h2 className={styles.cardTitle}>SLOW</h2>
               <p className={styles.cardText}>
                 Intymny klub z audiofilskim nagłośnieniem. Stworzony dla głębszych doświadczeń muzycznych, selekcjonowanych brzmień i bliskiego kontaktu z artystą. Zupełnie inny wymiar w tych samych murach.

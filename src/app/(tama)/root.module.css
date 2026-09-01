@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 0.9;
   margin-bottom: 1rem;
 }
@@ -100,6 +100,42 @@
 }
 
 @media (max-width: 768px) {
-  .page { padding-top: calc(2rem + 64px); }
-  .card { padding: 3rem 2rem; }
+  .page { 
+    padding-top: calc(2rem + 64px); 
+    padding-bottom: 3rem;
+  }
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+  .sub {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+  .grid {
+    gap: 1rem;
+  }
+  .card { 
+    padding: 2rem 1.5rem; 
+    gap: 1rem;
+  }
+  .cardLogo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  .cardText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .actionRow {
+    margin-top: 0.5rem;
+  }
+  .actionRow a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
