@@ -71,7 +71,14 @@ export default function WynajemPage() {
             </p>
 
             <div className={styles.locationBox}>
-              <div className={styles.locationAddress}>ul. Niezłomnych 2, 61-894 Poznań</div>
+              <a 
+                href="https://www.google.com/maps/search/Tama+Klub+Poznan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.locationAddress}
+              >
+                ul. Niezłomnych 2, 61-894 Poznań
+              </a>
               <div className={styles.transitGrid}>
                 <div className={styles.transitItem}>
                   <Image src="/icons/Artboard4.svg" alt="Train" width={56} height={56} className={styles.transitIcon} />

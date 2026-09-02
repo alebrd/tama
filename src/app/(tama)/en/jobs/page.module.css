@@ -99,3 +99,9 @@
 @media (max-width: 768px) {
   .page { padding-top: calc(2rem + 64px); }
 }
+
+@media (max-width: 768px) {
+  .roleCard {
+    padding: 1.5rem 1.25rem;
+  }
+}

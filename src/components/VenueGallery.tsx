@@ -10,18 +10,22 @@ interface VenueGalleryProps {
 }
 
 const images = [
-  // 10 Best Professional Photos for the Desktop Preview
+  // Top 8 Professional Photos for the Desktop Preview
+  "/offer/arturAENnowicki-2970.jpg",
+  "/offer/arturAENnowicki-2942.jpg",
+  "/offer/arturAENnowicki-2953.jpg",
+  "/offer/arturAENnowicki-2950.jpg",
+  "/offer/arturAENnowicki-2992.jpg",
+  "/offer/arturAENnowicki-3202.jpg",
+  "/offer/artur_aen_nowicki-0049.jpg",
+  "/offer/artur_aen_nowicki-0045.jpg",
+  // The rest of the photos
   "/offer/AEN03361.jpg",
   "/offer/AEN03586.jpg",
   "/offer/AEN04257.jpg",
   "/offer/ARTUR_AEN_NOWICKI-5262.jpg",
-  "/offer/arturAENnowicki-2942.jpg",
   "/offer/arturAENnowicki-2949.jpg",
-  "/offer/arturAENnowicki-2953.jpg",
-  "/offer/arturAENnowicki-2970.jpg",
-  "/offer/arturAENnowicki-2992.jpg",
   "/offer/artur_aen_nowicki-09430.jpg",
-  // The rest of the photos
   "/offer/AEN03279.jpg",
   "/offer/AEN03353.jpg",
   "/offer/AEN04241.jpg",
@@ -40,12 +44,8 @@ const images = [
   "/offer/IMG_7708.jpg",
   "/offer/IMG_7710.jpg",
   "/offer/IMG_7715.jpg",
-  "/offer/arturAENnowicki-2950.jpg",
   "/offer/arturAENnowicki-2982.jpg",
-  "/offer/arturAENnowicki-2987.jpg",
-  "/offer/arturAENnowicki-3202.jpg",
-  "/offer/artur_aen_nowicki-0045.jpg",
-  "/offer/artur_aen_nowicki-0049.jpg"
+  "/offer/arturAENnowicki-2987.jpg"
 ];
 
 export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
@@ -109,7 +109,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
             />
             <div className={styles.previewOverlay}>
               <span className={styles.overlayTextNormal}>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
-              <span className={styles.overlayTextMoreDesktop}>+{images.length - 10}</span>
+              <span className={styles.overlayTextMoreDesktop}>+{images.length - 8}</span>
               <span className={styles.overlayTextMoreMobile}>+{images.length - 4}</span>
             </div>
           </div>
