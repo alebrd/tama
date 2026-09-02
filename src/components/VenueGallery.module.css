@@ -88,7 +88,9 @@
   background: var(--background);
   border: 1px solid var(--glass-border);
   width: 100%;
-  max-width: 900px;
+  max-width: 1600px;
+  width: 95vw;
+  height: 95vh;
   max-height: 90vh;
   border-radius: 4px;
   display: flex;
@@ -151,7 +153,7 @@
 
 .imageWrapper {
   position: relative;
-  flex: 0 0 85%;
+  flex: 0 0 100%;
   min-height: 400px;
   background: #000;
   border: 1px solid var(--glass-border);
@@ -178,8 +180,8 @@
     scroll-snap-type: y mandatory;
   }
   .imageWrapper {
-    min-height: 250px;
-    flex: 0 0 auto;
+    height: 100%;
+    flex: 0 0 100%;
     width: 100%;
   }
   .previewGrid {
