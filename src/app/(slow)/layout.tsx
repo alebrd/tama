@@ -17,11 +17,37 @@ const virtuose = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SLOW — The other side of TAMA",
-  description: "Slow Club Poznań",
+  metadataBase: new URL("https://tamaklub.pl"),
+  title: {
+    default: "SLOW — The other side of TAMA",
+    template: "%s — SLOW",
+  },
+  description: "Slow Club Poznań. Only House Music.",
   icons: {
     icon: "/slow/logo.png",
     apple: "/slow/logo.png",
+  },
+  openGraph: {
+    title: "SLOW — The other side of TAMA",
+    description: "Slow Club Poznań. Only House Music.",
+    url: "https://tamaklub.pl/slowclub",
+    siteName: "SLOW Club",
+    images: [
+      {
+        url: "/slow/summer-break.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SLOW Club Poznań",
+      },
+    ],
+    locale: "pl_PL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SLOW — The other side of TAMA",
+    description: "Slow Club Poznań. Only House Music.",
+    images: ["/slow/summer-break.jpg"],
   },
 };
 

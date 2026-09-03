@@ -15,6 +15,7 @@ const products = [
     price: "PLN 120",
     image: "/shop-tshirt.jpg",
     tag: "NEW DROP",
+    soldOut: true,
   },
   {
     id: "socks-classic",
@@ -23,6 +24,7 @@ const products = [
     price: "PLN 40",
     image: "/shop-socks.jpg",
     tag: "BESTSELLER",
+    soldOut: true,
   },
   {
     id: "socks-zigzag",
@@ -31,6 +33,7 @@ const products = [
     price: "PLN 45",
     image: "/shop-socks-zigzag.jpg",
     tag: "LIMITED",
+    soldOut: false,
   },
 ];
 
@@ -48,6 +51,7 @@ export default function MerchPage() {
             <div key={product.id} className={`${styles.card} glass`}>
               <div className={styles.imageWrap}>
                 <span className={styles.tag}>{product.tag}</span>
+                {product.soldOut && <span className={styles.soldOutRibbon}>SOLD OUT</span>}
                 <Image
                   src={product.image}
                   alt={product.name}

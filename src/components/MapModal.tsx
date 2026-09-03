@@ -22,13 +22,21 @@ export default function MapModal({ isOpen, onClose, isEnglish, variant = 'tama' 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') onClose();
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   if (!isOpen || !mounted) return null;
 
@@ -69,7 +77,7 @@ export default function MapModal({ isOpen, onClose, isEnglish, variant = 'tama' 
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className={variant === 'slow' ? 'btn-slow' : 'btn'}
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.75rem' }}
           >
             {isEnglish ? 'OPEN IN MAPS' : 'OTWÓRZ W MAPACH'}

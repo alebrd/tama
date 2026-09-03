@@ -62,9 +62,17 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
   useEffect(() => {
     if (isOpen && selectedIndex !== null) {
       document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setIsOpen(false);
+      };
+      window.addEventListener('keydown', handleKeyDown);
       setTimeout(() => {
         document.getElementById(`gallery-img-${selectedIndex}`)?.scrollIntoView({ behavior: 'instant', block: 'start', inline: 'start' });
       }, 10);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = '';
     }
@@ -120,13 +128,23 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
             <div className={styles.header}>
               <h3 className={styles.title}>{isEnglish ? "Event Setups" : "Realizacje Eventowe"}</h3>
-              <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
+              <button 
+                className={styles.closeBtn} 
+                onClick={() => setIsOpen(false)}
+                aria-label={isEnglish ? "Close gallery" : "Zamknij galerię"}
+              >
                 ✕
               </button>
             </div>
             
             <div className={styles.galleryWrapper}>
-              <button className={`${styles.scrollBtn} ${styles.scrollPrev}`} onClick={(e) => scrollGallery(e, -1)}>‹</button>
+              <button 
+                className={`${styles.scrollBtn} ${styles.scrollPrev}`} 
+                onClick={(e) => scrollGallery(e, -1)}
+                aria-label={isEnglish ? "Previous photo" : "Poprzednie zdjęcie"}
+              >
+                ‹
+              </button>
               <div className={styles.galleryContent} ref={galleryRef}>
                 {images.map((src, index) => (
                   <div key={src} id={`gallery-img-${index}`} className={styles.imageWrapper}>
@@ -140,7 +158,13 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
                   </div>
                 ))}
               </div>
-              <button className={`${styles.scrollBtn} ${styles.scrollNext}`} onClick={(e) => scrollGallery(e, 1)}>›</button>
+              <button 
+                className={`${styles.scrollBtn} ${styles.scrollNext}`} 
+                onClick={(e) => scrollGallery(e, 1)}
+                aria-label={isEnglish ? "Next photo" : "Następne zdjęcie"}
+              >
+                ›
+              </button>
             </div>
           </div>
         </div>,
