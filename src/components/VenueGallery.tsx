@@ -76,7 +76,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
   const scrollGallery = (e: React.MouseEvent, direction: number) => {
     e.stopPropagation();
     if (galleryRef.current) {
-      const amount = window.innerWidth > 768 ? galleryRef.current.clientWidth * 0.85 : galleryRef.current.clientHeight * 0.85;
+      const amount = window.innerWidth > 768 ? galleryRef.current.clientWidth : galleryRef.current.clientHeight;
       galleryRef.current.scrollBy({ 
         left: window.innerWidth > 768 ? direction * amount : 0, 
         top: window.innerWidth <= 768 ? direction * amount : 0, 
@@ -105,7 +105,6 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
               fill
               className={styles.previewImage}
               sizes="(max-width: 768px) 100vw, 300px"
-              unoptimized={true}
             />
             <div className={styles.previewOverlay}>
               <span className={styles.overlayTextNormal}>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
@@ -136,8 +135,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
                       alt={`Venue Setup ${index + 1}`} 
                       fill
                       className={styles.image}
-                      sizes="(max-width: 900px) 100vw, 800px"
-                      unoptimized={true}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1600px"
                     />
                   </div>
                 ))}

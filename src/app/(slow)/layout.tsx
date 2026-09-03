@@ -8,7 +8,7 @@ import SlowFooter from "@/components/SlowFooter";
 
 const outfit = Outfit({
   variable: "--font-outfit",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 const virtuose = localFont({

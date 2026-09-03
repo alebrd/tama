@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -39,9 +38,6 @@ export default function SlowHomePage() {
             Tu tempo równa się rytmowi serca, a klimat przenosi Was poza codzienność.<br />
             <strong>ONLY HOUSE MUSIC</strong>
           </p>
-          <div className={styles.actions}>
-            <Link href="/slowclub/program" className="btn-slow">Program</Link>
-          </div>
         </div>
       </section>
     </div>

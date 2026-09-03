@@ -192,6 +192,6 @@ A global SVG noise texture is rendered via `.noise-overlay` at `opacity: 0.03` (
 
 **Footer only (both langs):** Merch · Praca / Jobs
 
-**Routes hidden but alive:** /program · /en/program
+**Routes archived:** /_program · /en/_program
 
 **Rule:** Every new page must be added to `plLinks`, `enLinks`, and `pathMap` in `Navbar.tsx`.

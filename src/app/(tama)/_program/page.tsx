@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "../en/program/page.module.css";
+import styles from "../en/_program/page.module.css";
 
 export const metadata: Metadata = {
   title: "Program — TAMA",

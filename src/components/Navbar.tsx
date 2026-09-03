@@ -30,7 +30,6 @@ const pathMap: Record<string, string> = {
   "/merch": "/en/merch",
   "/praca": "/en/jobs",
   "/kontakt": "/en/contact",
-  "/program": "/en/program",
   "/en": "/",
   "/en/tama": "/tama",
   "/en/spaces": "/przestrzen",
@@ -38,7 +37,6 @@ const pathMap: Record<string, string> = {
   "/en/merch": "/merch",
   "/en/jobs": "/praca",
   "/en/contact": "/kontakt",
-  "/en/program": "/program",
 };
 
 export default function Navbar() {
