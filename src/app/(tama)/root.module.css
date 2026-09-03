@@ -24,18 +24,6 @@
   margin-bottom: 0;
 }
 
-.glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 /* Split Grid */
 .grid {
   display: grid;
