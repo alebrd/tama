@@ -60,7 +60,6 @@
 .flyerWrapper:hover {
   border-color: rgba(196, 16, 16, 0.5);
   box-shadow: 0 15px 40px rgba(196, 16, 16, 0.1);
-  transform: translateY(-4px);
 }
 
 .flyerImage {

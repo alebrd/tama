@@ -147,7 +147,8 @@ border-radius: 4px
 padding:       2.5rem
 gap:           1rem
 ```
-Hover: `border-color: rgba(255,26,26,0.4)`, `box-shadow: 0 10px 30px rgba(255,26,26,0.1)`, `translateY(-3px)`
+Hover: `border-color: rgba(255,26,26,0.4)`
+> **Rule:** Non-clickable informational containers remain stationary on hover. Hover lifts (`translateY`) apply exclusively to clickable card links and buttons.
 
 ### Glass Utility (`.glass-slow`)
 ```
@@ -183,7 +184,8 @@ Overlay gradient: `linear-gradient(to bottom, rgba(7,7,7,0.2) 0%, rgba(7,7,7,1) 
 | Context | Value |
 |---|---|
 | Button | `all 0.3s ease` |
-| Card hover lift | `translateY(-3px)` |
+| Card hover (border) | `border-color 0.3s ease` |
+| Clickable card lift | `translateY(-2px)` (buttons) / `translateY(-3px)` (clickable links only) |
 | Flyer hover | `translateY(-4px)` |
 | Image filter | `filter 0.5s ease, transform 0.5s ease` |
 | Email/social link glow | `color 0.2s ease, text-shadow 0.2s ease` |

@@ -19,7 +19,6 @@ export default function UniversalLandingPage() {
           </h1>
           <p className={styles.sub}>Dwa wymiary. Jedno miejsce.</p>
         </div>
-        <div className={styles.glow} />
       </section>
 
       {/* Split Section */}

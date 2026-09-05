@@ -122,31 +122,39 @@ background:     #ffffff
 color:          #000000
 border:         1px solid #ffffff
 border-radius:  4px
-padding:        0.75rem 1.5rem
-font-weight:    600
+padding:        0.85rem 1.75rem
+font-size:      0.8125rem
+font-weight:    700
 text-transform: uppercase
-letter-spacing: 1px
-transition:     all 0.3s ease
+letter-spacing: 2px
+transition:     all 0.25s cubic-bezier(0.16, 1, 0.3, 1)
 ```
-Hover: `background: transparent`, `color: #ffffff`, glow `rgba(255,255,255,0.2)`
+Hover: `background: #000000`, `color: #ffffff`, `border-color: #ffffff`, `transform: translateY(-2px)`. (No fuzzy glow).
+Active: `transform: translateY(0)`.
+Arrow interaction (`.btn-arrow`): `transform: translateX(4px)` on hover.
 
 ### Outline Button (`.btn-outline`)
 ```
-background:  transparent
-color:       #ffffff
+background:              rgba(255, 255, 255, 0.04)
+color:                   #ffffff
+border:                  1px solid rgba(255, 255, 255, 0.2)
+backdrop-filter:         blur(8px)
+-webkit-backdrop-filter: blur(8px)
 ```
-Hover: fills white, text turns black.
+Hover: `background: rgba(255, 255, 255, 0.12)`, `border-color: #ffffff`, `transform: translateY(-2px)`.
+Active: `transform: translateY(0)`.
 
-### Cards
+### Cards & Containers
 ```
 background:    #0a0a0a
 border:        1px solid rgba(255, 255, 255, 0.08)
 border-radius: 4px
 padding:       2.5rem
 gap:           1.25rem
-transition:    transform 0.3s ease, border-color 0.3s ease
+transition:    border-color 0.3s ease
 ```
-Hover: `transform: translateY(-4px)`
+Hover: `border-color: rgba(255, 255, 255, 0.18)`
+> **Rule:** Non-clickable informational containers remain stationary on hover. Hover lifts (`translateY`) apply exclusively to clickable card links and buttons.
 
 ### Glass Utility (`.glass`)
 ```
@@ -163,11 +171,11 @@ border-radius:     4px
 | Context | Value |
 |---|---|
 | Default link | `opacity 0.2s ease` |
-| Button | `all 0.3s ease` |
-| Card hover | `transform 0.3s ease, border-color 0.3s ease` |
+| Button | `all 0.25s cubic-bezier(0.16, 1, 0.3, 1)` |
+| Card hover (border) | `border-color 0.3s ease` |
 | Image hover | `filter 0.4s ease, transform 0.4s ease` |
 | Modal entrance | `cubic-bezier(0.16, 1, 0.3, 1) 0.4s` |
-| Card lift | `translateY(-4px)` |
+| Clickable card lift | `translateY(-2px)` (buttons) / `translateY(-4px)` (clickable links only) |
 
 ### Noise Overlay
 A global SVG noise texture is rendered via `.noise-overlay` at `opacity: 0.03` (fixed, pointer-events none). Do not remove.
