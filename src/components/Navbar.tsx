@@ -9,7 +9,6 @@ import styles from "./Navbar.module.css";
 const plLinks = [
   { href: "/", label: "Home" },
   { href: "/tama", label: "TAMA" },
-  { href: "/przestrzen", label: "Przestrzeń" },
   { href: "/oferta", label: "Oferta" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -17,7 +16,6 @@ const plLinks = [
 const enLinks = [
   { href: "/en", label: "Home" },
   { href: "/en/tama", label: "TAMA" },
-  { href: "/en/spaces", label: "Spaces" },
   { href: "/en/offer", label: "Offer" },
   { href: "/en/contact", label: "Contact" },
 ];
