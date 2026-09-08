@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import MapTrigger from "@/components/MapTrigger";
 
 export const metadata: Metadata = {
   title: "Kontakt — SLOW",
-  description: "Skontaktuj się z Slow Club Poznań.",
+  description: "Skontaktuj się ze SLOW — bookings, prasa i zapytania ogólne.",
 };
 
 export default function SlowKontaktPage() {
@@ -16,35 +15,48 @@ export default function SlowKontaktPage() {
         </div>
 
         <div className={styles.grid}>
-          <div className={`${styles.card} glass-slow`}>
-            <h2 className={styles.cardTitle}>Zapytania ogólne</h2>
-            <p className={styles.cardText}>
-              Wszelkie pytania ogólne, kontakt prasowy lub opinie:
-            </p>
-            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-              joanna@tamaklub.pl
-            </a>
+
+          <div className={`${styles.card} ${styles.cardFull} glass-slow`}>
+            <h2 className={styles.cardTitle}>Napisz do nas</h2>
+            <div className={styles.contactsList}>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Wynajem Przestrzeni i Eventy B2B</span>
+                <p className={styles.contactDesc}>Zapytania dotyczące wynajmu przestrzeni, organizacji wydarzeń firmowych i współpracy B2B:</p>
+                <a href="mailto:katya@tamaklub.pl" className={styles.email}>
+                  katya@tamaklub.pl
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Booking Artystów i Koncerty</span>
+                <p className={styles.contactDesc}>Booking artystów oraz zapytania dotyczące organizacji koncertów:</p>
+                <a href="mailto:arek@tamaklub.pl" className={styles.email}>
+                  arek@tamaklub.pl
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Kontakt Prasowy</span>
+                <p className={styles.contactDesc}>Media, publikacje, wywiady i współpraca prasowa:</p>
+                <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
+                  joanna@tamaklub.pl
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className={`${styles.card} glass-slow`}>
-            <h2 className={styles.cardTitle}>Bookings</h2>
-            <p className={styles.cardText}>
-              Bookings artystów i propozycje eventów:
-            </p>
-            <a href="mailto:joanna@tamaklub.pl" className={styles.email}>
-              joanna@tamaklub.pl
-            </a>
-          </div>
-
-          <div className={`${styles.card} glass-slow`}>
+          <div className={`${styles.card} ${styles.cardFull} glass-slow`}>
             <h2 className={styles.cardTitle}>Odwiedź nas</h2>
             <p className={styles.cardText}>
-              Wielkopolska Izba Rzemieślnicza<br />
-              ul. Niezłomnych 2<br />
-              61-894 Poznań, Polska
+              Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Polska
             </p>
+            <iframe
+              src="https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className={styles.mapEmbed}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SLOW Poznań Map"
+            />
             <div className={styles.mapLinksWrapper}>
-              <MapTrigger isEnglish={false} className={styles.mapLink} variant="slow" />
               <a
                 href="https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
                 target="_blank"
@@ -56,25 +68,6 @@ export default function SlowKontaktPage() {
             </div>
           </div>
 
-          <div className={`${styles.card} glass-slow`}>
-            <h2 className={styles.cardTitle}>Social</h2>
-            <a
-              href="https://www.instagram.com/slowclubpoznan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.facebook.com/slowclubpoznan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              Facebook
-            </a>
-          </div>
         </div>
       </div>
     </div>
