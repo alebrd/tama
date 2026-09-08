@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./root.module.css";
 
 export const metadata: Metadata = {
@@ -13,7 +12,7 @@ export default function UniversalLandingPage() {
     <div className={styles.page}>
       {/* Hero */}
       <section className={styles.hero}>
-        <div className="container" style={{ textAlign: "center" }}>
+        <div className="container">
           <h1 className={`${styles.title} text-gradient`}>
             TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
           </h1>
