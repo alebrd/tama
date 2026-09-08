@@ -144,6 +144,7 @@
 
 @media (max-width: 768px) {
   .page { padding-top: calc(2rem + 64px); padding-bottom: 3rem; }
+  .hero { margin-bottom: 2rem; }
 }
 
 

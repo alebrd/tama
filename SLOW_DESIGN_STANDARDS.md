@@ -96,6 +96,14 @@ padding:    0 2rem
 | Desktop | `calc(3rem + 64px)` |
 | Mobile (≤ 768px) | `calc(2rem + 64px)` |
 
+### Header / Hero Bottom Spacing
+| Breakpoint | Value |
+|---|---|
+| Desktop | `3rem` – `3.5rem` |
+| Mobile (≤ 768px) | `2rem` (32px) |
+
+> **Rule:** Never combine `padding-bottom` on `.hero` with `margin-bottom` on mobile. The gap between the header/hero text and the first section or card must remain exactly `2rem` on mobile.
+
 ### Navbar
 | Property | Value |
 |---|---|

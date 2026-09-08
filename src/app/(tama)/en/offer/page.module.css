@@ -247,6 +247,12 @@
 
 
 @media (max-width: 768px) {
+  .hero {
+    margin-bottom: 2rem;
+  }
+  .statsRow {
+    margin-bottom: 2.5rem;
+  }
   .descBlock {
     padding: 1.5rem 1.25rem;
   }

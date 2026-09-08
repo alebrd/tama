@@ -98,6 +98,7 @@
 
 @media (max-width: 768px) {
   .page { padding-top: calc(2rem + 64px); }
+  .header { margin-bottom: 2rem; }
 }
 
 @media (max-width: 768px) {
