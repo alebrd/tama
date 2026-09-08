@@ -93,6 +93,13 @@ padding:    0 2rem
 
 > **Rule:** Never combine `padding-bottom` on `.hero` with `margin-bottom` on mobile. The gap between the header/hero text and the first section or card must remain exactly `2rem` on mobile to prevent excessive empty voids.
 
+### Header Alignment Architecture
+- **Brand Hero Tier (Centered)**:
+  - **Home (`/`)**: Centered title `TAMA x SLOW` and eyebrow. Bridges the top-left dual navbar logos and symmetrically anchors the 50/50 split cards below.
+  - **TAMA Club Page (`/tama`)**: Centered title `TAMA` and subtitle `MUZYKA. KULTURA. DOŚWIADCZENIE.`. Acts as a monumental cinematic marquee.
+- **Utility & Content Tier (Left-Aligned)**:
+  - **Oferta, Przestrzeń, Kontakt, Merch, Praca**: Strict left-aligned headings for fast scannability, directory layout, and Swiss-grid precision.
+
 ### Navbar
 | Property | Value |
 |---|---|
