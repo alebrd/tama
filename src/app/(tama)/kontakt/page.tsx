@@ -16,7 +16,7 @@ export default function KontaktPage() {
 
         <div className={styles.grid}>
 
-          <div className={`${styles.card} ${styles.cardFull} glass`}>
+          <div className={`${styles.card} ${styles.cardFull}`}>
             <h2 className={styles.cardTitle}>Napisz do nas</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
@@ -43,7 +43,7 @@ export default function KontaktPage() {
             </div>
           </div>
 
-          <div className={`${styles.card} ${styles.cardFull} glass`}>
+          <div className={`${styles.card} ${styles.cardFull}`}>
             <h2 className={styles.cardTitle}>Odwiedź nas</h2>
             <p className={styles.cardText}>
               Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Polska

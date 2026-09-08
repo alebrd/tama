@@ -45,7 +45,7 @@ export default function VenuePage() {
         {/* Stats */}
         <div className={styles.statsRow}>
           {stats.map((stat) => (
-            <div key={stat.label} className={`${styles.stat} glass`}>
+            <div key={stat.label} className={styles.stat}>
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
@@ -57,14 +57,14 @@ export default function VenuePage() {
           <h2 className={styles.sectionTitle}>What We Host</h2>
           <div className={styles.tagGrid}>
             {eventTypes.map((type) => (
-              <span key={type} className={`${styles.tag} glass`}>{type}</span>
+              <span key={type} className={styles.tag}>{type}</span>
             ))}
           </div>
         </div>
 
         {/* Location */}
         <div className={styles.section}>
-          <div className={`${styles.descBlock} glass`}>
+          <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Location</h2>
             <p className={styles.desc}>
               TAMA is located in the very heart of Poznań, just a few minutes from the Main Railway Station (PKP) and the Poznań International Fair (MTP). The convenient location ensures easy access for both event participants and organizers. In the immediate vicinity, there are numerous hotels of various standards and parking lots, making TAMA an ideal venue for local and national events.
@@ -117,7 +117,7 @@ export default function VenuePage() {
 
         {/* Description */}
         <div className={styles.section}>
-          <div className={`${styles.descBlock} glass`}>
+          <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>The Space</h2>
             <p className={styles.desc}>
               Create an event tailored to your vision.

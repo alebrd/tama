@@ -45,7 +45,7 @@ export default function WynajemPage() {
         {/* Stats */}
         <div className={styles.statsRow}>
           {stats.map((stat) => (
-            <div key={stat.label} className={`${styles.stat} glass`}>
+            <div key={stat.label} className={styles.stat}>
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
@@ -57,14 +57,14 @@ export default function WynajemPage() {
           <h2 className={styles.sectionTitle}>Co Organizujemy</h2>
           <div className={styles.tagGrid}>
             {eventTypes.map((type) => (
-              <span key={type} className={`${styles.tag} glass`}>{type}</span>
+              <span key={type} className={styles.tag}>{type}</span>
             ))}
           </div>
         </div>
 
         {/* Location */}
         <div className={styles.section}>
-          <div className={`${styles.descBlock} glass`}>
+          <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Lokalizacja</h2>
             <p className={styles.desc}>
               TAMA znajduje się w samym sercu Poznania, zaledwie kilka minut od Dworca Głównego PKP oraz Międzynarodowych Targów Poznańskich. Dogodna lokalizacja zapewnia łatwy dojazd zarówno uczestnikom wydarzeń, jak i organizatorom. W bezpośrednim sąsiedztwie znajdują się liczne hotele o zróżnicowanym standardzie oraz parkingi, co sprawia, że TAMA jest idealnym miejscem do organizacji wydarzeń lokalnych i ogólnopolskich.
@@ -117,7 +117,7 @@ export default function WynajemPage() {
 
         {/* Description */}
         <div className={styles.section}>
-          <div className={`${styles.descBlock} glass`}>
+          <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Przestrzeń</h2>
             <p className={styles.desc}>
               Stwórz wydarzenie dopasowane do swojej wizji.

@@ -48,6 +48,9 @@
   gap: 0.5rem;
   text-align: center;
   min-height: 130px;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
 }
 
 .statValue {
@@ -90,11 +93,14 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
-  transition: background 0.2s ease;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
 }
 
 .tag:hover {
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Description block */
@@ -104,6 +110,9 @@
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
 }
 
 .desc {

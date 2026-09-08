@@ -48,7 +48,7 @@ export default function MerchPage() {
 
         <div className={styles.grid}>
           {products.map((product) => (
-            <div key={product.id} className={`${styles.card} glass`}>
+            <div key={product.id} className={styles.card}>
               <div className={styles.imageWrap}>
                 <span className={styles.tag}>{product.tag}</span>
                 {product.soldOut && <span className={styles.soldOutRibbon}>SOLD OUT</span>}
