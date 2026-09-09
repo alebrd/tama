@@ -37,7 +37,7 @@ export default function TamaPage() {
 
           <div
             className={`${styles.card} reveal`}
-            style={{ '--reveal-delay': '80ms' } as React.CSSProperties}
+            style={{ '--reveal-delay': '30ms' } as React.CSSProperties}
           >
             <h2 className={styles.cardTitle}>The Music</h2>
             <p className={styles.cardText}>
@@ -53,7 +53,7 @@ export default function TamaPage() {
 
           <div
             className={`${styles.card} reveal`}
-            style={{ '--reveal-delay': '160ms' } as React.CSSProperties}
+            style={{ '--reveal-delay': '60ms' } as React.CSSProperties}
           >
             <h2 className={styles.cardTitle}>The Community</h2>
             <p className={styles.cardText}>
@@ -66,7 +66,7 @@ export default function TamaPage() {
 
           <div
             className={`${styles.card} reveal`}
-            style={{ '--reveal-delay': '240ms' } as React.CSSProperties}
+            style={{ '--reveal-delay': '90ms' } as React.CSSProperties}
           >
             <h2 className={styles.cardTitle}>Host Your Event</h2>
             <p className={styles.cardText}>

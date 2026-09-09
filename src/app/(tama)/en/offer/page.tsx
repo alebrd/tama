@@ -48,7 +48,7 @@ export default function VenuePage() {
             <div
               key={stat.label}
               className={`${styles.stat} reveal`}
-              style={{ '--reveal-delay': `${idx * 80}ms` } as React.CSSProperties}
+              style={{ '--reveal-delay': `${idx * 30}ms` } as React.CSSProperties}
             >
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>

@@ -45,7 +45,7 @@ export default function SlowContactPageEn() {
 
           <div
             className={`${styles.card} ${styles.cardFull} glass-slow reveal`}
-            style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+            style={{ '--reveal-delay': '40ms' } as React.CSSProperties}
           >
             <h2 className={styles.cardTitle}>Visit Us</h2>
             <p className={styles.cardText}>

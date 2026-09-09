@@ -27,7 +27,7 @@ export default function UniversalLandingPage() {
             {/* TAMA */}
             <div
               className={`${styles.card} ${styles.cardTama} reveal`}
-              style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+              style={{ '--reveal-delay': '30ms' } as React.CSSProperties}
             >
               <h2 className={styles.cardTitle}>TAMA</h2>
               <p className={styles.cardText}>
@@ -43,7 +43,7 @@ export default function UniversalLandingPage() {
             {/* SLOW */}
             <div
               className={`${styles.card} ${styles.cardSlow} reveal`}
-              style={{ '--reveal-delay': '240ms' } as React.CSSProperties}
+              style={{ '--reveal-delay': '60ms' } as React.CSSProperties}
             >
               <h2 className={styles.cardTitle}>SLOW</h2>
               <p className={styles.cardText}>

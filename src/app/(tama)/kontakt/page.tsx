@@ -45,7 +45,7 @@ export default function KontaktPage() {
 
           <div
             className={`${styles.card} ${styles.cardFull} reveal`}
-            style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+            style={{ '--reveal-delay': '40ms' } as React.CSSProperties}
           >
             <h2 className={styles.cardTitle}>Odwiedź nas</h2>
             <p className={styles.cardText}>
