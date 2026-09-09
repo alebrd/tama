@@ -51,6 +51,11 @@
   background: #0a0a0a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.stat:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .statValue {
@@ -96,11 +101,11 @@
   background: #0a0a0a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.3s ease;
 }
 
 .tag:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 /* Description block */
@@ -113,6 +118,11 @@
   background: #0a0a0a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.descBlock:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .desc {
@@ -163,6 +173,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   padding: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.setupCard:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .setupTitle {
@@ -194,6 +209,11 @@
   padding: 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.locationBox:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .locationAddress {

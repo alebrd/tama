@@ -53,6 +53,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.spaceRow:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .spaceImage {
@@ -104,6 +109,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   padding: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.setupCard:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .setupTitle {
