@@ -11,7 +11,7 @@ export default function TamaPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
-      <section className={styles.hero}>
+      <section className={`${styles.hero} reveal`}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
           <p className={styles.sub}>Muzyka. Kultura. Doświadczenie.</p>
@@ -22,7 +22,7 @@ export default function TamaPage() {
       {/* Body */}
       <div className="container">
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <div className={`${styles.card} reveal`}>
             <h2 className={styles.cardTitle}>Miejsce</h2>
             <p className={styles.cardText}>
               TAMA to wyjątkowa przestrzeń eventowa w sercu Poznania, mieszcząca się w zrewitalizowanym, 90-letnim budynku dawnej Wielkopolskiej Izby Rzemieślniczej. Historyczna architektura i industrialny charakter tworzą niepowtarzalne tło dla wydarzeń biznesowych i kulturalnych.
@@ -35,7 +35,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '80ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Muzyka</h2>
             <p className={styles.cardText}>
               TAMA to przestrzeń z wieloletnim doświadczeniem w realizacji koncertów i wydarzeń muzycznych o różnej skali.
@@ -48,7 +51,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '160ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Społeczność</h2>
             <p className={styles.cardText}>
               TAMA od początku jest miejscem tworzonym wokół ludzi, muzyki i wspólnych doświadczeń. Przez lata stała się ważnym punktem na kulturalnej i muzycznej mapie Poznania, współpracując z artystami, organizatorami, markami i lokalnymi twórcami.
@@ -58,7 +64,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '240ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Zorganizuj Wydarzenie</h2>
             <p className={styles.cardText}>
               Ponad 1 100 m² industrialnej przestrzeni, profesjonalne zaplecze techniczne i doświadczenie w realizacji wydarzeń dla nawet 1 000 gości.

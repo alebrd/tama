@@ -11,7 +11,7 @@ export default function UniversalLandingEnPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
-      <section className={styles.hero}>
+      <section className={`${styles.hero} reveal`}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>
             TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
@@ -25,7 +25,10 @@ export default function UniversalLandingEnPage() {
         <div className="container">
           <div className={styles.grid}>
             {/* TAMA */}
-            <div className={`${styles.card} ${styles.cardTama}`}>
+            <div
+              className={`${styles.card} ${styles.cardTama} reveal`}
+              style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+            >
               <h2 className={styles.cardTitle}>TAMA</h2>
               <p className={styles.cardText}>
                 The main stage. A raw, powerful industrial space designed for the biggest musical and cultural events. With a capacity of up to 1,000 guests, spectacular sound, and an uncompromising character.
@@ -38,7 +41,10 @@ export default function UniversalLandingEnPage() {
             </div>
 
             {/* SLOW */}
-            <div className={`${styles.card} ${styles.cardSlow}`}>
+            <div
+              className={`${styles.card} ${styles.cardSlow} reveal`}
+              style={{ '--reveal-delay': '240ms' } as React.CSSProperties}
+            >
               <h2 className={styles.cardTitle}>SLOW</h2>
               <p className={styles.cardText}>
                 An intimate club with an audiophile sound system. Created for deeper musical experiences, carefully selected sounds, and close contact with the artist. A completely different dimension within the same walls.

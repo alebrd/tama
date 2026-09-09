@@ -10,13 +10,13 @@ export default function SlowContactPageEn() {
   return (
     <div className={styles.page}>
       <div className="container">
-        <div className={styles.header}>
+        <div className={`${styles.header} reveal`}>
           <h1 className={`text-gradient-slow ${styles.title}`}>CONTACT</h1>
         </div>
 
         <div className={styles.grid}>
 
-          <div className={`${styles.card} ${styles.cardFull} glass-slow`}>
+          <div className={`${styles.card} ${styles.cardFull} glass-slow reveal`}>
             <h2 className={styles.cardTitle}>Get in Touch</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
@@ -43,7 +43,10 @@ export default function SlowContactPageEn() {
             </div>
           </div>
 
-          <div className={`${styles.card} ${styles.cardFull} glass-slow`}>
+          <div
+            className={`${styles.card} ${styles.cardFull} glass-slow reveal`}
+            style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Visit Us</h2>
             <p className={styles.cardText}>
               Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Poland

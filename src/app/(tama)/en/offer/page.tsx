@@ -33,7 +33,7 @@ export default function VenuePage() {
       <div className="container">
 
         {/* Hero */}
-        <div className={styles.hero}>
+        <div className={`${styles.hero} reveal`}>
           <p className={styles.eyebrow}>EVENT SPACE · POZNAŃ</p>
           <h1 className={`${styles.title} text-gradient`}>Host Your Event</h1>
           <p className={styles.sub}>
@@ -44,8 +44,12 @@ export default function VenuePage() {
 
         {/* Stats */}
         <div className={styles.statsRow}>
-          {stats.map((stat) => (
-            <div key={stat.label} className={styles.stat}>
+          {stats.map((stat, idx) => (
+            <div
+              key={stat.label}
+              className={`${styles.stat} reveal`}
+              style={{ '--reveal-delay': `${idx * 80}ms` } as React.CSSProperties}
+            >
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
@@ -53,7 +57,7 @@ export default function VenuePage() {
         </div>
 
         {/* Event Types */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <h2 className={styles.sectionTitle}>What We Host</h2>
           <div className={styles.tagGrid}>
             {eventTypes.map((type) => (
@@ -63,7 +67,7 @@ export default function VenuePage() {
         </div>
 
         {/* Location */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Location</h2>
             <p className={styles.desc}>
@@ -116,7 +120,7 @@ export default function VenuePage() {
         </div>
 
         {/* Description */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>The Space</h2>
             <p className={styles.desc}>
@@ -150,8 +154,8 @@ export default function VenuePage() {
           </div>
         </div>
 
-                {/* Setups */}
-        <div className={styles.section}>
+        {/* Setups */}
+        <div className={`${styles.section} reveal`}>
           <h2 className={styles.sectionTitle}>Possible Setups</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
@@ -187,7 +191,7 @@ export default function VenuePage() {
         </div>
 
         {/* Gallery */}
-        <div className={styles.section} style={{ marginTop: "6rem" }}>
+        <div className={`${styles.section} reveal`} style={{ marginTop: "6rem" }}>
           <h2 className={styles.sectionTitle}>Gallery</h2>
           <VenueGallery isEnglish={true} />
         </div>

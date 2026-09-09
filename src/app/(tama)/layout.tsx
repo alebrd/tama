@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollObserver from "@/components/ScrollObserver";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -52,7 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable}`} suppressHydrationWarning>
       <body>
+        <noscript>
+          <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
         <div className="noise-overlay" />
+        <ScrollObserver />
         <Navbar />
         <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           {children}

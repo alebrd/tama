@@ -10,13 +10,13 @@ export default function KontaktPage() {
   return (
     <div className={styles.page}>
       <div className="container">
-        <div className={styles.header}>
+        <div className={`${styles.header} reveal`}>
           <h1 className="text-gradient">KONTAKT</h1>
         </div>
 
         <div className={styles.grid}>
 
-          <div className={`${styles.card} ${styles.cardFull}`}>
+          <div className={`${styles.card} ${styles.cardFull} reveal`}>
             <h2 className={styles.cardTitle}>Napisz do nas</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
@@ -43,7 +43,10 @@ export default function KontaktPage() {
             </div>
           </div>
 
-          <div className={`${styles.card} ${styles.cardFull}`}>
+          <div
+            className={`${styles.card} ${styles.cardFull} reveal`}
+            style={{ '--reveal-delay': '120ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Odwiedź nas</h2>
             <p className={styles.cardText}>
               Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Polska

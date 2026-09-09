@@ -11,7 +11,7 @@ export default function TamaPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
-      <section className={styles.hero}>
+      <section className={`${styles.hero} reveal`}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>TAMA</h1>
           <p className={styles.sub}>Music. Culture. Experience.</p>
@@ -22,7 +22,7 @@ export default function TamaPage() {
       {/* Body */}
       <div className="container">
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <div className={`${styles.card} reveal`}>
             <h2 className={styles.cardTitle}>The Venue</h2>
             <p className={styles.cardText}>
               TAMA is a unique event space in the heart of Poznań, located in a revitalized, 90-year-old building of the former Wielkopolska Chamber of Crafts. Historical architecture and an industrial character create an unmistakable backdrop for business and cultural events.
@@ -35,7 +35,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '80ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>The Music</h2>
             <p className={styles.cardText}>
               TAMA is a space with years of experience in producing concerts and music events of various scales.
@@ -48,7 +51,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '160ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>The Community</h2>
             <p className={styles.cardText}>
               From the very beginning, TAMA has been a place built around people, music, and shared experiences. Over the years, it has become an important point on the cultural and musical map of Poznań, collaborating with artists, organizers, brands, and local creators.
@@ -58,7 +64,10 @@ export default function TamaPage() {
             </p>
           </div>
 
-          <div className={styles.card}>
+          <div
+            className={`${styles.card} reveal`}
+            style={{ '--reveal-delay': '240ms' } as React.CSSProperties}
+          >
             <h2 className={styles.cardTitle}>Host Your Event</h2>
             <p className={styles.cardText}>
               Over 1,100 m² of industrial space, professional technical facilities, and experience in producing events for up to 1,000 guests.

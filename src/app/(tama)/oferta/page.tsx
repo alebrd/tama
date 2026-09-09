@@ -33,7 +33,7 @@ export default function WynajemPage() {
       <div className="container">
 
         {/* Hero */}
-        <div className={styles.hero}>
+        <div className={`${styles.hero} reveal`}>
           <p className={styles.eyebrow}>PRZESTRZEŃ EVENTOWA · POZNAŃ</p>
           <h1 className={`${styles.title} text-gradient`}>Zorganizuj Swoje Wydarzenie</h1>
           <p className={styles.sub}>
@@ -44,8 +44,12 @@ export default function WynajemPage() {
 
         {/* Stats */}
         <div className={styles.statsRow}>
-          {stats.map((stat) => (
-            <div key={stat.label} className={styles.stat}>
+          {stats.map((stat, idx) => (
+            <div
+              key={stat.label}
+              className={`${styles.stat} reveal`}
+              style={{ '--reveal-delay': `${idx * 80}ms` } as React.CSSProperties}
+            >
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
@@ -53,7 +57,7 @@ export default function WynajemPage() {
         </div>
 
         {/* Event Types */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <h2 className={styles.sectionTitle}>Co Organizujemy</h2>
           <div className={styles.tagGrid}>
             {eventTypes.map((type) => (
@@ -63,7 +67,7 @@ export default function WynajemPage() {
         </div>
 
         {/* Location */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Lokalizacja</h2>
             <p className={styles.desc}>
@@ -116,7 +120,7 @@ export default function WynajemPage() {
         </div>
 
         {/* Description */}
-        <div className={styles.section}>
+        <div className={`${styles.section} reveal`}>
           <div className={styles.descBlock}>
             <h2 className={styles.sectionTitle}>Przestrzeń</h2>
             <p className={styles.desc}>
@@ -150,8 +154,8 @@ export default function WynajemPage() {
           </div>
         </div>
 
-                {/* Setups */}
-        <div className={styles.section}>
+        {/* Setups */}
+        <div className={`${styles.section} reveal`}>
           <h2 className={styles.sectionTitle}>Możliwe Ustawienia</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
@@ -187,7 +191,7 @@ export default function WynajemPage() {
         </div>
 
         {/* Gallery */}
-        <div className={styles.section} style={{ marginTop: "6rem" }}>
+        <div className={`${styles.section} reveal`} style={{ marginTop: "6rem" }}>
           <h2 className={styles.sectionTitle}>Galeria</h2>
           <VenueGallery isEnglish={false} />
         </div>

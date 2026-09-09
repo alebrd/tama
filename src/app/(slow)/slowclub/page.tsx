@@ -22,7 +22,7 @@ export default function SlowHomePage() {
           <div className={styles.bgOverlay} />
         </div>
         
-        <div className={`container ${styles.heroContent}`}>
+        <div className={`container ${styles.heroContent} reveal`}>
           <div className={styles.logoWrapper}>
             <Image
               src="/slow/neon-logo.png"

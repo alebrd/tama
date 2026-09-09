@@ -5,6 +5,7 @@ import "../(tama)/globals.css";
 import "./slow-globals.css";
 import SlowNavbar from "@/components/SlowNavbar";
 import SlowFooter from "@/components/SlowFooter";
+import ScrollObserver from "@/components/ScrollObserver";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -59,7 +60,11 @@ export default function SlowLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${virtuose.variable}`} suppressHydrationWarning>
       <body>
+        <noscript>
+          <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
         <div className="noise-overlay" />
+        <ScrollObserver />
         <SlowNavbar />
         <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           {children}

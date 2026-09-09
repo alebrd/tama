@@ -53,7 +53,7 @@ export default function SpacesPage() {
   return (
     <div className={styles.page}>
       <div className="container">
-        <div className={styles.hero}>
+        <div className={`${styles.hero} reveal`}>
           <p className={styles.eyebrow}>DISCOVER OUR RENTAL OFFER</p>
           <h1 className={`${styles.title} text-gradient`}>Our Spaces</h1>
           <p className={styles.sub}>
@@ -64,7 +64,7 @@ export default function SpacesPage() {
 
         <div className={styles.spacesList}>
           {spaces.map((space, i) => (
-            <div key={i} className={styles.spaceRow}>
+            <div key={i} className={`${styles.spaceRow} reveal`}>
               <div className={styles.spaceImage}>
                 <Image src={space.image} alt={space.title} fill style={{ objectFit: "cover" }} />
               </div>
@@ -83,7 +83,7 @@ export default function SpacesPage() {
           ))}
         </div>
 
-        <div className={styles.section} style={{ marginTop: "6rem" }}>
+        <div className={`${styles.section} reveal`} style={{ marginTop: "6rem" }}>
           <h2 className={styles.sectionTitle}>Possible Setups</h2>
           <div className={styles.setupsGrid}>
             <div className={styles.setupCard}>
