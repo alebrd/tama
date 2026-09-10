@@ -17,10 +17,11 @@
 }
 
 .navContainer {
-  height: 64px;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: space-between;
+  gap: 2.5rem;
+  height: 64px;
 }
 
 /* Logo */
@@ -48,15 +49,10 @@
 
 /* Desktop Nav */
 .navLinks {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .navLinks {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-left: auto;
 }
 
 .link {

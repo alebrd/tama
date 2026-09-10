@@ -110,6 +110,7 @@ padding:    0 2rem
 | Height | `64px` |
 | Logo height | `50px` |
 | Nav link gap | `2rem` |
+| Layout | Right-aligned nav links (matching TAMA), `margin-left: auto`, container `gap: 2.5rem` |
 
 ### Hero Section
 | Property | Value |
