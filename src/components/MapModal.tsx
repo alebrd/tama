@@ -52,8 +52,8 @@ export default function MapModal({ isOpen, onClose, isEnglish, variant = 'tama' 
         <div className={styles.mapContainer}>
           <iframe
             src={variant === 'slow' 
-              ? "https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              : "https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              ? "https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              : "https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=14&ie=UTF8&iwloc=&output=embed"
             }
             width="100%"
             height="100%"

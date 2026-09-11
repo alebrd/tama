@@ -52,7 +52,7 @@ export default function ContactPage() {
               Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Poland
             </p>
             <iframe
-              src="https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=TAMA%20Klub%20Poznan&t=&z=14&ie=UTF8&iwloc=&output=embed"
               className={styles.mapEmbed}
               allowFullScreen
               loading="lazy"

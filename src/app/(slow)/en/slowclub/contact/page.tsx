@@ -52,7 +52,7 @@ export default function SlowContactPageEn() {
               Wielkopolska Izba Rzemieślnicza · ul. Niezłomnych 2 · 61-894 Poznań, Poland
             </p>
             <iframe
-              src="https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Slow%20Club%20Poznan&t=&z=14&ie=UTF8&iwloc=&output=embed"
               className={styles.mapEmbed}
               allowFullScreen
               loading="lazy"
