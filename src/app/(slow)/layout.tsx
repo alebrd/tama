@@ -25,8 +25,12 @@ export const metadata: Metadata = {
   },
   description: "Slow Club Poznań. Only House Music.",
   icons: {
-    icon: "/slow/logo.png",
-    apple: "/slow/logo.png",
+    icon: [
+      { url: "/slow/icon.svg", type: "image/svg+xml" },
+      { url: "/slow/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/slow/favicon-48.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: "/slow/apple-icon.png",
   },
   openGraph: {
     title: "SLOW — The other side of TAMA",

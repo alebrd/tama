@@ -224,6 +224,8 @@ Global noise texture at `opacity: 0.03` (inherited from TAMA globals). **Do not 
 
 **Unified Navbar:** To ensure cross-brand consistency, the navigation menu (desktop links, dropdown menus, hamburger icon, mobile overlay, typographic sub-links, and language switcher) uses the exact same typography, colors, and styling across TAMA and SLOW, using unified monochrome typography (pure white text, glow, and underlines) with zero red color on navigation links.
 
+**Browser Favicon:** Uses the official white SLOW geometric wordmark on a solid black background (`/slow/favicon-32.png` and `/slow/apple-icon.png`), matching the site's brand logo and remaining crisp in both light and dark browser tabs.
+
 ---
 
 ## 9. Brand Identity Notes
