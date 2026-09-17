@@ -4,7 +4,7 @@
 }
 
 .hero {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -25,7 +25,15 @@
   margin-bottom: 0;
 }
 
+.marqueeBand {
+  margin: 1.5rem 0 3.5rem;
+}
+
 /* Split Grid */
+.splitSection {
+  margin-bottom: 3.5rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -36,12 +44,58 @@
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: border-color 0.3s ease;
   position: relative;
   overflow: hidden;
+  background: #0a0a0a;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.cardBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cardBgImage {
+  object-fit: cover;
+  opacity: 0.16;
+  filter: grayscale(40%) contrast(110%);
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.card:hover .cardBgImage {
+  opacity: 0.32;
+  transform: scale(1.04);
+  filter: grayscale(10%) contrast(115%);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.75) 0%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
 }
 
 .cardTama {
@@ -49,11 +103,7 @@
 }
 
 .cardSlow {
-  background: #0a0505; /* slight red/warm tint for slow */
-}
-
-.card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  background: #080505;
 }
 
 .cardLogo {
@@ -93,7 +143,13 @@
     padding-bottom: 3rem;
   }
   .hero {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .marqueeBand {
+    margin: 1rem 0 2rem;
+  }
+  .splitSection {
+    margin-bottom: 2rem;
   }
   .sub {
     font-size: 0.8rem;
@@ -103,13 +159,10 @@
     gap: 1rem;
   }
   .card { 
-    padding: 1.5rem 1.25rem; 
-    gap: 1rem;
+    padding: 2rem 1.5rem; 
   }
-  .cardLogo {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0.5rem;
+  .cardContent {
+    gap: 1rem;
   }
   .cardTitle {
     font-size: 1.5rem;

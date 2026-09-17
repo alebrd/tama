@@ -4,85 +4,272 @@
   flex: 1;
 }
 
-/* ---- TAMA PAGE ---- */
+/* ---- HERO ---- */
 .hero {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
   text-align: center;
 }
 
+.kicker {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.65;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
 .title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
   line-height: 0.9;
+  letter-spacing: 4px;
   margin-bottom: 1rem;
 }
 
 .sub {
-  font-size: 0.9rem;
-  letter-spacing: 3px;
-  color: var(--color-light-grey);
-  opacity: 0.7;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-.glow {
-  display: none;
-}
-
-/* Card grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.card {
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  background: #0a0a0a;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-  transition: border-color 0.3s ease;
-}
-
-.card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-.cardTitle {
   font-size: 1rem;
-  letter-spacing: 2px;
-}
-
-.cardText {
+  letter-spacing: 4px;
   color: var(--color-light-grey);
-  line-height: 1.8;
-  font-size: 0.9375rem;
+  opacity: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
 }
 
-.mapLinksWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+.sub em {
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-light-grey);
+  opacity: 0.8;
+}
+
+.marqueeBand {
+  margin: 2rem 0 4rem;
+}
+
+/* ---- EDITORIAL INTRO SECTION ---- */
+.editorialSection {
+  margin-bottom: 5rem;
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
 }
 
-.mapLink {
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  align-self: flex-start;
+.editorialImageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
 }
 
-.mapLink:hover {
-  border-color: var(--foreground);
+.editorialImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorialImageWrapper:hover .editorialImage {
+  transform: scale(1.04);
+}
+
+.editorialContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sectionEyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.editorialTitle {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.editorialText {
+  color: var(--color-light-grey);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.editorialAction {
+  margin-top: 1rem;
+}
+
+/* ---- SPACES PREVIEW SECTION ---- */
+.spacesSection {
+  margin-bottom: 5rem;
+}
+
+.spacesHeader {
+  margin-bottom: 2.5rem;
+}
+
+.spacesTitle {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.spacesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.spaceCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.spaceCard:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.spaceMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.spaceImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spaceCard:hover .spaceImage {
+  transform: scale(1.05);
+}
+
+.spaceMeta {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #0a0a0a;
+  flex: 1;
+}
+
+.spaceName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--foreground);
+  margin-bottom: 0;
+}
+
+.spaceCap {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+}
+
+/* ---- CTA BAND ---- */
+.ctaBand {
+  margin-top: 5rem;
+}
+
+.ctaCard {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  transition: border-color 0.3s ease;
+}
+
+.ctaCard:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.ctaContent {
+  max-width: 620px;
+}
+
+.ctaTitle {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.ctaText {
+  color: var(--color-light-grey);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.ctaAction {
+  flex-shrink: 0;
+}
+
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+@media (max-width: 900px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .spacesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .ctaCard {
+    padding: 2.5rem 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ctaAction {
+    width: 100%;
+  }
+  .ctaAction a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -92,43 +279,13 @@
   }
   .hero {
     margin-bottom: 2rem;
-    padding-bottom: 0;
   }
-  .grid { grid-template-columns: 1fr; }
-  .card {
-    padding: 1.5rem 1.25rem;
-    gap: 1rem;
+  .marqueeBand {
+    margin: 1.25rem 0 2.5rem;
+  }
+  .editorialSection,
+  .spacesSection,
+  .ctaBand {
+    margin-bottom: 3rem;
   }
 }
-
-.cardWide {
-  grid-column: 1 / -1;
-}
-
-.cardWideInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.venueLink {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  flex-shrink: 0;
-}
-
-.venueLink:hover {
-  border-color: var(--foreground);
-  opacity: 1;
-}
-
-
-
-
