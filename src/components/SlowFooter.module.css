@@ -1,6 +1,6 @@
 .footer {
   margin-top: auto;
-  border-top: 1px solid rgba(255, 26, 26, 0.1);
+  border-top: 1px solid rgba(168, 85, 247, 0.15);
   padding: 4rem 0 0 0;
   background-color: var(--color-slow-dark);
 }
@@ -50,7 +50,8 @@
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
-  color: var(--color-slow-red);
+  color: var(--foreground);
+  opacity: 0.5;
   text-transform: uppercase;
 }
 

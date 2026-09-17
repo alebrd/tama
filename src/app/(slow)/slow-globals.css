@@ -1,8 +1,10 @@
 :root {
-  --color-slow-red: #c41010;
-  --color-slow-red-glow: rgba(196, 16, 16, 0.4);
+  --color-slow-purple: #7c3aed;
+  --color-slow-purple-glow: rgba(124, 58, 237, 0.35);
+  --color-slow-red: var(--color-slow-purple);
+  --color-slow-red-glow: var(--color-slow-purple-glow);
   --color-slow-dark: #070707;
-  --color-slow-gradient: linear-gradient(135deg, #e01212, #d45000);
+  --color-slow-gradient: linear-gradient(135deg, #8b5cf6, #581c87);
   --background: var(--color-slow-dark);
 }
 
@@ -14,14 +16,14 @@ body {
   font-family: var(--font-virtuose), sans-serif;
   letter-spacing: 4px;
   font-weight: 900;
-  color: var(--color-slow-red);
+  color: var(--foreground, #ffffff);
 }
 
 .glass-slow {
   background: rgba(7, 7, 7, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(224, 18, 18, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
@@ -29,8 +31,8 @@ body {
 .btn-slow {
   display: inline-block;
   background: transparent;
-  color: var(--color-slow-red);
-  border: 1px solid var(--color-slow-red);
+  color: var(--foreground, #ffffff);
+  border: 1px solid rgba(124, 58, 237, 0.35);
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
@@ -40,13 +42,14 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 0 6px rgba(224, 18, 18, 0.15);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.2);
 }
 
 .btn-slow:hover {
-  background: var(--color-slow-red);
-  color: #fff;
-  box-shadow: 0 0 14px rgba(224, 18, 18, 0.3);
+  background: var(--foreground, #ffffff);
+  color: #000000;
+  border-color: var(--foreground, #ffffff);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.5);
   transform: translateY(-2px);
   opacity: 1;
 }

@@ -12,18 +12,18 @@
 | `--background` | `#070707` | Page background (near-black, slightly warmer than TAMA) |
 | `--foreground` | `#ffffff` | Primary text (inherited from TAMA globals) |
 | `--color-slow-dark` | `#070707` | Same as background |
-| `--color-slow-red` | `#c41010` | Primary brand accent — buttons, highlights, eyebrows, links |
-| `--color-slow-red-glow` | `rgba(196, 16, 16, 0.4)` | Red glow for shadows and drop-shadows |
-| `--color-slow-gradient` | `linear-gradient(135deg, #e01212, #d45000)` | Brand gradient (red → deep orange) |
+| `--color-slow-purple` | `#7c3aed` | Primary brand accent (aliased to `--color-slow-red`) |
+| `--color-slow-purple-glow` | `rgba(124, 58, 237, 0.35)` | Deep ultraviolet glow for shadows and drop-shadows |
+| `--color-slow-gradient` | `linear-gradient(135deg, #8b5cf6, #581c87)` | Brand gradient (royal violet → deep midnight purple) |
 | `--color-light-grey` | `#e0e0e0` | Secondary text (inherited from TAMA globals) |
 | Glass background | `rgba(7, 7, 7, 0.4)` | Glass card background |
-| Glass border | `rgba(224, 18, 18, 0.1)` | Subtle red-tinted glass border |
-| Card border (default) | `rgba(255, 26, 26, 0.1)` | SLOW card borders |
-| Card border (hover) | `rgba(255, 26, 26, 0.4)` | SLOW card borders on hover |
-| Banner border | `rgba(255, 26, 26, 0.2)` | Event flyer/banner border |
+| Glass border | `rgba(124, 58, 237, 0.15)` | Subtle purple-tinted glass border |
+| Card border (default) | `rgba(124, 58, 237, 0.15)` | SLOW card borders |
+| Card border (hover) | `rgba(124, 58, 237, 0.45)` | SLOW card borders on hover |
+| Banner border | `rgba(124, 58, 237, 0.2)` | Event flyer/banner border |
 
 > **IMPORTANT:** SLOW's background is `#070707` (not pure `#000000` like TAMA).
-> The key chromatic identity is the **red accent** `#c41010` which replaces all white accents from TAMA.
+> The key chromatic identity is the **deep ultraviolet purple accent** `#7c3aed` matching the official SLOW neon sign and the ambient club lighting. All typography font colors remain unified with TAMA's pure white `#ffffff` and light-grey scale.
 
 ---
 
@@ -42,7 +42,7 @@
 font-family:    var(--font-virtuose)
 letter-spacing: 4px
 font-weight:    900
-color:          var(--color-slow-red)   /* #c41010 */
+color:          var(--foreground, #ffffff)   /* Unified with TAMA */
 ```
 
 ### Heading Base (inherited from TAMA globals)
@@ -57,9 +57,9 @@ font-weight:    700
 |---|---|---|
 | Hero title | `clamp(3rem, 10vw, 6rem)` | line-height `0.9` |
 | Section / card title | `1.25rem` | uppercase, letter-spacing `2px`, font-weight `700` |
-| Eyebrow label | `0.7rem` | uppercase, letter-spacing `4px`, `var(--color-slow-red)` |
+| Eyebrow label | `0.75rem` | uppercase, letter-spacing `2px`, `var(--color-light-grey)`, opacity `0.6` |
 | Body / subtitle | `0.9375rem` | `var(--color-light-grey)`, line-height `1.6`, opacity `0.7` |
-| Email / social links | `1.125rem` | font-weight `600`, `var(--color-slow-red)` |
+| Email / social links | `1.125rem` | font-weight `600`, `var(--foreground)`, hover glow |
 | Nav links (desktop) | `0.8rem` | uppercase, letter-spacing `1.5px`, font-weight `600` (unified with TAMA) |
 | Mobile nav links | `1.4rem` | uppercase, letter-spacing `3px`, font-weight `700` (unified with TAMA) |
 | Mobile sub-links | `1.05rem` | uppercase, letter-spacing `2.5px`, font-weight `600` (unified with TAMA) |
@@ -127,7 +127,7 @@ border-radius: 4px
 border:        1px solid rgba(255, 26, 26, 0.2)
 box-shadow:    0 10px 30px rgba(0, 0, 0, 0.5)
 ```
-Hover: `border-color: rgba(196,16,16,0.5)`, `transform: translateY(-4px)`
+Hover: `border-color: rgba(168, 85, 247, 0.5)`, `transform: translateY(-4px)`
 
 ---
 
@@ -136,35 +136,35 @@ Hover: `border-color: rgba(196,16,16,0.5)`, `transform: translateY(-4px)`
 ### SLOW Button (`.btn-slow`)
 ```
 background:     transparent
-color:          var(--color-slow-red)
-border:         1px solid var(--color-slow-red)
+color:          var(--color-slow-purple)
+border:         1px solid rgba(124, 58, 237, 0.35)
 border-radius:  4px
 padding:        0.85rem 2rem
 font-size:      0.8rem
 font-weight:    700
 text-transform: uppercase
 letter-spacing: 2px
-box-shadow:     0 0 6px rgba(224, 18, 18, 0.15)
+box-shadow:     0 0 8px rgba(124, 58, 237, 0.2)
 transition:     all 0.3s ease
 ```
-Hover: fills red `#c41010`, text turns white, glow `rgba(224,18,18,0.3)`, lifts `translateY(-2px)`
+Hover: fills white `#ffffff`, text turns black, glow `rgba(124, 58, 237, 0.5)`, lifts `translateY(-2px)`
 
 ### Cards
 ```
 background:    rgba(7, 7, 7, 0.6)
-border:        1px solid rgba(255, 26, 26, 0.1)
+border:        1px solid rgba(124, 58, 237, 0.15)
 border-radius: 4px
 padding:       2.5rem
 gap:           1rem
 ```
-Hover: `border-color: rgba(255,26,26,0.4)`
+Hover: `border-color: rgba(124, 58, 237, 0.45)`
 > **Rule:** Non-clickable informational containers remain stationary on hover. Hover lifts (`translateY`) apply exclusively to clickable card links and buttons.
 
 ### Glass Utility (`.glass-slow`)
 ```
 background:        rgba(7, 7, 7, 0.4)
 backdrop-filter:   blur(12px)
-border:            1px solid rgba(224, 18, 18, 0.1)
+border:            1px solid rgba(124, 58, 237, 0.15)
 box-shadow:        0 4px 30px rgba(0, 0, 0, 0.1)
 border-radius:     4px
 ```
@@ -176,9 +176,8 @@ border-radius:     4px
 ### Hero Logo Pulse Glow
 ```css
 @keyframes pulseGlow {
-  0%   { filter: drop-shadow(0 0 8px rgba(255, 26, 26, 0.6)); }
-  100% { filter: drop-shadow(0 0 24px rgba(255, 26, 26, 1))
-                 drop-shadow(0 0 50px rgba(255, 26, 26, 0.4)); }
+  0%   { filter: brightness(0.92) saturate(1.02); }
+  100% { filter: brightness(1.10) saturate(1.18) contrast(1.04); }
 }
 animation: pulseGlow 3s infinite alternate ease-in-out;
 ```

@@ -263,7 +263,7 @@ export default function SlowOfertaPage() {
                 href="/slowclub/kontakt"
                 className="btn-slow"
                 id="slow-oferta-contact-btn"
-                style={{ background: "transparent", borderColor: "rgba(255, 26, 26, 0.3)", color: "#fff" }}
+                style={{ background: "transparent", borderColor: "rgba(168, 85, 247, 0.35)", color: "#fff" }}
               >
                 KONTAKT
               </Link>

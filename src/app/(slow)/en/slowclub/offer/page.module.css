@@ -10,9 +10,10 @@
 }
 
 .eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 4px;
-  color: var(--color-slow-red);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--color-light-grey);
+  opacity: 0.6;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -25,8 +26,8 @@
   margin-bottom: 1.5rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-slow-red);
-  text-shadow: 0 0 30px rgba(196, 16, 16, 0.4);
+  color: var(--foreground, #ffffff);
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.45);
 }
 
 .sub {
@@ -55,14 +56,14 @@
   text-align: center;
   min-height: 130px;
   background: rgba(7, 7, 7, 0.6);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 4px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat:hover {
-  border-color: rgba(255, 26, 26, 0.4);
-  box-shadow: 0 0 15px rgba(196, 16, 16, 0.15);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
 }
 
 .statValue {
@@ -90,7 +91,8 @@
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-slow-red);
+  color: var(--color-light-grey);
+  opacity: 0.7;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -109,14 +111,14 @@
   text-transform: uppercase;
   font-weight: 600;
   background: rgba(7, 7, 7, 0.6);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 4px;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .tag:hover {
-  border-color: rgba(255, 26, 26, 0.4);
-  color: var(--color-slow-red);
+  border-color: rgba(168, 85, 247, 0.45);
+  color: #ffffff;
 }
 
 /* Description block */
@@ -127,13 +129,13 @@
   gap: 1.5rem;
   width: 100%;
   background: rgba(7, 7, 7, 0.6);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 4px;
   transition: border-color 0.3s ease;
 }
 
 .descBlock:hover {
-  border-color: rgba(255, 26, 26, 0.35);
+  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .desc {
@@ -153,7 +155,7 @@
 /* Location */
 .locationBox {
   background: rgba(7, 7, 7, 0.6);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 4px;
   padding: 2rem;
   margin-top: 2.5rem;
@@ -162,7 +164,7 @@
 }
 
 .locationBox:hover {
-  border-color: rgba(255, 26, 26, 0.35);
+  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .locationAddress {
@@ -170,7 +172,7 @@
   font-weight: 700;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 26, 26, 0.15);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
   display: block;
   text-decoration: none;
   color: inherit;
@@ -178,8 +180,8 @@
 }
 
 .locationAddress:hover {
-  color: var(--color-slow-red);
-  text-shadow: 0 0 10px rgba(196, 16, 16, 0.4);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
 }
 
 .transitGrid {
@@ -232,14 +234,14 @@
 
 .setupCard {
   background: rgba(7, 7, 7, 0.6);
-  border: 1px solid rgba(255, 26, 26, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 4px;
   padding: 2rem;
   transition: border-color 0.3s ease;
 }
 
 .setupCard:hover {
-  border-color: rgba(255, 26, 26, 0.4);
+  border-color: rgba(168, 85, 247, 0.45);
 }
 
 .setupTitle {
@@ -332,12 +334,12 @@
 }
 
 .spaceCardSlow {
-  border: 1px solid rgba(255, 26, 26, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.25);
   background: rgba(7, 7, 7, 0.6);
 }
 
 .spaceCardSlow:hover {
-  border-color: rgba(255, 26, 26, 0.5);
+  border-color: rgba(168, 85, 247, 0.55);
 }
 
 .spaceCardConference {
@@ -381,7 +383,8 @@
 }
 
 .spaceCardEyebrowSlow {
-  color: var(--color-slow-red);
+  color: var(--color-light-grey);
+  opacity: 0.6;
 }
 
 .spaceCardEyebrowConference {
@@ -420,7 +423,8 @@
   content: "·";
   position: absolute;
   left: 0;
-  color: var(--color-slow-red);
+  color: var(--color-light-grey);
+  opacity: 0.6;
 }
 
 .spaceCardNote {

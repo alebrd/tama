@@ -25,10 +25,10 @@ export default function SlowHomePageEn() {
         <div className={`container ${styles.heroContent} reveal`}>
           <div className={styles.logoWrapper}>
             <Image
-              src="/slow/neon-logo.png"
+              src="/slow/slow-neon-purple-v3.png"
               alt="SLOW Neon Sign"
               width={600}
-              height={200}
+              height={258}
               className={styles.heroNeonLogo}
               priority
             />
