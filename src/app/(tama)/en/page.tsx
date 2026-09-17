@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Marquee from "@/components/Marquee";
 import StatsCounter from "@/components/StatsCounter";
 import EventShowcaseGallery from "@/components/EventShowcaseGallery";
 import styles from "../root.module.css";
@@ -11,24 +10,42 @@ export const metadata: Metadata = {
   description: "Two dimensions of club experience in the heart of Poznań.",
 };
 
-const marqueeItems = [
-  "TAMA",
-  "MUSIC",
-  "CULTURE",
-  "EXPERIENCES",
-  "SLOW",
-  "MAIN HALL",
-  "CHANDELIER ROOM",
-  "1000 M²",
-  "POZNAŃ",
-  "NIEZŁOMNYCH 2",
+const spaces = [
+  {
+    name: "Main Room",
+    cap: "Up to 1,000 guests · Stage · VIP",
+    desc: "Over 500 m² of open industrial space with professional stage and technical facilities.",
+    image: "/spaces/main-room.jpg",
+    href: "/en/spaces",
+  },
+  {
+    name: "SLOW Club",
+    cap: "Up to 150 guests · Sound System",
+    desc: "Modular, modern club space designed for corporate, private, and cultural events.",
+    image: "/spaces/slow.jpg",
+    href: "/en/slowclub",
+  },
+  {
+    name: "Chandelier Room",
+    cap: "Up to 250 guests · Cocktail Bar",
+    desc: "Representative space with classic chandeliers, stained glass, parquet floor, and cocktail bar.",
+    image: "/spaces/chandelier.jpg",
+    href: "/en/spaces",
+  },
+  {
+    name: "U'Patka Room",
+    cap: "Up to 40 guests · 42 m²",
+    desc: "Intimate space ideal for a welcome area, lounge zone, VIP room, or private meetings.",
+    image: "/spaces/upatki.jpg",
+    href: "/en/spaces",
+  },
 ];
 
 export default function UniversalLandingEnPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
-      <section className={`${styles.hero} reveal`}>
+      <section className={styles.hero}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>
             TAMA{" "}
@@ -48,20 +65,12 @@ export default function UniversalLandingEnPage() {
         </div>
       </section>
 
-      {/* Infinite Marquee Ticker */}
-      <div className={styles.marqueeBand}>
-        <Marquee items={marqueeItems} />
-      </div>
-
-      {/* Split Section */}
+      {/* Split Section — immediately visible above fold */}
       <section className={styles.splitSection}>
         <div className="container">
           <div className={styles.grid}>
             {/* TAMA */}
-            <div
-              className={`${styles.card} ${styles.cardTama} reveal`}
-              style={{ "--reveal-delay": "30ms" } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardTama}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/main-room.jpg"
@@ -69,6 +78,7 @@ export default function UniversalLandingEnPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
                   className={styles.cardBgImage}
+                  priority
                 />
                 <div className={styles.cardOverlay} />
               </div>
@@ -89,10 +99,7 @@ export default function UniversalLandingEnPage() {
             </div>
 
             {/* SLOW */}
-            <div
-              className={`${styles.card} ${styles.cardSlow} reveal`}
-              style={{ "--reveal-delay": "60ms" } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardSlow}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/slow.jpg"
@@ -100,6 +107,7 @@ export default function UniversalLandingEnPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
                   className={styles.cardBgImage}
+                  priority
                 />
                 <div className={styles.cardOverlay} />
               </div>
@@ -123,10 +131,60 @@ export default function UniversalLandingEnPage() {
         </div>
       </section>
 
-      {/* Dynamic Key Stats Counter */}
+      {/* Spaces Showcase Section */}
+      <section className={styles.spacesSection}>
+        <div className="container">
+          <div className={styles.spacesHeader}>
+            <div>
+              <p className={styles.spacesEyebrow}>OUR SPACES</p>
+              <h2 className={`${styles.spacesTitle} text-gradient`}>
+                Four atmospheres. One venue.
+              </h2>
+              <p className={styles.spacesSub}>
+                Over 1,100 m² of revitalized industrial space in the heart of Poznań.
+              </p>
+            </div>
+            <div className={styles.spacesAction}>
+              <Link href="/en/spaces" className="btn btn-outline">
+                EXPLORE ALL SPACES <span className="btn-arrow">→</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className={styles.spacesGrid}>
+            {spaces.map((space) => (
+              <Link
+                key={space.name}
+                href={space.href}
+                className={styles.spaceCard}
+              >
+                <div className={styles.spaceMedia}>
+                  <Image
+                    src={space.image}
+                    alt={space.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                    className={styles.spaceImage}
+                  />
+                </div>
+                <div className={styles.spaceMeta}>
+                  <h3 className={styles.spaceName}>{space.name}</h3>
+                  <span className={styles.spaceCap}>{space.cap}</span>
+                  <p className={styles.spaceDesc}>{space.desc}</p>
+                  <span className={styles.spaceLinkText}>
+                    DETAILS <span className="btn-arrow">→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dynamic Animated Stats Counter */}
       <StatsCounter lang="en" />
 
-      {/* Event Versatility Gallery */}
+      {/* Event Showcase Gallery */}
       <EventShowcaseGallery
         lang="en"
         eyebrow="EVENTS"

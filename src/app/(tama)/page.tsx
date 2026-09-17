@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Marquee from "@/components/Marquee";
 import StatsCounter from "@/components/StatsCounter";
 import EventShowcaseGallery from "@/components/EventShowcaseGallery";
 import styles from "./root.module.css";
@@ -11,24 +10,42 @@ export const metadata: Metadata = {
   description: "Dwa wymiary klubowego doświadczenia w sercu Poznania.",
 };
 
-const marqueeItems = [
-  "TAMA",
-  "MUZYKA",
-  "KULTURA",
-  "DOŚWIADCZENIA",
-  "SLOW",
-  "SALA GŁÓWNA",
-  "SALA ŻYRANDOLOWA",
-  "1000 M²",
-  "POZNAŃ",
-  "NIEZŁOMNYCH 2",
+const spaces = [
+  {
+    name: "Sala Główna",
+    cap: "Do 1 000 osób · Scena · VIP",
+    desc: "Ponad 500 m² otwartej przestrzeni industrialnej z profesjonalną sceną i zapleczem technicznym.",
+    image: "/spaces/main-room.jpg",
+    href: "/przestrzen",
+  },
+  {
+    name: "Klub SLOW",
+    cap: "Do 150 osób · Sound System",
+    desc: "Modułowa, nowoczesna przestrzeń klubowa stworzona z myślą o wydarzeniach firmowych i kulturalnych.",
+    image: "/spaces/slow.jpg",
+    href: "/slowclub",
+  },
+  {
+    name: "Sala Żyrandolowa",
+    cap: "Do 250 osób · Koktajl Bar",
+    desc: "Reprezentacyjna przestrzeń z klasycznymi żyrandolami, witrażami, parkietem i barem koktajlowym.",
+    image: "/spaces/chandelier.jpg",
+    href: "/przestrzen",
+  },
+  {
+    name: "Sala U'Patki",
+    cap: "Do 40 osób · 42 m²",
+    desc: "Kameralna przestrzeń idealna na strefę powitalną, lounge, VIP lub dodatkową atrakcję.",
+    image: "/spaces/upatki.jpg",
+    href: "/przestrzen",
+  },
 ];
 
 export default function UniversalLandingPage() {
   return (
     <div className={styles.page}>
       {/* Hero */}
-      <section className={`${styles.hero} reveal`}>
+      <section className={styles.hero}>
         <div className="container">
           <h1 className={`${styles.title} text-gradient`}>
             TAMA{" "}
@@ -48,20 +65,12 @@ export default function UniversalLandingPage() {
         </div>
       </section>
 
-      {/* Infinite Marquee Ticker */}
-      <div className={styles.marqueeBand}>
-        <Marquee items={marqueeItems} />
-      </div>
-
-      {/* Split Section */}
+      {/* Split Section — immediately visible above fold */}
       <section className={styles.splitSection}>
         <div className="container">
           <div className={styles.grid}>
             {/* TAMA */}
-            <div
-              className={`${styles.card} ${styles.cardTama} reveal`}
-              style={{ "--reveal-delay": "30ms" } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardTama}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/main-room.jpg"
@@ -69,6 +78,7 @@ export default function UniversalLandingPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
                   className={styles.cardBgImage}
+                  priority
                 />
                 <div className={styles.cardOverlay} />
               </div>
@@ -90,10 +100,7 @@ export default function UniversalLandingPage() {
             </div>
 
             {/* SLOW */}
-            <div
-              className={`${styles.card} ${styles.cardSlow} reveal`}
-              style={{ "--reveal-delay": "60ms" } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardSlow}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/slow.jpg"
@@ -101,6 +108,7 @@ export default function UniversalLandingPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
                   className={styles.cardBgImage}
+                  priority
                 />
                 <div className={styles.cardOverlay} />
               </div>
@@ -123,10 +131,60 @@ export default function UniversalLandingPage() {
         </div>
       </section>
 
-      {/* Dynamic Key Stats Counter */}
+      {/* Spaces Showcase Section */}
+      <section className={styles.spacesSection}>
+        <div className="container">
+          <div className={styles.spacesHeader}>
+            <div>
+              <p className={styles.spacesEyebrow}>PRZESTRZENIE</p>
+              <h2 className={`${styles.spacesTitle} text-gradient`}>
+                Cztery nastroje. Jedna lokalizacja.
+              </h2>
+              <p className={styles.spacesSub}>
+                Ponad 1 100 m² zrewitalizowanej przestrzeni industrialnej w centrum Poznania.
+              </p>
+            </div>
+            <div className={styles.spacesAction}>
+              <Link href="/przestrzen" className="btn btn-outline">
+                POZNAJ WSZYSTKIE PRZESTRZENIE <span className="btn-arrow">→</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className={styles.spacesGrid}>
+            {spaces.map((space) => (
+              <Link
+                key={space.name}
+                href={space.href}
+                className={styles.spaceCard}
+              >
+                <div className={styles.spaceMedia}>
+                  <Image
+                    src={space.image}
+                    alt={space.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                    className={styles.spaceImage}
+                  />
+                </div>
+                <div className={styles.spaceMeta}>
+                  <h3 className={styles.spaceName}>{space.name}</h3>
+                  <span className={styles.spaceCap}>{space.cap}</span>
+                  <p className={styles.spaceDesc}>{space.desc}</p>
+                  <span className={styles.spaceLinkText}>
+                    SZCZEGÓŁY <span className="btn-arrow">→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dynamic Animated Stats Counter */}
       <StatsCounter lang="pl" />
 
-      {/* Event Versatility Gallery */}
+      {/* Event Showcase Gallery */}
       <EventShowcaseGallery
         lang="pl"
         eyebrow="WYDARZENIA"

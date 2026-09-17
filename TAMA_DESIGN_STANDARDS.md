@@ -74,9 +74,9 @@ font-weight: 700
 
 ### Container
 ```
-max-width:  1200px
+max-width:  1380px
 margin:     0 auto
-padding:    0 2rem
+padding:    0 clamp(1.5rem, 3vw, 2.5rem)
 ```
 
 ### Page Top Padding (accounts for fixed 64px navbar)

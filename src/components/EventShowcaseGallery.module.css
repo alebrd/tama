@@ -83,7 +83,7 @@
   display: flex;
   gap: 1.5rem;
   width: max-content;
-  padding: 0 max(2rem, calc((100vw - 1200px) / 2));
+  padding: 0 max(clamp(1.5rem, 3vw, 2.5rem), calc((100vw - 1380px) / 2));
 }
 
 .card {
