@@ -109,7 +109,7 @@ padding:    0 2rem
 | Property | Value |
 |---|---|
 | Height | `64px` |
-| Logo height | `50px` |
+| Logos | Both TAMA and SLOW logos present across all pages (`.logoGroup`, `gap: 0.5rem`, height `50px`) matching landing page |
 | Nav link gap | `2rem` |
 | Layout | Right-aligned nav links (matching TAMA), `margin-left: auto`, container `gap: 2.5rem` |
 

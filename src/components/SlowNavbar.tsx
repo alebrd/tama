@@ -91,7 +91,8 @@ export default function SlowNavbar() {
 
   const isEnglish = pathname.startsWith("/en");
   const links = isEnglish ? enLinks : plLinks;
-  const homeHref = isEnglish ? "/en/slowclub" : "/slowclub";
+  const tamaHomeHref = isEnglish ? "/en/tama" : "/tama";
+  const slowHomeHref = isEnglish ? "/en/slowclub" : "/slowclub";
   const alternatePath = pathMap[pathname] ?? (isEnglish ? "/slowclub" : "/en/slowclub");
 
   const plHref = isEnglish ? alternatePath : pathname;
@@ -145,9 +146,16 @@ export default function SlowNavbar() {
     <>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${menuOpen ? styles.menuOpenHeader : ''}`}>
         <div className={`container ${styles.navContainer}`}>
-          <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-            <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
-          </Link>
+          <div className={styles.logoGroup}>
+            <Link href={tamaHomeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
+              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+            </Link>
+            <Link href={slowHomeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
+              <div className={styles.slowLogoWrapper}>
+                <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+              </div>
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
           <nav ref={navRef} className={styles.navLinks}>

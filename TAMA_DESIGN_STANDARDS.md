@@ -108,7 +108,7 @@ padding:    0 clamp(1.5rem, 3vw, 2.5rem)
 | Scrolled background | `rgba(0, 0, 0, 0.85)` |
 | Border bottom | `1px solid var(--glass-border)` |
 | Nav link gap | `2rem` |
-| Layout | SLOW logo sits directly next to TAMA logo (1.5x zoom, `gap: 1rem`) |
+| Layout | Both TAMA and SLOW logos present across all pages (`.logoGroup`, `gap: 0.5rem`, height `50px`) |
 
 ### Footer
 | Property | Value |
