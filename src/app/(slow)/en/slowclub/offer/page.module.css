@@ -315,3 +315,125 @@
     text-align: center;
   }
 }
+
+/* Spaces Grid */
+.spacesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.spaceCard {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease;
+}
+
+.spaceCardSlow {
+  border: 1px solid rgba(255, 26, 26, 0.2);
+  background: rgba(7, 7, 7, 0.6);
+}
+
+.spaceCardSlow:hover {
+  border-color: rgba(255, 26, 26, 0.5);
+}
+
+.spaceCardConference {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(12, 10, 10, 0.6);
+}
+
+.spaceCardConference:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.spaceCardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.spaceCardImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.spaceCard:hover .spaceCardImage {
+  transform: scale(1.04);
+}
+
+.spaceCardBody {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.spaceCardEyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.spaceCardEyebrowSlow {
+  color: var(--color-slow-red);
+}
+
+.spaceCardEyebrowConference {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.spaceCardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.spaceCardSpecs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.spaceCardSpecs li {
+  font-size: 0.8rem;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.spaceCardSpecs li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--color-slow-red);
+}
+
+.spaceCardNote {
+  font-size: 0.75rem;
+  color: var(--color-light-grey);
+  opacity: 0.5;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .spacesGrid {
+    grid-template-columns: 1fr;
+  }
+}

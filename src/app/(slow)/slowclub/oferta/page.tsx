@@ -17,13 +17,11 @@ const stats = [
 
 const eventTypes = [
   "Imprezy firmowe",
-  "Prywatne przyjęcia",
-  "Gale i bankiety",
+  "Imprezy okolicznościowe",
   "Spotkania branżowe",
-  "Premiery produktów",
-  "Kameralne koncerty",
   "Warsztaty i panele",
   "Wieczory autorskie",
+  "Mini konferencje",
 ];
 
 const slowGalleryImages = [
@@ -100,6 +98,87 @@ export default function SlowOfertaPage() {
             {eventTypes.map((type) => (
               <span key={type} className={styles.tag}>{type}</span>
             ))}
+          </div>
+        </div>
+
+        {/* Our Spaces */}
+        <div className={`${styles.section} reveal`}>
+          <h2 className={styles.sectionTitle}>Nasze Przestrzenie</h2>
+          <div className={styles.spacesGrid}>
+            {/* SLOW main space */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardSlow}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/slow-offer/Dancefloor-1_SLOW.jpg"
+                  alt="SLOW Club — przestrzeń klubowa"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowSlow}`}>PRZESTRZEŃ GŁÓWNA</span>
+                <h3 className={styles.spaceCardTitle}>SLOW Club</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>Do 200 gości stojących</li>
+                  <li>200 m² — parkiet, antresola, bar</li>
+                  <li>Audiofilski system nagłośnienia</li>
+                  <li>Profesjonalne oświetlenie sceniczne</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Sala konferencyjna */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/spaces/sala-tv.jpg"
+                  alt="Sala konferencyjna SLOW"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>SALA DODATKOWA · NA WYNAJEM</span>
+                <h3 className={styles.spaceCardTitle}>Sala konferencyjna</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>12 miejsc siedzących (układ konferencyjny)</li>
+                  <li>19 m² — kameralnie i komfortowo</li>
+                  <li>TV i zaplecze multimedialne</li>
+                  <li>Dostępna osobno lub razem z SLOW</li>
+                </ul>
+                <p className={styles.spaceCardNote}>
+                  Sala o spokojnym, dziennym charakterze — idealna na spotkania robocze, warsztaty i prezentacje.
+                </p>
+              </div>
+            </div>
+
+            {/* Sala U'Patki */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/spaces/upatki.jpg"
+                  alt="Sala U'Patki"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>SALA DODATKOWA · NA WYNAJEM</span>
+                <h3 className={styles.spaceCardTitle}>Sala U&apos;Patki</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>Kameralna przestrzeń o powierzchni 42 m²</li>
+                  <li>Stoły bankietowe i koktajlowe</li>
+                  <li>Strefa chillout, fotobudka lub mini dancefloor</li>
+                  <li>Dostępna osobno lub w pakiecie z SLOW</li>
+                </ul>
+                <p className={styles.spaceCardNote}>
+                  Wszechstronna przestrzeń idealna na strefę chillout, mniejsze przyjęcie lub dedykowaną strefę warsztatową.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -17,13 +17,11 @@ const stats = [
 
 const eventTypes = [
   "Corporate Parties",
-  "Private Celebrations",
-  "Galas & Banquets",
+  "Special Occasions",
   "Industry Meetups",
-  "Product Launches",
-  "Intimate Concerts",
   "Workshops & Panels",
   "Exclusive Gatherings",
+  "Mini Conferences",
 ];
 
 const slowGalleryImages = [
@@ -100,6 +98,87 @@ export default function SlowOfferPage() {
             {eventTypes.map((type) => (
               <span key={type} className={styles.tag}>{type}</span>
             ))}
+          </div>
+        </div>
+
+        {/* Our Spaces */}
+        <div className={`${styles.section} reveal`}>
+          <h2 className={styles.sectionTitle}>Our Spaces</h2>
+          <div className={styles.spacesGrid}>
+            {/* SLOW main space */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardSlow}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/slow-offer/Dancefloor-1_SLOW.jpg"
+                  alt="SLOW Club — main event space"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowSlow}`}>MAIN SPACE</span>
+                <h3 className={styles.spaceCardTitle}>SLOW Club</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>Up to 200 standing guests</li>
+                  <li>200 m² — dancefloor, mezzanine, bar</li>
+                  <li>Audiophile sound system</li>
+                  <li>Professional stage lighting</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Conference room */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/spaces/sala-tv.jpg"
+                  alt="SLOW Conference Room"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>ADDITIONAL SPACE · FOR HIRE</span>
+                <h3 className={styles.spaceCardTitle}>Conference Room</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>12 seated (boardroom layout)</li>
+                  <li>19 m² — intimate and comfortable</li>
+                  <li>TV screen and multimedia setup</li>
+                  <li>Available separately or bundled with SLOW</li>
+                </ul>
+                <p className={styles.spaceCardNote}>
+                  A space with a calm, focused atmosphere — ideal for working sessions, workshops, and presentations.
+                </p>
+              </div>
+            </div>
+
+            {/* U'Patka Room */}
+            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
+              <div className={styles.spaceCardImageWrapper}>
+                <Image
+                  src="/spaces/upatki.jpg"
+                  alt="U'Patka Room"
+                  fill
+                  className={styles.spaceCardImage}
+                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.spaceCardBody}>
+                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>ADDITIONAL SPACE · FOR HIRE</span>
+                <h3 className={styles.spaceCardTitle}>U&apos;Patka Room</h3>
+                <ul className={styles.spaceCardSpecs}>
+                  <li>Intimate event space of 42 m²</li>
+                  <li>Banquet and cocktail table arrangements</li>
+                  <li>Chillout zone, photo booth, or mini dancefloor</li>
+                  <li>Available separately or bundled with SLOW</li>
+                </ul>
+                <p className={styles.spaceCardNote}>
+                  A versatile space ideal as a breakout chillout lounge or an independent venue for private gatherings.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
