@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./root.module.css";
 
 export const metadata: Metadata = {
@@ -29,14 +30,28 @@ export default function UniversalLandingPage() {
               className={`${styles.card} ${styles.cardTama} reveal`}
               style={{ '--reveal-delay': '30ms' } as React.CSSProperties}
             >
-              <h2 className={styles.cardTitle}>TAMA</h2>
-              <p className={styles.cardText}>
-                Główna scena. Surowa, potężna przestrzeń industrialna zaprojektowana dla największych wydarzeń muzycznych i kulturalnych. Z pojemnością do 1 000 gości, spektakularnym nagłośnieniem i bezkompromisowym charakterem.
-              </p>
-              <div className={styles.actionRow}>
-                <Link href="/tama" className="btn btn-outline">
-                  ODKRYJ TAMĘ
-                </Link>
+              <div className={styles.cardBg}>
+                <Image
+                  src="/spaces/main-room.jpg"
+                  alt="TAMA Main Hall"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  className={styles.cardBgImage}
+                  priority
+                />
+                <div className={styles.cardOverlay} />
+              </div>
+
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardTitle}>TAMA</h2>
+                <p className={styles.cardText}>
+                  Główna scena. Surowa, potężna przestrzeń industrialna zaprojektowana dla największych wydarzeń muzycznych i kulturalnych. Z pojemnością do 1 000 gości, spektakularnym nagłośnieniem i bezkompromisowym charakterem.
+                </p>
+                <div className={styles.actionRow}>
+                  <Link href="/tama" className="btn btn-outline">
+                    ODKRYJ TAMĘ <span className="btn-arrow">→</span>
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -45,14 +60,28 @@ export default function UniversalLandingPage() {
               className={`${styles.card} ${styles.cardSlow} reveal`}
               style={{ '--reveal-delay': '60ms' } as React.CSSProperties}
             >
-              <h2 className={styles.cardTitle}>SLOW</h2>
-              <p className={styles.cardText}>
-                Intymny klub z audiofilskim nagłośnieniem. Stworzony dla głębszych doświadczeń muzycznych, selekcjonowanych brzmień i bliskiego kontaktu z artystą. Zupełnie inny wymiar w tych samych murach.
-              </p>
-              <div className={styles.actionRow}>
-                <Link href="/slowclub" className="btn btn-outline">
-                  ODKRYJ SLOW
-                </Link>
+              <div className={styles.cardBg}>
+                <Image
+                  src="/spaces/slow.jpg"
+                  alt="SLOW Club"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  className={styles.cardBgImage}
+                  priority
+                />
+                <div className={styles.cardOverlay} />
+              </div>
+
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardTitle}>SLOW</h2>
+                <p className={styles.cardText}>
+                  Intymny klub z audiofilskim nagłośnieniem. Stworzony dla głębszych doświadczeń muzycznych, selekcjonowanych brzmień i bliskiego kontaktu z artystą. Zupełnie inny wymiar w tych samych murach.
+                </p>
+                <div className={styles.actionRow}>
+                  <Link href="/slowclub" className="btn btn-outline">
+                    ODKRYJ SLOW <span className="btn-arrow">→</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

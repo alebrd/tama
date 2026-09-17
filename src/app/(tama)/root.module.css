@@ -4,7 +4,7 @@
 }
 
 .hero {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -33,15 +33,70 @@
 }
 
 .card {
-  padding: 4rem 3rem;
+  padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: border-color 0.3s ease;
   position: relative;
   overflow: hidden;
+  background: #0a0a0a;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.cardBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cardBgImage {
+  object-fit: cover;
+  opacity: 0.42;
+  filter: grayscale(15%) contrast(110%);
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.card:hover .cardBgImage {
+  opacity: 0.65;
+  transform: scale(1.04);
+  filter: grayscale(0%) contrast(115%);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 5, 0.55) 0%,
+    rgba(5, 5, 5, 0.80) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.card:hover .cardOverlay {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 5, 0.45) 0%,
+    rgba(5, 5, 5, 0.72) 100%
+  );
+}
+
+.cardContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
 }
 
 .cardTama {
@@ -49,11 +104,7 @@
 }
 
 .cardSlow {
-  background: #0a0505; /* slight red/warm tint for slow */
-}
-
-.card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  background: #080505;
 }
 
 .cardLogo {
@@ -103,7 +154,9 @@
     gap: 1rem;
   }
   .card { 
-    padding: 1.5rem 1.25rem; 
+    padding: 2rem 1.5rem; 
+  }
+  .cardContent {
     gap: 1rem;
   }
   .cardLogo {

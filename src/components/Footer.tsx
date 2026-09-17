@@ -10,35 +10,11 @@ import MapModal from "./MapModal";
 export default function Footer() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
-  const homeHref = isEnglish ? "/en/tama" : "/tama";
   const [isMapOpen, setIsMapOpen] = useState(false);
-
-  const isRootPage = pathname === "/" || pathname === "/en";
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
-        <div className={styles.column}>
-          {isRootPage ? (
-            <div className={styles.logoGroup}>
-              <Link href={homeHref} className={styles.logo}>
-                <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
-              </Link>
-              <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo}>
-                <div className={styles.slowLogoWrapper}>
-                  <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
-                </div>
-              </Link>
-            </div>
-          ) : (
-            <Link href={homeHref}>
-              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
-            </Link>
-          )}
-          <p className={styles.tagline}>
-            {isEnglish ? "Music. Culture. Experience." : "Muzyka. Kultura. Doświadczenie."}
-          </p>
-        </div>
 
         {isEnglish ? (
           <div className={styles.column}>

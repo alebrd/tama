@@ -10,18 +10,11 @@ import MapModal from "./MapModal";
 export default function SlowFooter() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
-  const homeHref = isEnglish ? "/en/slowclub" : "/slowclub";
   const [isMapOpen, setIsMapOpen] = useState(false);
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
-        <div className={styles.column}>
-          <Link href={homeHref}>
-            <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.logoImg} />
-          </Link>
-          <p className={styles.tagline}>THE OTHER SIDE OF TAMA.</p>
-        </div>
 
         {isEnglish ? (
           <div className={styles.column}>

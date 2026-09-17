@@ -74,9 +74,9 @@ font-weight: 700
 
 ### Container
 ```
-max-width:  1200px
+max-width:  1380px
 margin:     0 auto
-padding:    0 2rem
+padding:    0 clamp(1.5rem, 3vw, 2.5rem)
 ```
 
 ### Page Top Padding (accounts for fixed 64px navbar)
@@ -115,10 +115,11 @@ padding:    0 2rem
 |---|---|
 | Background | `#121212` |
 | Top border | `1px solid var(--glass-border)` |
-| Desktop grid | `1.5fr 1fr 1fr 1fr` |
-| Tablet (≤ 900px) | `1fr 1fr` |
-| Mobile (≤ 560px) | full-width brand + `1fr 1fr 1fr` |
-| Padding top | `4rem` desktop / `1.5rem` mobile |
+| Desktop grid | `repeat(3, auto)`, `justify-content: center`, `gap: clamp(3.5rem, 8vw, 7rem)` |
+| Tablet (≤ 900px) | `repeat(3, auto)`, `gap: clamp(2rem, 5vw, 3.5rem)` |
+| Mobile (≤ 560px) | `1fr 1fr 1fr` (gap `1.25rem`, text-align center) |
+| Padding top | `4rem` desktop / `2rem` mobile |
+| Layout | Centered cluster (Navigation · Visit Us · Social) symmetrically balanced in the dead center of the page. Redundant brand/logo column removed; brand attribution anchored in bottom copyright bar. |
 | Links / Actions | Address acts as a direct link to Google Maps (underline + hover glow) |
 
 ### Card Grid

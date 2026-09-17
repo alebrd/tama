@@ -220,9 +220,9 @@ Global noise texture at `opacity: 0.03` (inherited from TAMA globals). **Do not 
 
 **Header links (EN):** Home (/en) · TAMA (/en/tama) · SLOW (/en/slowclub) · Offer (/en/slowclub/offer) · Contact (/en/slowclub/contact)
 
-**Footer:** Full set of SLOW links (SLOW · Oferta / Offer · Kontakt / Contact · TAMA cross-link · Socials · Map Modal).
+**Footer:** Centered cluster layout (Navigation · Visit Us · Social) matching TAMA with full set of SLOW links (SLOW · Oferta / Offer · Kontakt / Contact · TAMA cross-link · Socials · Map Modal) symmetrically balanced in the center of the page. Redundant brand column removed; brand attribution anchored in bottom copyright bar.
 
-**Unified Navbar:** To ensure cross-brand consistency, the navigation menu (desktop links, dropdown menus, hamburger icon, mobile overlay, typographic sub-links, and language switcher) uses the exact same typography, colors, and styling as TAMA (`Navbar.module.css`), with SLOW links highlighted via the red brand accent (`#ff1a1a`).
+**Unified Navbar:** To ensure cross-brand consistency, the navigation menu (desktop links, dropdown menus, hamburger icon, mobile overlay, typographic sub-links, and language switcher) uses the exact same typography, colors, and styling across TAMA and SLOW, using unified monochrome typography (pure white text, glow, and underlines) with zero red color on navigation links.
 
 ---
 
