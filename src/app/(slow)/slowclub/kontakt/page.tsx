@@ -20,17 +20,22 @@ export default function SlowKontaktPage() {
             <h2 className={styles.cardTitle}>Napisz do nas</h2>
             <div className={styles.contactsList}>
               <div className={styles.contactItem}>
+                <span className={styles.contactRole}>Rezerwacja loży</span>
+                <p className={styles.contactDesc}>
+                  Planujesz imprezę w większym stylu? Zarezerwuj lożę i ciesz się wieczorem w komfortowej przestrzeni.
+                </p>
+                <a href="mailto:events@slowclub.pl" className={styles.email}>
+                  events@slowclub.pl
+                </a>
+                <p className={styles.contactDesc} style={{ marginTop: '0.25rem', fontSize: '0.7rem', opacity: 0.6 }}>
+                  W razie dodatkowych pytań, pozostaję do dyspozycji.
+                </p>
+              </div>
+              <div className={styles.contactItem}>
                 <span className={styles.contactRole}>Wynajem Przestrzeni i Eventy B2B</span>
                 <p className={styles.contactDesc}>Zapytania dotyczące wynajmu przestrzeni, organizacji wydarzeń firmowych i współpracy B2B:</p>
                 <a href="mailto:katya@tamaklub.pl" className={styles.email}>
                   katya@tamaklub.pl
-                </a>
-              </div>
-              <div className={styles.contactItem}>
-                <span className={styles.contactRole}>Booking Artystów i Koncerty</span>
-                <p className={styles.contactDesc}>Booking artystów oraz zapytania dotyczące organizacji koncertów:</p>
-                <a href="mailto:arek@tamaklub.pl" className={styles.email}>
-                  arek@tamaklub.pl
                 </a>
               </div>
               <div className={styles.contactItem}>

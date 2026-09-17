@@ -7,9 +7,11 @@ import styles from './VenueGallery.module.css';
 
 interface VenueGalleryProps {
   isEnglish: boolean;
+  images?: string[];
+  variant?: 'tama' | 'slow';
 }
 
-const images = [
+const defaultImages = [
   // Top 8 Professional Photos for the Desktop Preview
   "/offer/arturAENnowicki-2970.jpg",
   "/offer/arturAENnowicki-2942.jpg",
@@ -48,7 +50,7 @@ const images = [
   "/offer/arturAENnowicki-2987.jpg"
 ];
 
-export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
+export default function VenueGallery({ isEnglish, images = defaultImages, variant = 'tama' }: VenueGalleryProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -101,7 +103,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
         {images.map((src, index) => (
           <div 
             key={src}
-            className={styles.previewCard} 
+            className={`${styles.previewCard} ${variant === 'slow' ? styles.previewCardSlow : ''}`} 
             onClick={() => {
               setSelectedIndex(index);
               setIsOpen(true);
@@ -114,7 +116,7 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
               className={styles.previewImage}
               sizes="(max-width: 768px) 100vw, 300px"
             />
-            <div className={styles.previewOverlay}>
+            <div className={`${styles.previewOverlay} ${variant === 'slow' ? styles.previewOverlaySlow : ''}`}>
               <span className={styles.overlayTextNormal}>{isEnglish ? "VIEW" : "ZOBACZ"}</span>
               <span className={styles.overlayTextMoreDesktop}>+{images.length - 8}</span>
               <span className={styles.overlayTextMoreMobile}>+{images.length - 4}</span>
@@ -125,9 +127,14 @@ export default function VenueGallery({ isEnglish }: VenueGalleryProps) {
 
       {isOpen && createPortal(
         <div className={styles.overlay} onClick={() => setIsOpen(false)}>
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+          <div className={`${styles.modal} ${variant === 'slow' ? styles.modalSlow : ''}`} onClick={(e) => e.stopPropagation()}>
             <div className={styles.header}>
-              <h3 className={styles.title}>{isEnglish ? "Event Setups" : "Realizacje Eventowe"}</h3>
+              <h3 className={styles.title}>
+                {variant === 'slow'
+                  ? (isEnglish ? "SLOW Club Gallery" : "Galeria SLOW")
+                  : (isEnglish ? "Event Setups" : "Realizacje Eventowe")
+                }
+              </h3>
               <button 
                 className={styles.closeBtn} 
                 onClick={() => setIsOpen(false)}

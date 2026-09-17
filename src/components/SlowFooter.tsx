@@ -27,6 +27,7 @@ export default function SlowFooter() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Navigate</h4>
             <Link href="/en/slowclub" className={styles.text}>SLOW</Link>
+            <Link href="/en/slowclub/offer" className={styles.text}>Offer</Link>
             <Link href="/en/slowclub/contact" className={styles.text}>Contact</Link>
             <Link href="/en/tama" className={styles.tamaLink}>TAMA</Link>
           </div>
@@ -34,6 +35,7 @@ export default function SlowFooter() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/slowclub" className={styles.text}>SLOW</Link>
+            <Link href="/slowclub/oferta" className={styles.text}>Oferta</Link>
             <Link href="/slowclub/kontakt" className={styles.text}>Kontakt</Link>
             <Link href="/tama" className={styles.tamaLink}>TAMA</Link>
           </div>

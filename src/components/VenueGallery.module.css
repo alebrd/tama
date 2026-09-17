@@ -41,6 +41,26 @@
   border-color: var(--color-light-grey);
 }
 
+.previewCardSlow {
+  border-color: rgba(255, 26, 26, 0.15);
+  background: rgba(7, 7, 7, 0.6);
+}
+
+.previewCardSlow:hover {
+  border-color: rgba(255, 26, 26, 0.5);
+}
+
+.previewOverlaySlow span {
+  border-color: rgba(255, 26, 26, 0.2);
+}
+
+.previewCardSlow:hover .previewOverlaySlow span {
+  border-color: rgba(255, 26, 26, 0.6);
+  background: rgba(196, 16, 16, 0.15);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(196, 16, 16, 0.25);
+}
+
 .previewImage {
   object-fit: cover;
   filter: grayscale(10%) brightness(0.9);
@@ -102,6 +122,15 @@
 @keyframes slideUp {
   from { transform: translateY(30px) scale(0.98); opacity: 0; }
   to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.modalSlow {
+  border-color: rgba(224, 18, 18, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(196, 16, 16, 0.1);
+}
+
+.modalSlow .header {
+  border-bottom-color: rgba(224, 18, 18, 0.15);
 }
 
 .header {

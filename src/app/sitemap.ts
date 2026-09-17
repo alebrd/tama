@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/jobs",
     "/slowclub",
     "/en/slowclub",
+    "/slowclub/oferta",
+    "/en/slowclub/offer",
     "/slowclub/kontakt",
     "/en/slowclub/contact",
   ];

@@ -9,6 +9,7 @@ import styles from "./SlowNavbar.module.css";
 const plLinks = [
   { href: "/", label: "Home", special: true },
   { href: "/slowclub", label: "SLOW", special: false },
+  { href: "/slowclub/oferta", label: "Oferta", special: false },
   { href: "/tama", label: "TAMA", special: true },
   { href: "/slowclub/kontakt", label: "Kontakt", special: false },
 ];
@@ -16,14 +17,17 @@ const plLinks = [
 const enLinks = [
   { href: "/en", label: "Home", special: true },
   { href: "/en/slowclub", label: "SLOW", special: false },
+  { href: "/en/slowclub/offer", label: "Offer", special: false },
   { href: "/en/tama", label: "TAMA", special: true },
   { href: "/en/slowclub/contact", label: "Contact", special: false },
 ];
 
 const pathMap: Record<string, string> = {
   "/slowclub": "/en/slowclub",
+  "/slowclub/oferta": "/en/slowclub/offer",
   "/slowclub/kontakt": "/en/slowclub/contact",
   "/en/slowclub": "/slowclub",
+  "/en/slowclub/offer": "/slowclub/oferta",
   "/en/slowclub/contact": "/slowclub/kontakt",
 };
 

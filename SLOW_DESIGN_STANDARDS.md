@@ -215,11 +215,11 @@ Global noise texture at `opacity: 0.03` (inherited from TAMA globals). **Do not 
 
 ## 8. Navigation Structure
 
-**Header links (PL):** SLOW (logo/home) · Program · Kontakt
+**Header links (PL):** Home (/) · SLOW (/slowclub) · Oferta (/slowclub/oferta) · TAMA (/tama) · Kontakt (/slowclub/kontakt)
 
-**Header links (EN):** SLOW (logo/home) · Program · Contact
+**Header links (EN):** Home (/en) · SLOW (/en/slowclub) · Offer (/en/slowclub/offer) · TAMA (/en/tama) · Contact (/en/slowclub/contact)
 
-**Footer:** Full set of SLOW links including socials and TAMA cross-link.
+**Footer:** Full set of SLOW links (SLOW · Oferta / Offer · Kontakt / Contact · TAMA cross-link · Socials · Map Modal).
 
 **TAMA cross-link in Navbar:** Rendered as a link with red hover glow:
 ```css
