@@ -7,19 +7,19 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./SlowNavbar.module.css";
 
 const plLinks = [
-  { href: "/", label: "Home", special: true },
-  { href: "/tama", label: "TAMA", special: true },
-  { href: "/slowclub", label: "SLOW", special: false },
-  { href: "/slowclub/oferta", label: "Oferta", special: false, dropdown: "oferta" as const },
-  { href: "/slowclub/kontakt", label: "Kontakt", special: false, dropdown: "kontakt" as const },
+  { href: "/", label: "Home" },
+  { href: "/tama", label: "TAMA" },
+  { href: "/slowclub", label: "SLOW", isSlow: true },
+  { href: "/slowclub/oferta", label: "Oferta", dropdown: "oferta" as const },
+  { href: "/slowclub/kontakt", label: "Kontakt", dropdown: "kontakt" as const },
 ];
 
 const enLinks = [
-  { href: "/en", label: "Home", special: true },
-  { href: "/en/tama", label: "TAMA", special: true },
-  { href: "/en/slowclub", label: "SLOW", special: false },
-  { href: "/en/slowclub/offer", label: "Offer", special: false, dropdown: "oferta" as const },
-  { href: "/en/slowclub/contact", label: "Contact", special: false, dropdown: "kontakt" as const },
+  { href: "/en", label: "Home" },
+  { href: "/en/tama", label: "TAMA" },
+  { href: "/en/slowclub", label: "SLOW", isSlow: true },
+  { href: "/en/slowclub/offer", label: "Offer", dropdown: "oferta" as const },
+  { href: "/en/slowclub/contact", label: "Contact", dropdown: "kontakt" as const },
 ];
 
 const pathMap: Record<string, string> = {
@@ -151,7 +151,7 @@ export default function SlowNavbar() {
 
           {/* Desktop Nav */}
           <nav ref={navRef} className={styles.navLinks}>
-            {links.map(({ href, label, special, dropdown }) => {
+            {links.map(({ href, label, isSlow, dropdown }) => {
               if (dropdown) {
                 const isOpen = openDropdown === dropdown;
                 const isCurrentActive = dropdown === "oferta" ? isOfertaActive : isKontaktActive;
@@ -213,7 +213,7 @@ export default function SlowNavbar() {
                 <Link
                   key={href}
                   href={href}
-                  className={`${special ? styles.tamaLink : styles.link} ${pathname === href ? styles.active : ""}`}
+                  className={`${isSlow ? styles.slowLink : styles.link} ${pathname === href ? styles.active : ""}`}
                 >
                   {label}
                 </Link>
@@ -257,7 +257,7 @@ export default function SlowNavbar() {
         aria-hidden={!menuOpen}
       >
         <nav className={styles.mobileNav}>
-          {links.map(({ href, label, special, dropdown }) => {
+          {links.map(({ href, label, isSlow, dropdown }) => {
             if (dropdown) {
               const isMobileOpen = mobileOpenDropdown === dropdown;
               const isCurrentActive = dropdown === "oferta" ? isOfertaActive : isKontaktActive;
@@ -317,7 +317,7 @@ export default function SlowNavbar() {
               <Link
                 key={href}
                 href={href}
-                className={`${special ? styles.mobileTamaLink : styles.mobileLink} ${pathname === href ? styles.active : ""}`}
+                className={`${isSlow ? styles.mobileSlowLink : styles.mobileLink} ${pathname === href ? styles.active : ""}`}
                 onClick={() => {
                   setMobileOpenDropdown(null);
                   setMenuOpen(false);

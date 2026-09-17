@@ -60,8 +60,9 @@ font-weight:    700
 | Eyebrow label | `0.7rem` | uppercase, letter-spacing `4px`, `var(--color-slow-red)` |
 | Body / subtitle | `0.9375rem` | `var(--color-light-grey)`, line-height `1.6`, opacity `0.7` |
 | Email / social links | `1.125rem` | font-weight `600`, `var(--color-slow-red)` |
-| Button label | `0.8rem` | uppercase, letter-spacing `2px`, font-weight `700` |
-| Nav links | `0.75rem` | uppercase, letter-spacing `2px` |
+| Nav links (desktop) | `0.8rem` | uppercase, letter-spacing `1.5px`, font-weight `600` (unified with TAMA) |
+| Mobile nav links | `1.4rem` | uppercase, letter-spacing `3px`, font-weight `700` (unified with TAMA) |
+| Mobile sub-links | `1.05rem` | uppercase, letter-spacing `2.5px`, font-weight `600` (unified with TAMA) |
 
 ---
 
@@ -221,12 +222,7 @@ Global noise texture at `opacity: 0.03` (inherited from TAMA globals). **Do not 
 
 **Footer:** Full set of SLOW links (SLOW · Oferta / Offer · Kontakt / Contact · TAMA cross-link · Socials · Map Modal).
 
-**TAMA cross-link in Navbar:** Rendered as a link with red hover glow:
-```css
-color: var(--color-light-grey)
-hover color: #ff1a1a
-hover text-shadow: 0 0 15px rgba(255, 26, 26, 0.5)
-```
+**Unified Navbar:** To ensure cross-brand consistency, the navigation menu (desktop links, dropdown menus, hamburger icon, mobile overlay, typographic sub-links, and language switcher) uses the exact same typography, colors, and styling as TAMA (`Navbar.module.css`), with SLOW links highlighted via the red brand accent (`#ff1a1a`).
 
 ---
 
