@@ -116,9 +116,10 @@ padding:    0 2rem
 ### Hero Section
 | Property | Value |
 |---|---|
-| Min height | `100vh` |
-| Content alignment | `center / center` |
-| Padding top | `80px` (accounts for navbar) |
+| Min height | `520px` (desktop), `420px` (mobile) |
+| Content alignment | Top-aligned `flex-start` / centered horizontally |
+| Padding top | `calc(2.5rem + 64px)` (desktop), `calc(1.5rem + 64px)` (mobile) |
+| Padding bottom | `4rem` (desktop), `3rem` (mobile) |
 
 ### Banner / Flyer
 ```
