@@ -11,9 +11,20 @@ export const metadata: Metadata = {
 export default function UniversalLandingEnPage() {
   return (
     <div className={styles.page}>
-      {/* Hero */}
-      <section className={`${styles.hero} reveal`}>
-        <div className="container">
+      {/* Hero Banner with Venue Background */}
+      <section className={styles.hero}>
+        <div className={styles.heroBg}>
+          <Image
+            src="/tama/venue-hero-hd.jpg"
+            alt="TAMA KLUB building"
+            fill
+            sizes="100vw"
+            className={styles.heroBgImage}
+            priority
+          />
+          <div className={styles.heroOverlay} />
+        </div>
+        <div className={`container ${styles.heroContent}`}>
           <h1 className={`${styles.title} text-gradient`}>
             TAMA <span style={{ textTransform: "lowercase", fontSize: "0.65em", verticalAlign: "middle", padding: "0 0.5rem" }}>x</span> SLOW
           </h1>
@@ -21,15 +32,12 @@ export default function UniversalLandingEnPage() {
         </div>
       </section>
 
-      {/* Split Section */}
+      {/* Split Section — Original Boxes */}
       <section>
         <div className="container">
           <div className={styles.grid}>
             {/* TAMA */}
-            <div
-              className={`${styles.card} ${styles.cardTama} reveal`}
-              style={{ '--reveal-delay': '30ms' } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardTama}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/main-room.jpg"
@@ -45,7 +53,7 @@ export default function UniversalLandingEnPage() {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>TAMA</h2>
                 <p className={styles.cardText}>
-                  The main stage. A raw, powerful industrial space designed for the biggest musical and cultural events. With a capacity of up to 1,000 guests, spectacular sound, and an uncompromising character.
+                  A monumental 1,100 m² industrial venue in the heart of Poznań. Designed for corporate events, conferences, banquets, galas, and product launches for up to 1,000 guests, equipped with comprehensive production and AV infrastructure.
                 </p>
                 <div className={styles.actionRow}>
                   <Link href="/en/tama" className="btn btn-outline">
@@ -56,10 +64,7 @@ export default function UniversalLandingEnPage() {
             </div>
 
             {/* SLOW */}
-            <div
-              className={`${styles.card} ${styles.cardSlow} reveal`}
-              style={{ '--reveal-delay': '60ms' } as React.CSSProperties}
-            >
+            <div className={`${styles.card} ${styles.cardSlow}`}>
               <div className={styles.cardBg}>
                 <Image
                   src="/spaces/slow.jpg"
@@ -75,7 +80,7 @@ export default function UniversalLandingEnPage() {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>SLOW</h2>
                 <p className={styles.cardText}>
-                  An intimate club with an audiophile sound system. Created for deeper musical experiences, carefully selected sounds, and close contact with the artist. A completely different dimension within the same walls.
+                  A boutique 200 m² event space designed by mode:lina™ for up to 200 guests. An intimate atmosphere featuring a mezzanine, cocktail bar, and audiophile acoustics — ideal for corporate parties, networking, and private gatherings.
                 </p>
                 <div className={styles.actionRow}>
                   <Link href="/en/slowclub" className="btn btn-outline">
