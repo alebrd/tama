@@ -32,9 +32,21 @@ export default function UniversalLandingPage() {
         </div>
       </section>
 
-      {/* Split Section — Original Boxes */}
-      <section>
-        <div className="container">
+      {/* ── Connected Screen Background with Rental Boxes (The other two next to each other) ── */}
+      <section className={styles.connectedSection}>
+        <div className={styles.connectedBg}>
+          <Image
+            src="/tama/venue-action-split.jpg"
+            alt="TAMA x SLOW venue in action"
+            fill
+            sizes="100vw"
+            className={styles.connectedBgImage}
+            priority
+          />
+          <div className={styles.connectedBgOverlay} />
+        </div>
+
+        <div className="container" style={{ position: "relative", zIndex: 3 }}>
           <div className={styles.grid}>
             {/* TAMA */}
             <div className={`${styles.card} ${styles.cardTama}`}>

@@ -11,10 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 320px;
-  padding: calc(3rem + 64px) 0 3rem;
+  min-height: 520px;
+  padding: calc(5rem + 64px) 0 5rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .heroBg {
@@ -27,16 +27,16 @@
 
 .heroBgImage {
   object-fit: cover;
-  object-position: center 42%;
-  filter: grayscale(100%) contrast(108%);
-  opacity: 0.5;
+  object-position: center 46%;
+  filter: grayscale(100%) contrast(102%);
+  opacity: 0.65;
   transform: scale(1.0);
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
 }
 
 .hero:hover .heroBgImage {
   transform: scale(1.03);
-  opacity: 0.65;
+  opacity: 0.78;
 }
 
 .heroOverlay {
@@ -44,9 +44,10 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.40) 40%,
-    rgba(0, 0, 0, 0.75) 80%,
+    rgba(0, 0, 0, 0.80) 0%,
+    rgba(0, 0, 0, 0.28) 35%,
+    rgba(0, 0, 0, 0.38) 65%,
+    rgba(0, 0, 0, 0.85) 92%,
     #000000 100%
   );
   z-index: 2;
@@ -71,6 +72,43 @@
   opacity: 0.7;
   text-transform: uppercase;
   margin-bottom: 0;
+}
+
+/* ─── Connected Screen Background Section (Venue in Action) ─────── */
+
+.connectedSection {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 6rem;
+}
+
+.connectedBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.connectedBgImage {
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.75;
+  transition: opacity 0.8s ease;
+}
+
+.connectedBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.40) 20%,
+    rgba(0, 0, 0, 0.50) 75%,
+    #000000 100%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* ─── Split Grid (Original Boxes) ──────────────────────────────── */
@@ -176,6 +214,10 @@
 /* ─── Responsive ────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
+  .connectedSection {
+    padding: 3rem 0 4rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -188,7 +230,10 @@
   .hero {
     min-height: 320px;
     padding: calc(3rem + 64px) 0 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+  }
+  .connectedSection {
+    padding: 2rem 0 3rem;
   }
   .sub {
     font-size: 0.8rem;
