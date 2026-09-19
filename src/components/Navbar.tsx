@@ -28,6 +28,7 @@ const pathMap: Record<string, string> = {
   "/slowclub": "/en/slowclub",
   "/przestrzen": "/en/spaces",
   "/oferta": "/en/offer",
+  "/o-nas": "/en/about",
   "/merch": "/en/merch",
   "/praca": "/en/jobs",
   "/kontakt": "/en/contact",
@@ -36,6 +37,7 @@ const pathMap: Record<string, string> = {
   "/en/slowclub": "/slowclub",
   "/en/spaces": "/przestrzen",
   "/en/offer": "/oferta",
+  "/en/about": "/o-nas",
   "/en/merch": "/merch",
   "/en/jobs": "/praca",
   "/en/contact": "/kontakt",
@@ -161,11 +163,11 @@ export default function Navbar() {
         <div className={`container ${styles.navContainer}`}>
           <div className={styles.logoGroup}>
             <Link href={homeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
-              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} />
+              <Image src="/icons/TAMA-logo.svg" alt="TAMA Logo" width={50} height={50} className={styles.logoImg} priority />
             </Link>
             <Link href={isEnglish ? "/en/slowclub" : "/slowclub"} className={styles.logo} onClick={() => setMenuOpen(false)}>
               <div className={styles.slowLogoWrapper}>
-                <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} />
+                <Image src="/icons/SLOW-logo.svg" alt="SLOW Logo" width={50} height={50} className={styles.slowLogoImg} priority />
               </div>
             </Link>
           </div>
@@ -177,7 +179,6 @@ export default function Navbar() {
                 const isOpen = openDropdown === dropdown;
                 const isCurrentActive = dropdown === "oferta" ? isOfertaActive : isKontaktActive;
                 const items = dropdownItems[dropdown];
-                const isRightAligned = dropdown === "kontakt";
 
                 return (
                   <div
@@ -188,7 +189,7 @@ export default function Navbar() {
                   >
                     <button
                       type="button"
-                      className={`${styles.link} ${styles.dropdownTrigger} ${isCurrentActive ? styles.active : ""}`}
+                      className={`${styles.link} ${styles.dropdownTrigger} ${isCurrentActive ? styles.active : ""} ${isOpen ? styles.dropdownTriggerOpen : ""}`}
                       onClick={() => setOpenDropdown(isOpen ? null : dropdown)}
                       aria-expanded={isOpen}
                       aria-haspopup="true"
@@ -212,17 +213,35 @@ export default function Navbar() {
                     </button>
 
                     <div
-                      className={`${styles.dropdownMenu} ${isRightAligned ? styles.dropdownMenuRight : ""} ${isOpen ? styles.dropdownOpen : ""}`}
+                      className={`${styles.dropdownMenu} ${isOpen ? styles.dropdownOpen : ""}`}
                     >
                       {items.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
+                          prefetch={false}
                           className={`${styles.dropdownItem} ${item.isSlow ? styles.dropdownItemSlow : ""} ${pathname === item.href ? styles.dropdownItemActive : ""}`}
                           onClick={() => setOpenDropdown(null)}
                         >
-                          <span className={styles.dropdownItemTitle}>{item.title}</span>
-                          <span className={styles.dropdownItemDesc}>{item.desc}</span>
+                          <div className={styles.dropdownItemContent}>
+                            <span className={styles.dropdownItemTitle}>{item.title}</span>
+                            <span className={styles.dropdownItemDesc}>{item.desc}</span>
+                          </div>
+                          <svg
+                            className={styles.dropdownItemArrow}
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5"
+                              stroke="currentColor"
+                              strokeWidth="1.25"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
                         </Link>
                       ))}
                     </div>

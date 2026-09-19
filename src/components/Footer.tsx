@@ -20,6 +20,7 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Navigation</h4>
             <Link href="/en/tama" className={styles.text}>TAMA</Link>
+            <Link href="/en/about" className={styles.text}>About</Link>
             <Link href="/en/spaces" className={styles.text}>Spaces</Link>
             <Link href="/en/offer" className={styles.text}>Offer</Link>
             <Link href="/en/merch" className={styles.text}>Merch</Link>
@@ -30,6 +31,7 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.heading}>Nawigacja</h4>
             <Link href="/tama" className={styles.text}>TAMA</Link>
+            <Link href="/o-nas" className={styles.text}>O nas</Link>
             <Link href="/przestrzen" className={styles.text}>Przestrzeń</Link>
             <Link href="/oferta" className={styles.text}>Oferta</Link>
             <Link href="/merch" className={styles.text}>Merch</Link>

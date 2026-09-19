@@ -1,37 +1,222 @@
-/* Shared page shell */
 .page {
-  padding: calc(3rem + 64px) 0 6rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ---- TAMA PAGE ---- */
+/* ─── Hero Banner with Atmospheric Venue Background ────────────── */
+
 .hero {
-  margin-bottom: 3.5rem;
   position: relative;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(4rem + 64px) 1.5rem 4.5rem;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 0;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 35%;
+  filter: grayscale(85%) brightness(0.4) contrast(108%);
+  transform: scale(1.02);
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.hero:hover .bgImage {
+  transform: scale(1.04);
+  filter: grayscale(70%) brightness(0.48) contrast(110%);
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.65) 75%,
+    #000000 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
 }
 
 .title {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 0.9;
+  line-height: 0.95;
+  letter-spacing: 4px;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .sub {
-  font-size: 0.9rem;
-  letter-spacing: 3px;
+  font-size: 1rem;
+  letter-spacing: 4px;
   color: var(--color-light-grey);
-  opacity: 0.7;
+  opacity: 0.75;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 
-.glow {
-  display: none;
+.actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Card grid */
+.btnActionPrimary {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 0.85rem 2.2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnActionPrimary:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btnActionSecondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 4px;
+  padding: 0.85rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnActionSecondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ─── Main Content ────────────────────────────────────────────── */
+
+.mainContent {
+  padding: 3rem 0 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Stats Row ───────────────────────────────────────────────── */
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.stat {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  min-height: 120px;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.stat:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.statValue {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+}
+
+/* ─── Section Shared Styles ───────────────────────────────────── */
+
+.section {
+  margin-bottom: 5.5rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+/* ─── 4-Card Experience Grid ──────────────────────────────────── */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -39,96 +224,158 @@
 }
 
 .card {
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
   background: #0a0a0a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   transition: border-color 0.3s ease;
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.cardEyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  font-weight: 700;
 }
 
 .cardTitle {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0;
 }
 
 .cardText {
   color: var(--color-light-grey);
-  line-height: 1.8;
+  line-height: 1.75;
   font-size: 0.9375rem;
+  opacity: 0.8;
+  margin: 0;
 }
 
-.mapLinksWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.mapLink {
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  align-self: flex-start;
-}
-
-.mapLink:hover {
-  border-color: var(--foreground);
-}
-
-@media (max-width: 768px) {
-  .page { 
-    padding-top: calc(2rem + 64px); 
-    padding-bottom: 3rem;
-  }
-  .hero {
-    margin-bottom: 2rem;
-    padding-bottom: 0;
-  }
-  .grid { grid-template-columns: 1fr; }
-  .card {
-    padding: 1.5rem 1.25rem;
-    gap: 1rem;
-  }
-}
-
-.cardWide {
-  grid-column: 1 / -1;
-}
-
-.cardWideInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.venueLink {
+.cardLink {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: nowrap;
+  color: #ffffff;
+  margin-top: auto;
+  padding-top: 0.5rem;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
-  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
 }
 
-.venueLink:hover {
-  border-color: var(--foreground);
-  opacity: 1;
+.cardLink:hover {
+  border-color: #ffffff;
 }
 
+/* ─── Contact & Visit Quick Bar ───────────────────────────────── */
 
+.contactBar {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  transition: border-color 0.3s ease;
+}
 
+.contactBar:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
 
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactLabel {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+.contactVal {
+  color: #ffffff;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contactDesc {
+  font-size: 0.8125rem;
+  color: var(--color-light-grey);
+  opacity: 0.7;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contactLink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.contactLink:hover {
+  border-color: #ffffff;
+}
+
+/* ─── Responsive Breakpoints ──────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .contactBar {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 440px;
+    padding: calc(3rem + 64px) 1rem 3.5rem;
+  }
+  .sub {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+  .card {
+    padding: 1.75rem 1.25rem;
+  }
+  .contactBar {
+    padding: 1.75rem 1.25rem;
+  }
+}

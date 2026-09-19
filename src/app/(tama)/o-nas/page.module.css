@@ -1,0 +1,296 @@
+/* Shared page shell */
+.page {
+  padding: calc(3rem + 64px) 0 8rem;
+  flex: 1;
+}
+
+/* Header / Hero */
+.hero {
+  margin-bottom: 4rem;
+  max-width: 820px;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--color-light-grey);
+  opacity: 0.75;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Chapters */
+.chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.chapterReverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.chapterText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.chapterEyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+.chapterTitle {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+}
+
+.chapterParagraph {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  line-height: 1.85;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.chapterImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.chapterImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.chapterImageWrapper:hover .chapterImage {
+  transform: scale(1.03);
+}
+
+/* Quote / Manifesto Block */
+.manifesto {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.manifestoText {
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+
+.manifestoAuthor {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-light-grey);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* Values Grid */
+.valuesSection {
+  margin-bottom: 6rem;
+}
+
+.valuesHeader {
+  margin-bottom: 2.5rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.valueCard {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.valueCard:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.valueNum {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.4;
+  font-weight: 700;
+}
+
+.valueTitle {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.valueText {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  line-height: 1.75;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* CTA Nav Bar */
+.ctaBar {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.ctaText {
+  max-width: 600px;
+}
+
+.ctaTitle {
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.ctaDesc {
+  font-size: 0.9375rem;
+  color: var(--color-light-grey);
+  opacity: 0.75;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.ctaLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaBtnPrimary {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaBtnPrimary:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.ctaBtnOutline {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaBtnOutline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .chapter, .chapterReverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: calc(2rem + 64px) 0 4rem;
+  }
+  .hero {
+    margin-bottom: 2.5rem;
+  }
+  .manifesto {
+    padding: 2rem 1.5rem;
+  }
+}

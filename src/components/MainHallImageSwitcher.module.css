@@ -1,0 +1,315 @@
+.switcherContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+  background: #101010;
+  border-radius: 4px;
+}
+
+.switcherContainer:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-offset: -1px;
+}
+
+.slidesWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.02);
+}
+
+.slideActive {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.slideImage {
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   TOP SEGMENTED CONTROL PILLS
+   ========================================================================== */
+.topControlBar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.pillsScrollContainer {
+  display: flex;
+  gap: 0.4rem;
+  pointer-events: auto;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 2px;
+}
+
+.pillsScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tabPill {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.45rem 0.85rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.tabPill:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.tabPillActive {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.tabPillActive:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ==========================================================================
+   NAVIGATION CHEVRONS
+   ========================================================================== */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.85;
+}
+
+.navBtn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  opacity: 1;
+}
+
+.navBtnPrev {
+  left: 1rem;
+}
+
+.navBtnNext {
+  right: 1rem;
+}
+
+/* ==========================================================================
+   BOTTOM INFORMATION BADGE & PAGINATION
+   ========================================================================== */
+.bottomMetaOverlay {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.badgeInfo {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 0.55rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  pointer-events: auto;
+  max-width: 68%;
+}
+
+.badgeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badgeIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.badgeTitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.badgeSub {
+  font-size: 0.6875rem;
+  color: var(--color-light-grey);
+  opacity: 0.8;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.paginationRow {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  pointer-events: auto;
+}
+
+.counterText {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.dotsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dotActive {
+  width: 14px;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .switcherContainer {
+    min-height: 280px;
+  }
+
+  .topControlBar {
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .tabPill {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .navBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navBtnPrev {
+    left: 0.5rem;
+  }
+
+  .navBtnNext {
+    right: 0.5rem;
+  }
+
+  .bottomMetaOverlay {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .badgeInfo {
+    max-width: 65%;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .badgeTitle {
+    font-size: 0.6875rem;
+    letter-spacing: 1px;
+  }
+
+  .badgeSub {
+    display: none;
+  }
+
+  .paginationRow {
+    padding: 0.45rem 0.6rem;
+    gap: 0.45rem;
+  }
+}

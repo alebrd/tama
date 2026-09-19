@@ -9,6 +9,7 @@ interface VenueGalleryProps {
   isEnglish: boolean;
   images?: string[];
   variant?: 'tama' | 'slow';
+  title?: string;
 }
 
 const defaultImages = [
@@ -50,7 +51,7 @@ const defaultImages = [
   "/offer/arturAENnowicki-2987.jpg"
 ];
 
-export default function VenueGallery({ isEnglish, images = defaultImages, variant = 'tama' }: VenueGalleryProps) {
+export default function VenueGallery({ isEnglish, images = defaultImages, variant = 'tama', title }: VenueGalleryProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -66,11 +67,34 @@ export default function VenueGallery({ isEnglish, images = defaultImages, varian
       document.body.style.overflow = 'hidden';
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') setIsOpen(false);
+        if (e.key === 'ArrowLeft' && galleryRef.current) {
+          const amount = window.innerWidth > 768 ? galleryRef.current.clientWidth : galleryRef.current.clientHeight;
+          galleryRef.current.scrollBy({ 
+            left: window.innerWidth > 768 ? -amount : 0, 
+            top: window.innerWidth <= 768 ? -amount : 0, 
+            behavior: 'smooth' 
+          });
+        }
+        if (e.key === 'ArrowRight' && galleryRef.current) {
+          const amount = window.innerWidth > 768 ? galleryRef.current.clientWidth : galleryRef.current.clientHeight;
+          galleryRef.current.scrollBy({ 
+            left: window.innerWidth > 768 ? amount : 0, 
+            top: window.innerWidth <= 768 ? amount : 0, 
+            behavior: 'smooth' 
+          });
+        }
       };
       window.addEventListener('keydown', handleKeyDown);
       setTimeout(() => {
-        document.getElementById(`gallery-img-${selectedIndex}`)?.scrollIntoView({ behavior: 'instant', block: 'start', inline: 'start' });
-      }, 10);
+        const target = document.getElementById(`gallery-img-${selectedIndex}`);
+        if (target && galleryRef.current) {
+          if (window.innerWidth > 768) {
+            galleryRef.current.scrollLeft = target.offsetLeft;
+          } else {
+            galleryRef.current.scrollTop = target.offsetTop;
+          }
+        }
+      }, 20);
       return () => {
         document.body.style.overflow = '';
         window.removeEventListener('keydown', handleKeyDown);
@@ -94,8 +118,6 @@ export default function VenueGallery({ isEnglish, images = defaultImages, varian
       });
     }
   };
-
-  if (!mounted) return null;
 
   return (
     <>
@@ -125,14 +147,16 @@ export default function VenueGallery({ isEnglish, images = defaultImages, varian
         ))}
       </div>
 
-      {isOpen && createPortal(
+      {mounted && isOpen && createPortal(
         <div className={styles.overlay} onClick={() => setIsOpen(false)}>
           <div className={`${styles.modal} ${variant === 'slow' ? styles.modalSlow : ''}`} onClick={(e) => e.stopPropagation()}>
             <div className={styles.header}>
               <h3 className={styles.title}>
-                {variant === 'slow'
-                  ? (isEnglish ? "SLOW Club Gallery" : "Galeria SLOW")
-                  : (isEnglish ? "Event Setups" : "Realizacje Eventowe")
+                {title
+                  ? title
+                  : variant === 'slow'
+                    ? (isEnglish ? "SLOW Club Gallery" : "Galeria SLOW")
+                    : (isEnglish ? "Event Setups" : "Realizacje Eventowe")
                 }
               </h3>
               <button 

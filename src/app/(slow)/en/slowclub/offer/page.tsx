@@ -35,6 +35,8 @@ const slowGalleryImages = [
   "/slow-offer/Antresola-7_SLOW.jpg",
   "/slow-offer/Deco_SLOW.jpg",
   // Additional Photos in Modal
+  "/slow/slow-prev-events/IMG_7590.jpeg",
+  "/slow/slow-prev-events/IMG_7587.jpeg",
   "/slow-offer/Dancefloor-2_SLOW.jpg",
   "/slow-offer/Dancefloor-4_SLOW.jpg",
   "/slow-offer/Dancefloor-5_SLOW.jpg",
@@ -67,7 +69,7 @@ export default function SlowOfferPage() {
     <div className={styles.page}>
       <div className="container">
 
-        {/* Hero */}
+        {/* 1. Hero */}
         <div className={`${styles.hero} reveal`}>
           <p className={styles.eyebrow}>EVENT SPACE · POZNAŃ</p>
           <h1 className={styles.title}>Host Your Event</h1>
@@ -75,9 +77,17 @@ export default function SlowOfferPage() {
             Corporate parties, private celebrations, galas, and bespoke gatherings —
             intimate atmosphere, audiophile sound, and distinctive character in the heart of Poznań.
           </p>
+          <div className={styles.heroCta}>
+            <a href="#inquire" className="btn-slow">
+              INQUIRE NOW →
+            </a>
+            <a href="#gallery" className={styles.btnSlowOutline}>
+              EXPLORE GALLERY ↓
+            </a>
+          </div>
         </div>
 
-        {/* Stats */}
+        {/* 2. Stats */}
         <div className={styles.statsRow}>
           {stats.map((stat, idx) => (
             <div
@@ -91,9 +101,11 @@ export default function SlowOfferPage() {
           ))}
         </div>
 
-        {/* Event Types */}
+        {/* 3. Event Types */}
         <div className={`${styles.section} reveal`}>
-          <h2 className={styles.sectionTitle}>What We Host</h2>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>What We Host</h2>
+          </div>
           <div className={styles.tagGrid}>
             {eventTypes.map((type) => (
               <span key={type} className={styles.tag}>{type}</span>
@@ -101,125 +113,295 @@ export default function SlowOfferPage() {
           </div>
         </div>
 
-        {/* Our Spaces */}
+        {/* 4. Gallery Showcase (Photos First) */}
+        <div id="gallery" className={`${styles.section} reveal`}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>ATMOSPHERE & INTERIORS</span>
+            <h2 className={styles.sectionTitle}>SLOW Club Gallery</h2>
+            <p className={styles.sectionDesc}>
+              Discover the venue, dancefloor, mezzanine, and cocktail bar during live events.
+            </p>
+          </div>
+          <VenueGallery isEnglish={true} images={slowGalleryImages} variant="slow" title="SLOW Club Gallery" />
+        </div>
+
+        {/* 5. Main Space & Setups */}
         <div className={`${styles.section} reveal`}>
-          <h2 className={styles.sectionTitle}>Our Spaces</h2>
-          <div className={styles.spacesGrid}>
-            {/* SLOW main space */}
-            <div className={`${styles.spaceCard} ${styles.spaceCardSlow}`}>
-              <div className={styles.spaceCardImageWrapper}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>MAIN VENUE</span>
+            <h2 className={styles.sectionTitle}>SLOW Club & Layout Configurations</h2>
+            <p className={styles.sectionDesc}>
+              A modular venue designed by mode:lina™, blending industrial heritage with acoustic engineering and full technical rider support.
+            </p>
+          </div>
+
+          <div className={styles.mainSpaceCard}>
+            <div className={styles.mainSpaceImageWrapper}>
+              <Image
+                src="/slow-offer/Dancefloor-1_SLOW.jpg"
+                alt="SLOW Club — main event space"
+                fill
+                className={styles.mainSpaceImage}
+                sizes="(max-width: 992px) 100vw, 50vw"
+              />
+            </div>
+            <div className={styles.mainSpaceBody}>
+              <span className={styles.mainSpaceEyebrow}>HEART OF THE CLUB</span>
+              <h3 className={styles.mainSpaceTitle}>SLOW Club — 200 m²</h3>
+              <p className={styles.mainSpaceText}>
+                A seamless combination of dancefloor, cocktail bar, intimate mezzanine, and comfortable lounge booths. The adaptable layout allows for a smooth transition from presentations and daytime networking to evening banquets and dance parties.
+              </p>
+              <ul className={styles.specsList}>
+                <li>Up to 200 standing guests</li>
+                <li>200 m² total space</li>
+                <li>Dancefloor & lounge booth seating</li>
+                <li>Mezzanine overlooking the main hall</li>
+                <li>Dedicated cocktail bar</li>
+                <li>Full DJ & multimedia rider</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.setupsGrid}>
+            <div className={styles.setupCard}>
+              <div className={styles.setupHeader}>
+                <h4 className={styles.setupTitle}>Club & Party</h4>
+                <Image src="/icons/Artboard1.svg" alt="Club & Party" width={32} height={32} className={styles.setupIcon} />
+              </div>
+              <div className={styles.setupCapacity}>Up to 200 guests</div>
+              <p className={styles.setupDesc}>
+                Standing and cocktail setup. Full access to the dancefloor, bar, and mezzanine. Ideal for corporate bashes, galas, live concerts, and product launches.
+              </p>
+            </div>
+
+            <div className={styles.setupCard}>
+              <div className={styles.setupHeader}>
+                <h4 className={styles.setupTitle}>Cocktail & Networking</h4>
+                <Image src="/icons/Artboard3.svg" alt="Cocktail" width={32} height={32} className={styles.setupIcon} />
+              </div>
+              <div className={styles.setupCapacity}>Up to 120 guests</div>
+              <p className={styles.setupDesc}>
+                Cocktail party formula with high tables, lounge booths, and effortless movement between the bar and mezzanine. Perfect for business receptions and anniversaries.
+              </p>
+            </div>
+
+            <div className={styles.setupCard}>
+              <div className={styles.setupHeader}>
+                <h4 className={styles.setupTitle}>Lounge & Seated</h4>
+                <Image src="/icons/Artboard2.svg" alt="Seated" width={32} height={32} className={styles.setupIcon} />
+              </div>
+              <div className={styles.setupCapacity}>Up to 70 guests</div>
+              <p className={styles.setupDesc}>
+                Seated lounge arrangement with presentation space, mezzanine, and workshop area. Tailored for panels, listening sessions, and private talks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 6. Real Event Setups */}
+        <div className={`${styles.section} reveal`}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>EVENT REALIZATIONS</span>
+            <h2 className={styles.sectionTitle}>Previous Event Setups at SLOW</h2>
+            <p className={styles.sectionDesc}>
+              From exclusive themed galas and casino nights to corporate workshops with full banquet catering — explore how our space transforms for live events.
+            </p>
+          </div>
+
+          <div className={styles.realizationsGrid}>
+            {/* Realization 1: Casino / Themed Gala */}
+            <div className={styles.realizationCard}>
+              <div className={styles.realizationImageWrapper}>
                 <Image
-                  src="/slow-offer/Dancefloor-1_SLOW.jpg"
-                  alt="SLOW Club — main event space"
+                  src="/slow/slow-prev-events/IMG_7587.jpeg"
+                  alt="Casino and themed gala setup at SLOW"
                   fill
-                  className={styles.spaceCardImage}
-                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                  className={styles.realizationImage}
+                  sizes="(max-width: 992px) 100vw, 50vw"
                 />
               </div>
-              <div className={styles.spaceCardBody}>
-                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowSlow}`}>MAIN SPACE</span>
-                <h3 className={styles.spaceCardTitle}>SLOW Club</h3>
-                <ul className={styles.spaceCardSpecs}>
-                  <li>Up to 200 standing guests</li>
-                  <li>200 m² — dancefloor, mezzanine, bar</li>
-                  <li>Audiophile sound system</li>
-                  <li>Professional stage lighting</li>
+              <div className={styles.realizationBody}>
+                <span className={styles.realizationTag}>THEMED EVENT · CORPORATE GALA</span>
+                <h4 className={styles.realizationTitle}>Casino & Interactive Entertainment</h4>
+                <p className={styles.realizationText}>
+                  A Las Vegas & Wall Street themed corporate party. The open club floor transformed with professional gaming tables (roulette, blackjack), illuminated photo booth, and red velvet stanchion ropes.
+                </p>
+                <ul className={styles.realizationBullets}>
+                  <li>Casino tables with glowing cyan LED rims</li>
+                  <li>Branded welcome easel & illuminated photo zone</li>
+                  <li>Dynamic ambient UV/cyan club lighting</li>
                 </ul>
               </div>
             </div>
 
-            {/* Conference room */}
-            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
-              <div className={styles.spaceCardImageWrapper}>
+            {/* Realization 2: Catering & Workshops */}
+            <div className={styles.realizationCard}>
+              <div className={styles.realizationImageWrapper}>
                 <Image
-                  src="/spaces/sala-tv.jpg"
-                  alt="SLOW Conference Room"
+                  src="/slow/slow-prev-events/IMG_7590.jpeg"
+                  alt="Catering buffet and workshop setup at SLOW"
                   fill
-                  className={styles.spaceCardImage}
-                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                  className={styles.realizationImage}
+                  sizes="(max-width: 992px) 100vw, 50vw"
                 />
               </div>
-              <div className={styles.spaceCardBody}>
-                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>ADDITIONAL SPACE · FOR HIRE</span>
-                <h3 className={styles.spaceCardTitle}>Conference Room</h3>
-                <ul className={styles.spaceCardSpecs}>
+              <div className={styles.realizationBody}>
+                <span className={styles.realizationTag}>CATERING · WORKSHOP & RECEPTION</span>
+                <h4 className={styles.realizationTitle}>Catering Station & Coffee Break</h4>
+                <p className={styles.realizationText}>
+                  A full-service hospitality and banquet counter arranged along the mezzanine railing, featuring a continuous coffee/tea bar, seasonal garland decor, and custom directional zone signage.
+                </p>
+                <ul className={styles.realizationBullets}>
+                  <li>Espresso machine & hot beverage urn station</li>
+                  <li>Pastry and banquet snack presentation</li>
+                  <li>Custom event branding and directional signage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 7. USPs / The SLOW Experience */}
+        <div className={`${styles.section} reveal`}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>STANDARDS & FEATURES</span>
+            <h2 className={styles.sectionTitle}>Why SLOW?</h2>
+            <p className={styles.sectionDesc}>
+              Three defining pillars that make every event at SLOW unforgettable.
+            </p>
+          </div>
+
+          <div className={styles.featuresGrid}>
+            <div className={styles.featureCard}>
+              <span className={styles.featureNumber}>01 / ACOUSTICS</span>
+              <h4 className={styles.featureTitle}>Audiophile Sound</h4>
+              <p className={styles.featureText}>
+                Interiors designed in partnership with architecture studio mode:lina™. Dedicated acoustic treatment and a high-fidelity sound system ensure crystal-clear audio for keynote speeches and DJ sets alike.
+              </p>
+            </div>
+
+            <div className={styles.featureCard}>
+              <span className={styles.featureNumber}>02 / BAR</span>
+              <h4 className={styles.featureTitle}>Artisanal Mixology</h4>
+              <p className={styles.featureText}>
+                Experienced bartenders and a bespoke cocktail menu crafted from artisanal ingredients. We provide complete bar service, custom branded welcome drinks, and tailored open-bar packages.
+              </p>
+            </div>
+
+            <div className={styles.featureCard}>
+              <span className={styles.featureNumber}>03 / DESIGN</span>
+              <h4 className={styles.featureTitle}>Light & Heritage Architecture</h4>
+              <p className={styles.featureText}>
+                Housed in the historic 1930s Wielkopolska Craft Guild building, paired with dynamic RGBW/UV scene lighting, neon accents, and velvet lounges for an immersive cinematic ambiance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 7. Additional Breakout Spaces */}
+        <div className={`${styles.section} reveal`}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>EXPAND YOUR EVENT</span>
+            <h2 className={styles.sectionTitle}>Breakout Rooms in the Building</h2>
+            <p className={styles.sectionDesc}>
+              Need dedicated spaces for breakout workshops, production offices, or a private greenroom? The same historic building offers additional rooms available for hire.
+            </p>
+          </div>
+
+          <div className={styles.breakoutGrid}>
+            {/* Conference Room */}
+            <div className={styles.breakoutCard}>
+              <div className={styles.breakoutImageWrapper}>
+                <Image
+                  src="/spaces/sala-tv.jpg"
+                  alt="Conference Room"
+                  fill
+                  className={styles.breakoutImage}
+                  sizes="(max-width: 992px) 100vw, 50vw"
+                />
+              </div>
+              <div className={styles.breakoutBody}>
+                <span className={styles.breakoutEyebrow}>MEETING ROOM · 19 M²</span>
+                <h4 className={styles.breakoutTitle}>Conference Room</h4>
+                <ul className={styles.breakoutSpecs}>
                   <li>12 seated (boardroom layout)</li>
-                  <li>19 m² — intimate and comfortable</li>
-                  <li>TV screen and multimedia setup</li>
+                  <li>Large TV screen and multimedia setup</li>
+                  <li>Bright, focused environment for work sessions</li>
                   <li>Available separately or bundled with SLOW</li>
                 </ul>
-                <p className={styles.spaceCardNote}>
-                  A space with a calm, focused atmosphere — ideal for working sessions, workshops, and presentations.
+                <p className={styles.breakoutNote}>
+                  Ideal for board meetings, client presentations, and focused workshops.
                 </p>
               </div>
             </div>
 
             {/* U'Patka Room */}
-            <div className={`${styles.spaceCard} ${styles.spaceCardConference}`}>
-              <div className={styles.spaceCardImageWrapper}>
+            <div className={styles.breakoutCard}>
+              <div className={styles.breakoutImageWrapper}>
                 <Image
                   src="/spaces/upatki.jpg"
                   alt="U'Patka Room"
                   fill
-                  className={styles.spaceCardImage}
-                  sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
+                  className={styles.breakoutImage}
+                  sizes="(max-width: 992px) 100vw, 50vw"
                 />
               </div>
-              <div className={styles.spaceCardBody}>
-                <span className={`${styles.spaceCardEyebrow} ${styles.spaceCardEyebrowConference}`}>ADDITIONAL SPACE · FOR HIRE</span>
-                <h3 className={styles.spaceCardTitle}>U&apos;Patka Room</h3>
-                <ul className={styles.spaceCardSpecs}>
-                  <li>Intimate event space of 42 m²</li>
+              <div className={styles.breakoutBody}>
+                <span className={styles.breakoutEyebrow}>MULTI-PURPOSE HALL · 42 M²</span>
+                <h4 className={styles.breakoutTitle}>U&apos;Patka Room</h4>
+                <ul className={styles.breakoutSpecs}>
+                  <li>42 m² versatile space</li>
                   <li>Banquet and cocktail table arrangements</li>
-                  <li>Chillout zone, photo booth, or mini dancefloor</li>
+                  <li>Chillout zone, greenroom, or mini dancefloor</li>
                   <li>Available separately or bundled with SLOW</li>
                 </ul>
-                <p className={styles.spaceCardNote}>
-                  A versatile space ideal as a breakout chillout lounge or an independent venue for private gatherings.
+                <p className={styles.breakoutNote}>
+                  A versatile room ideal as a chillout lounge, artist backstage, or an independent space for private gatherings.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Location */}
+        {/* 8. Location */}
         <div className={`${styles.section} reveal`}>
-          <div className={styles.descBlock}>
-            <h2 className={styles.sectionTitle}>Location</h2>
-            <p className={styles.desc}>
-              SLOW is located in the very heart of Poznań, within the historic Wielkopolska Craft Guild building at ul. Niezłomnych 2 — just a short walk from the Main Railway Station (PKP) and the Poznań International Fair (MTP). Its central position ensures effortless access for your guests and organizers, with adjacent hotels and parking simplifying event logistics.
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>HEART OF POZNAŃ</span>
+            <h2 className={styles.sectionTitle}>Location & Accessibility</h2>
+            <p className={styles.sectionDesc}>
+              SLOW is located in the very heart of Poznań, within the historic Wielkopolska Craft Guild building at ul. Niezłomnych 2 — just a short walk from the Main Railway Station (PKP) and the Poznań International Fair (MTP).
             </p>
+          </div>
 
-            <div className={styles.locationBox}>
-              <a
-                href="https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.locationAddress}
-              >
-                ul. Niezłomnych 2, 61-894 Poznań
-              </a>
-              <div className={styles.transitGrid}>
-                <div className={styles.transitItem}>
-                  <Image src="/icons/Artboard4.svg" alt="Train" width={56} height={56} className={styles.transitIcon} />
-                  <div>
-                    <div className={styles.transitLabel}>Main Railway Station</div>
-                    <div className={styles.transitValue}>0.8 km</div>
-                  </div>
+          <div className={styles.locationBox}>
+            <a
+              href="https://maps.app.goo.gl/GAQgNHoqGhnbCuqp9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.locationAddress}
+            >
+              ul. Niezłomnych 2, 61-894 Poznań
+            </a>
+            <div className={styles.transitGrid}>
+              <div className={styles.transitItem}>
+                <Image src="/icons/Artboard4.svg" alt="Train" width={52} height={52} className={styles.transitIcon} />
+                <div>
+                  <div className={styles.transitLabel}>Main Railway Station</div>
+                  <div className={styles.transitValue}>0.8 km</div>
                 </div>
-                <div className={styles.transitItem}>
-                  <Image src="/icons/Artboard5.svg" alt="Airport" width={56} height={56} className={styles.transitIcon} />
-                  <div>
-                    <div className={styles.transitLabel}>Poznań-Ławica Airport</div>
-                    <div className={styles.transitValue}>6.4 km</div>
-                  </div>
+              </div>
+              <div className={styles.transitItem}>
+                <Image src="/icons/Artboard5.svg" alt="Airport" width={52} height={52} className={styles.transitIcon} />
+                <div>
+                  <div className={styles.transitLabel}>Poznań-Ławica Airport</div>
+                  <div className={styles.transitValue}>6.4 km</div>
                 </div>
-                <div className={styles.transitItem}>
-                  <Image src="/icons/Artboard6.svg" alt="Public Transport" width={56} height={56} className={styles.transitIcon} />
-                  <div>
-                    <div className={styles.transitLabel}>Public Transit Access</div>
-                    <div className={styles.transitValue}>Bus, Tram</div>
-                  </div>
+              </div>
+              <div className={styles.transitItem}>
+                <Image src="/icons/Artboard6.svg" alt="Public Transport" width={52} height={52} className={styles.transitIcon} />
+                <div>
+                  <div className={styles.transitLabel}>Public Transit Access</div>
+                  <div className={styles.transitValue}>Bus & Tram</div>
                 </div>
               </div>
             </div>
@@ -235,83 +417,47 @@ export default function SlowOfferPage() {
           </div>
         </div>
 
-        {/* Description */}
-        <div className={`${styles.section} reveal`}>
-          <div className={styles.descBlock}>
-            <h2 className={styles.sectionTitle}>The Space</h2>
-            <p className={styles.desc}>
-              The new SLOW stage is a modular, modern event space crafted for corporate, cultural, and special occasion gatherings.
+        {/* 9. Final B2B Booking & Inquiry Card */}
+        <div id="inquire" className={`${styles.inquiryCard} reveal`}>
+          <div className={styles.inquiryInner}>
+            <span className={styles.inquiryEyebrow}>B2B & EVENT HIRE</span>
+            <h2 className={styles.inquiryTitle}>Plan Your Event at SLOW</h2>
+            <p className={styles.inquiryDesc}>
+              Tell us about your event vision — we will prepare a bespoke estimate, recommend optimal room configurations, and curate a bar package tailored to your exact needs.
             </p>
-            <p className={styles.desc}>
-              The interior&apos;s industrial character, paired with advanced acoustic engineering and professional technical infrastructure, creates a venue where aesthetics seamlessly meet comfort and functionality.
-            </p>
-            <p className={styles.desc}>
-              Designed by the acclaimed mode:lina™ studio, the concept is grounded in the harmony of architecture, sound, and light — enabling a wide spectrum of events, from conferences and presentations to banquets, listening sessions, and private celebrations.
-            </p>
-            <p className={styles.desc}>
-              Tell us about your concept and we will prepare a proposal tailored to your requirements.
-            </p>
-            <div className={styles.cta}>
+
+            <div className={styles.inquiryContacts}>
+              <div className={styles.inquiryItem}>
+                <span className={styles.inquiryRole}>Event Manager & B2B Hire</span>
+                <a href="mailto:katya@tamaklub.pl" className={styles.inquiryEmail}>
+                  katya@tamaklub.pl
+                </a>
+              </div>
+              <div className={styles.inquiryItem}>
+                <span className={styles.inquiryRole}>Table Bookings & Club Packages</span>
+                <a href="mailto:events@slowclub.pl" className={styles.inquiryEmail}>
+                  events@slowclub.pl
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.inquiryActions}>
               <a
                 href="mailto:katya@tamaklub.pl"
                 className="btn-slow"
                 id="slow-offer-enquire-btn"
               >
-                ENQUIRE →
+                INQUIRE NOW →
               </a>
               <Link
                 href="/en/slowclub/contact"
-                className="btn-slow"
+                className={styles.btnSlowOutline}
                 id="slow-offer-contact-btn"
-                style={{ background: "transparent", borderColor: "rgba(168, 85, 247, 0.35)", color: "#fff" }}
               >
-                CONTACT
+                CONTACT PAGE
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Setups */}
-        <div className={`${styles.section} reveal`}>
-          <h2 className={styles.sectionTitle}>Possible Setups</h2>
-          <div className={styles.setupsGrid}>
-            <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>
-                Club & Event
-                <Image src="/icons/Artboard1.svg" alt="Club & Event" width={32} height={32} className={styles.setupIcon} />
-              </h3>
-              <p className={styles.setupValue}>
-                Up to 200 standing guests<br />
-                Full access to dancefloor, bar, and mezzanine
-              </p>
-            </div>
-            <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>
-                Cocktail & Networking
-                <Image src="/icons/Artboard3.svg" alt="Cocktail" width={32} height={32} className={styles.setupIcon} />
-              </h3>
-              <p className={styles.setupValue}>
-                Up to 120 cocktail capacity<br />
-                High tables, lounge seating, and dedicated bar
-              </p>
-            </div>
-            <div className={styles.setupCard}>
-              <h3 className={styles.setupTitle}>
-                Intimate / Seated
-                <Image src="/icons/Artboard2.svg" alt="Intimate" width={32} height={32} className={styles.setupIcon} />
-              </h3>
-              <p className={styles.setupValue}>
-                Up to 70 seated guests<br />
-                Lounge arrangement with mezzanine access
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Gallery */}
-        <div className={`${styles.section} reveal`} style={{ marginTop: "6rem" }}>
-          <h2 className={styles.sectionTitle}>Gallery</h2>
-          <VenueGallery isEnglish={true} images={slowGalleryImages} variant="slow" />
         </div>
 
       </div>

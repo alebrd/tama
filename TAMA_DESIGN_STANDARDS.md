@@ -214,7 +214,7 @@ A global SVG noise texture is rendered via `.noise-overlay` at `opacity: 0.03` (
 
 **Header (EN):** Home (/en) · TAMA (/en/tama) · SLOW (/en/slowclub) · Offer (/en/offer) · Contact (/en/contact)
 
-**Footer only (both langs):** Merch · Praca / Jobs
+**Footer (both langs):** O nas / About (/o-nas, /en/about) · Merch · Praca / Jobs
 
 **Routes archived:** /_program · /en/_program
 

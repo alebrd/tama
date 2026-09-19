@@ -509,13 +509,24 @@
 }
 
 .dropdownTrigger:hover,
-.dropdownTrigger.active {
+.dropdownTrigger.active,
+.dropdownTriggerOpen {
+  opacity: 1;
   color: #ffffff;
 }
 
+.dropdownTriggerOpen::after {
+  width: 100%;
+}
+
 .dropdownChevron {
-  transition: transform 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
   opacity: 0.6;
+}
+
+.dropdownTrigger:hover .dropdownChevron,
+.dropdownTriggerOpen .dropdownChevron {
+  opacity: 1;
 }
 
 .chevronRotated {
@@ -525,20 +536,23 @@
 .dropdownMenu {
   position: absolute;
   top: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-6px);
-  min-width: 220px;
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: auto;
+  right: 0;
+  transform: translateY(-6px);
+  min-width: 260px;
+  background: rgba(10, 10, 10, 0.94);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   padding: 6px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.22s ease;
   z-index: 1000;
 }
 
@@ -555,59 +569,98 @@
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  transform: translateX(-50%) translateY(0);
-}
-
-.dropdownMenuRight {
-  left: auto;
-  right: 0;
-  transform: translateY(-6px);
-}
-
-.dropdownMenuRight.dropdownOpen {
   transform: translateY(0);
 }
 
 .dropdownItem {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 9px 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
   border-radius: 4px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-.dropdownItem:hover {
-  background: rgba(255, 255, 255, 0.08);
+.dropdownItem:not(:last-child) {
+  margin-bottom: 3px;
 }
 
-.dropdownItemActive {
-  background: rgba(255, 255, 255, 0.05);
+.dropdownItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.dropdownItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .dropdownItemTitle {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .dropdownItemDesc {
   font-size: 0.6875rem;
-  color: var(--color-light-grey);
-  opacity: 0.6;
-  letter-spacing: 0.3px;
+  color: var(--color-light-grey, #e0e0e0);
+  opacity: 0.65;
+  letter-spacing: 0.4px;
+  line-height: 1.35;
+  transition: opacity 0.2s ease;
+}
+
+.dropdownItemArrow {
+  color: #ffffff;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.dropdownItem:hover .dropdownItemDesc {
+  opacity: 0.95;
+}
+
+.dropdownItem:hover .dropdownItemArrow {
+  opacity: 0.85;
+  transform: translateX(0);
+}
+
+.dropdownItemActive {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .dropdownItemSlow:hover {
-  background: rgba(168, 85, 247, 0.12);
+  background: rgba(124, 58, 237, 0.14);
 }
 
 .dropdownItemSlow:hover .dropdownItemTitle {
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  text-shadow: 0 0 12px rgba(124, 58, 237, 0.6);
 }
+
+.dropdownItemSlow:hover .dropdownItemArrow {
+  color: #a855f7;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
