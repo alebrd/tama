@@ -10,6 +10,7 @@ const plLinks = [
   { href: "/", label: "Home" },
   { href: "/tama", label: "TAMA" },
   { href: "/slowclub", label: "SLOW", isSlow: true },
+  { href: "/o-nas", label: "O nas", dropdown: "about" as const },
   { href: "/slowclub/oferta", label: "Oferta", dropdown: "oferta" as const },
   { href: "/slowclub/kontakt", label: "Kontakt", dropdown: "kontakt" as const },
 ];
@@ -18,6 +19,7 @@ const enLinks = [
   { href: "/en", label: "Home" },
   { href: "/en/tama", label: "TAMA" },
   { href: "/en/slowclub", label: "SLOW", isSlow: true },
+  { href: "/en/about", label: "About", dropdown: "about" as const },
   { href: "/en/slowclub/offer", label: "Offer", dropdown: "oferta" as const },
   { href: "/en/slowclub/contact", label: "Contact", dropdown: "kontakt" as const },
 ];
@@ -26,6 +28,10 @@ const pathMap: Record<string, string> = {
   "/slowclub": "/en/slowclub",
   "/slowclub/oferta": "/en/slowclub/offer",
   "/slowclub/kontakt": "/en/slowclub/contact",
+  "/o-nas": "/en/about",
+  "/en/about": "/o-nas",
+  "/przestrzen": "/en/spaces",
+  "/en/spaces": "/przestrzen",
   "/en/slowclub": "/slowclub",
   "/en/slowclub/offer": "/slowclub/oferta",
   "/en/slowclub/contact": "/slowclub/kontakt",
@@ -98,6 +104,12 @@ export default function SlowNavbar() {
   const plHref = isEnglish ? alternatePath : pathname;
   const enHref = isEnglish ? pathname : alternatePath;
 
+  const isAboutActive =
+    pathname === "/o-nas" ||
+    pathname === "/en/about" ||
+    pathname === "/przestrzen" ||
+    pathname === "/en/spaces";
+
   const isOfertaActive =
     pathname === "/oferta" ||
     pathname === "/en/offer" ||
@@ -114,6 +126,18 @@ export default function SlowNavbar() {
     string,
     { href: string; title: string; desc: string; isSlow?: boolean }[]
   > = {
+    about: [
+      {
+        href: isEnglish ? "/en/about" : "/o-nas",
+        title: isEnglish ? "About" : "O nas",
+        desc: isEnglish ? "History, identity & architecture" : "Historia, tożsamość & architektura",
+      },
+      {
+        href: isEnglish ? "/en/spaces" : "/przestrzen",
+        title: isEnglish ? "Spaces" : "Przestrzenie",
+        desc: isEnglish ? "Main Hall, SLOW & historic rooms" : "Sala Główna, SLOW & zabytkowe sale",
+      },
+    ],
     oferta: [
       {
         href: isEnglish ? "/en/offer" : "/oferta",
@@ -144,7 +168,10 @@ export default function SlowNavbar() {
 
   return (
     <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${menuOpen ? styles.menuOpenHeader : ''}`}>
+      <header
+        className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${menuOpen ? styles.menuOpenHeader : ''} ${openDropdown ? styles.headerWithDropdown : ''}`}
+        onMouseLeave={() => setOpenDropdown(null)}
+      >
         <div className={`container ${styles.navContainer}`}>
           <div className={styles.logoGroup}>
             <Link href={tamaHomeHref} className={styles.logo} onClick={() => setMenuOpen(false)}>
@@ -162,7 +189,12 @@ export default function SlowNavbar() {
             {links.map(({ href, label, isSlow, dropdown }) => {
               if (dropdown) {
                 const isOpen = openDropdown === dropdown;
-                const isCurrentActive = dropdown === "oferta" ? isOfertaActive : isKontaktActive;
+                const isCurrentActive =
+                  dropdown === "about"
+                    ? isAboutActive
+                    : dropdown === "oferta"
+                    ? isOfertaActive
+                    : isKontaktActive;
                 const items = dropdownItems[dropdown];
 
                 return (
@@ -170,7 +202,6 @@ export default function SlowNavbar() {
                     key={label}
                     className={styles.dropdownWrapper}
                     onMouseEnter={() => setOpenDropdown(dropdown)}
-                    onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <button
                       type="button"
@@ -212,21 +243,6 @@ export default function SlowNavbar() {
                             <span className={styles.dropdownItemTitle}>{item.title}</span>
                             <span className={styles.dropdownItemDesc}>{item.desc}</span>
                           </div>
-                          <svg
-                            className={styles.dropdownItemArrow}
-                            width="14"
-                            height="14"
-                            viewBox="0 0 14 14"
-                            fill="none"
-                          >
-                            <path
-                              d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5"
-                              stroke="currentColor"
-                              strokeWidth="1.25"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
                         </Link>
                       ))}
                     </div>
@@ -239,6 +255,7 @@ export default function SlowNavbar() {
                   key={href}
                   href={href}
                   className={`${isSlow ? styles.slowLink : styles.link} ${pathname === href ? styles.active : ""}`}
+                  onMouseEnter={() => setOpenDropdown(null)}
                 >
                   {label}
                 </Link>
@@ -274,6 +291,12 @@ export default function SlowNavbar() {
             </button>
           </div>
         </div>
+
+        {/* RA-style full-width seamless curtain */}
+        <div
+          className={`${styles.headerCurtain} ${openDropdown ? styles.headerCurtainOpen : ''}`}
+          aria-hidden="true"
+        />
       </header>
 
       {/* Mobile Overlay — outside header to avoid iOS backdrop-filter containment */}
@@ -285,7 +308,12 @@ export default function SlowNavbar() {
           {links.map(({ href, label, isSlow, dropdown }) => {
             if (dropdown) {
               const isMobileOpen = mobileOpenDropdown === dropdown;
-              const isCurrentActive = dropdown === "oferta" ? isOfertaActive : isKontaktActive;
+              const isCurrentActive =
+                dropdown === "about"
+                  ? isAboutActive
+                  : dropdown === "oferta"
+                  ? isOfertaActive
+                  : isKontaktActive;
               const items = dropdownItems[dropdown];
 
               return (

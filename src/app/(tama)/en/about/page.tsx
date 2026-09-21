@@ -19,7 +19,7 @@ export default function AboutPageEn() {
           <h1 className={`${styles.title} text-gradient`}>About Us</h1>
           <p className={styles.sub}>
             TAMA is a premier electronic music venue and distinctive event destination in the heart of Poznań.
-            A space born from an uncompromising passion for music, architecture, and community.
+            Together with the intimate SLOW club, it forms a two-dimensional ecosystem of uncompromising music, architecture, and community.
           </p>
         </section>
 
@@ -78,6 +78,32 @@ export default function AboutPageEn() {
           </div>
         </section>
 
+        {/* ─── Chapter 3: SLOW — The Other Side of TAMA ──────────────── */}
+        <section className={`${styles.chapter} reveal`}>
+          <div className={styles.chapterText}>
+            <span className={styles.chapterEyebrow}>SLOW · THE NEW CHAPTER</span>
+            <h2 className={styles.chapterTitle}>SLOW — The Other Side of TAMA</h2>
+            <p className={styles.chapterParagraph}>
+              Complementing the monumental Main Hall is SLOW — the new, intimate side of the TAMA complex. Designed by the acclaimed architectural studio mode:lina™, this 200 m² boutique space offers an evocative, refined counterpoint to the raw industrial presence of the main room.
+            </p>
+            <p className={styles.chapterParagraph}>
+              Featuring a private mezzanine, bespoke cocktail bar, and a finely calibrated audiophile sound system, SLOW operates as an autonomous house music club, an elevated cocktail lounge, and an independent destination for boutique corporate events and private gatherings for up to 200 guests.
+            </p>
+            <p className={styles.chapterParagraph}>
+              Together, TAMA and SLOW form a harmonious two-dimensional ecosystem: from monumental club nights and large-scale galas to intimate, nuanced sonic experiences and networking.
+            </p>
+          </div>
+          <div className={styles.chapterImageWrapper}>
+            <Image
+              src="/spaces/slow.jpg"
+              alt="SLOW Club — boutique interior and mezzanine designed by mode:lina™"
+              fill
+              className={styles.chapterImage}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+        </section>
+
         {/* ─── Values Grid ──────────────────────────────────────────── */}
         <section className={`${styles.valuesSection} reveal`}>
           <div className={styles.valuesHeader}>
@@ -126,6 +152,9 @@ export default function AboutPageEn() {
           <div className={styles.ctaLinks}>
             <Link href="/en/tama" className={styles.ctaBtnPrimary} id="about-to-tama-btn-en">
               TAMA CLUB →
+            </Link>
+            <Link href="/en/slowclub" className={styles.ctaBtnSlow} id="about-to-slow-btn-en">
+              SLOW CLUB →
             </Link>
             <Link href="/en/spaces" className={styles.ctaBtnOutline} id="about-to-spaces-btn-en">
               SPACES

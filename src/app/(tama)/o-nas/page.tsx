@@ -19,7 +19,7 @@ export default function ONasPage() {
           <h1 className={`${styles.title} text-gradient`}>O Nas</h1>
           <p className={styles.sub}>
             TAMA to wiodący klub muzyki elektronicznej i unikalna przestrzeń eventowa w sercu Poznania.
-            Miejsce zrodzone z pasji do bezkompromisowej muzyki, architektury i społeczności.
+            Wraz z nową, kameralną odsłoną kompleksu — klubem SLOW — tworzy dwuwymiarowy ekosystem bezkompromisowej muzyki, architektury i społeczności.
           </p>
         </section>
 
@@ -78,6 +78,32 @@ export default function ONasPage() {
           </div>
         </section>
 
+        {/* ─── Chapter 3: SLOW — The Other Side of TAMA ──────────────── */}
+        <section className={`${styles.chapter} reveal`}>
+          <div className={styles.chapterText}>
+            <span className={styles.chapterEyebrow}>SLOW · NOWE OBLICZE TAMY</span>
+            <h2 className={styles.chapterTitle}>SLOW — Druga Strona TAMY</h2>
+            <p className={styles.chapterParagraph}>
+              Dopełnieniem monumentalnej Sali Głównej jest SLOW — nowa, kameralna odsłona kompleksu TAMA. Zaprojektowana przez renomowaną pracownię architektoniczną mode:lina™, boutique’owa przestrzeń o powierzchni 200 m² tworzy wyrafinowany kontrast dla surowego, industrialnego gmachu.
+            </p>
+            <p className={styles.chapterParagraph}>
+              Z antresolą, autorskim barem koktajlowym i precyzyjnie dostrojonym audiofilskim systemem dźwiękowym, SLOW to przestrzeń dedykowana wyłącznie muzyce house, ekskluzywny cocktail lounge oraz autonomiczne miejsce na kameralne wydarzenia firmowe i prywatne przyjęcia dla nawet 200 osób.
+            </p>
+            <p className={styles.chapterParagraph}>
+              Razem TAMA i SLOW tworzą spójny, dwuwymiarowy ekosystem: od monumentalnych nocy techno i dużych gal po intymne, wysublimowane doświadczenia muzyczne i networkingowe.
+            </p>
+          </div>
+          <div className={styles.chapterImageWrapper}>
+            <Image
+              src="/spaces/slow.jpg"
+              alt="SLOW Club — boutique’owa przestrzeń i antresola projektu mode:lina™"
+              fill
+              className={styles.chapterImage}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+        </section>
+
         {/* ─── Values Grid ──────────────────────────────────────────── */}
         <section className={`${styles.valuesSection} reveal`}>
           <div className={styles.valuesHeader}>
@@ -126,6 +152,9 @@ export default function ONasPage() {
           <div className={styles.ctaLinks}>
             <Link href="/tama" className={styles.ctaBtnPrimary} id="about-to-tama-btn">
               KLUB TAMA →
+            </Link>
+            <Link href="/slowclub" className={styles.ctaBtnSlow} id="about-to-slow-btn">
+              KLUB SLOW →
             </Link>
             <Link href="/przestrzen" className={styles.ctaBtnOutline} id="about-to-spaces-btn">
               PRZESTRZENIE

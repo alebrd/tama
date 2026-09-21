@@ -210,9 +210,9 @@ A global SVG noise texture is rendered via `.noise-overlay` at `opacity: 0.03` (
 
 ## 8. Navigation Structure
 
-**Header (PL):** Home (/) · TAMA (/tama) · SLOW (/slowclub) · Oferta (/oferta) · Kontakt (/kontakt)
+**Header (PL):** Home (/) · TAMA (/tama) · SLOW (/slowclub) · O nas [dropdown: O nas / Przestrzenie] · Oferta [dropdown: TAMA / SLOW] · Kontakt [dropdown: TAMA / SLOW]
 
-**Header (EN):** Home (/en) · TAMA (/en/tama) · SLOW (/en/slowclub) · Offer (/en/offer) · Contact (/en/contact)
+**Header (EN):** Home (/en) · TAMA (/en/tama) · SLOW (/en/slowclub) · About [dropdown: About / Spaces] · Offer [dropdown: TAMA / SLOW] · Contact [dropdown: TAMA / SLOW]
 
 **Footer (both langs):** O nas / About (/o-nas, /en/about) · Merch · Praca / Jobs
 
